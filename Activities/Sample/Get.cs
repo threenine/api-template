@@ -1,14 +1,14 @@
 using System.Threading;
 using System.Threading.Tasks;
-using ApiEndpoint.Requests;
-using ApiEndpoint.Responses;
+using MyProject.Requests;
+using MyProject.Responses;
 using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
 
-namespace ApiEndpoint.Activities.Sample
+namespace MyProject.Activities.Sample
 {
     public class Get : BaseAsyncEndpoint.WithRequest<SampleRequest>.WithResponse<SampleResponse>
     {

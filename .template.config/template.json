@@ -8,7 +8,7 @@
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "ApiEndpoint",
+  "sourceName": "MyProject",
   "symbols": {
     "Framework": {
       "type": "parameter",

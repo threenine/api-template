@@ -1,4 +1,4 @@
-namespace ApiEndpoint.Responses
+namespace MyProject.Responses
 {
     public class SampleResponse
     {

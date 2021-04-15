@@ -1,4 +1,4 @@
-namespace ApiEndpoint.Requests
+namespace MyProject.Requests
 {
     public class SampleRequest
     {
