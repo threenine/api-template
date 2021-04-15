@@ -1,11 +1,12 @@
 using System.Threading;
 using System.Threading.Tasks;
+using ApiEndpoint.Requests;
+using ApiEndpoint.Responses;
 using Ardalis.ApiEndpoints;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
-using webtemplate.Requests;
-using webtemplate.Responses;
+
 
 namespace ApiEndpoint.Activities.Sample
 {
