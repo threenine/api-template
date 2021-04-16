@@ -8,7 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Serilog;
 
-namespace MyProject
+namespace ApiProject
 {
     public class Program
     {
@@ -19,7 +19,10 @@ namespace MyProject
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-                .UseSerilog()
+                .UseSerilog((hostContext, LoggerConfiguration) =>
+                {
+                    LoggerConfiguration.ReadFrom.Configuration(hostContext.Configuration);
+                })
                 .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
     }
 }

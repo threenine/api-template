@@ -3,12 +3,12 @@
   "name": "API Endpoints starter project",
   "description": "Project template to create Adralis API endpoint project",
   "identity": "threenine.ApiEndpoints.1.0",
-  "shortName": "apiendpoints",
+  "shortName": "apiproject",
   "tags": {
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "MyProject",
+  "sourceName": "ApiProject",
   "symbols": {
     "Framework": {
       "type": "parameter",
