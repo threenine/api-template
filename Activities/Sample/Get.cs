@@ -22,8 +22,8 @@ namespace ApiProject.Activities.Sample
         }
         [HttpGet("{id}")]
         [SwaggerOperation(
-            Summary = "Retrieve an article by id ",
-            Description = "Retrieves a full articles ",
+            Summary = "Retrieve a sample response by id ",
+            Description = "Retrieves a sample response ",
             OperationId = "EF0A3653-153F-4E73-8D20-621C9F9FFDC9",
             Tags = new[] {"Sample"})
         ]

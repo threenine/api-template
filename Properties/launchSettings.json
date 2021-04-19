@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ApiEndpoint": {
+    "ApiProject": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

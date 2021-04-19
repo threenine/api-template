@@ -1,8 +1,9 @@
 {
+  "$schema": "http://json.schemastore.org/template",
   "author": "Gary Woodfine",
-  "name": "API Endpoints starter project",
+  "name": "API project template",
   "description": "Project template to create Adralis API endpoint project",
-  "identity": "threenine.ApiEndpoints.1.0",
+  "identity": "threenine.ApiProject.1.0",
   "shortName": "apiproject",
   "tags": {
     "language": "C#",
