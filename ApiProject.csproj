@@ -15,7 +15,7 @@
         <PackageIconUrl>http://static.threenine.co.uk/threenine_icon.png</PackageIconUrl>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
-        <ContentTargetFolders>content</ContentTargetFolders>
+        <ContentTargetFolders>Content</ContentTargetFolders>
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
     </PropertyGroup>
     <ItemGroup>
