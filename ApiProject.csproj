@@ -19,7 +19,6 @@
     </PropertyGroup>
     <ItemGroup>
         <Content Include="**" Exclude="**\bin;**\obj" />
-        <Content Include=".template.config\template.json" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
