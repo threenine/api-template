@@ -16,6 +16,7 @@
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
+        <EnableDefaultContentItems>false</EnableDefaultContentItems>
     </PropertyGroup>
     <ItemGroup>
         <Content Include="Content\**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**">
