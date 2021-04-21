@@ -18,7 +18,7 @@
         <ContentTargetFolders>content</ContentTargetFolders>
     </PropertyGroup>
     <ItemGroup>
-        <Content Include="\**" Exclude="**\bin;**\obj" />
+        <Content Include="**" Exclude="**\bin;**\obj" />
         <Content Include=".template.config\template.json" />
     </ItemGroup>
     <ItemGroup>
