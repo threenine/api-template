@@ -16,7 +16,6 @@
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
-        <PackageVersion>1.0</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
