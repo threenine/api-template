@@ -3,7 +3,7 @@
   "author": "Gary Woodfine",
   "name": "API project template",
   "description": "Project template to create Adralis API endpoint project",
-  "identity": "threenine.ApiProject.1.0",
+  "identity": "Threenine.ApiProject",
   "shortName": "apiproject",
   "tags": {
     "language": "C#",

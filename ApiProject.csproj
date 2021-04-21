@@ -19,10 +19,7 @@
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
     </PropertyGroup>
     <ItemGroup>
-        <Content Include="Content\**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**">
-            <PackagePath>Content\</PackagePath>
-        </Content>
-        <Content Include="Content\.template.config\template.json" />
+        <Content Include="Content\**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**"/>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
@@ -36,14 +33,4 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.1.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.1" />
     </ItemGroup>
-    <ItemGroup>
-      <None Include="Content\Properties\launchSettings.json">
-        <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-        <CopyToPublishDirectory>Never</CopyToPublishDirectory>
-        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      </None>
-    </ItemGroup>
-
-   
-
 </Project>
