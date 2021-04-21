@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 
-namespace ApiProject
+namespace ApiProject.Content
 {
     public class Program
     {

@@ -1,8 +1,8 @@
-using ApiProject.Responses.Sample;
+using ApiProject.Content.Responses.Sample;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiProject.Requests.Sample
+namespace ApiProject.Content.Requests.Sample
 {
     public class SampleRequest : IRequest<SampleResponse>
     {

@@ -1,15 +1,14 @@
 using System.Threading;
 using System.Threading.Tasks;
-using ApiProject.Requests.Sample;
-using ApiProject.Responses.Sample;
+using ApiProject.Content.Requests.Sample;
+using ApiProject.Content.Responses.Sample;
 using Ardalis.ApiEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-
-namespace ApiProject.Activities.Sample
+namespace ApiProject.Content.Activities.Sample
 {
    [Route("sample")]
     public class Get : BaseAsyncEndpoint.WithRequest<SampleRequest>.WithResponse<SampleResponse>

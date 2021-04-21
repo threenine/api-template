@@ -1,11 +1,11 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using ApiProject.Requests.Sample;
-using ApiProject.Responses.Sample;
+using ApiProject.Content.Requests.Sample;
+using ApiProject.Content.Responses.Sample;
 using MediatR;
 
-namespace ApiProject.Handlers.Sample
+namespace ApiProject.Content.Handlers.Sample
 {
     public class GetSampleHandler : IRequestHandler<SampleRequest, SampleResponse>
     {

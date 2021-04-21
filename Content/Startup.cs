@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
-namespace ApiProject
+namespace ApiProject.Content
 {
     public class Startup
     {
