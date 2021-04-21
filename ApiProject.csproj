@@ -16,9 +16,10 @@
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
     </PropertyGroup>
     <ItemGroup>
-        <Content Include="Content\**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**"/>
+        <Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**"/>
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
