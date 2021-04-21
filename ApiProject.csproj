@@ -18,7 +18,7 @@
         <ContentTargetFolders>content</ContentTargetFolders>
     </PropertyGroup>
     <ItemGroup>
-        <Content Exclude="**\bin\**;**\obj\**" />
+        <Content Include="**" Exclude="**\bin\**;**\obj\**" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
