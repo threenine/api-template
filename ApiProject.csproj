@@ -20,6 +20,7 @@
     </PropertyGroup>
     <ItemGroup>
         <Content Include="ApiProject\**" Exclude="**\bin\**;**\obj\**;**\.idea\**" />
+        <Content Include=".template.config\template.json" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
