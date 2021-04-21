@@ -17,7 +17,10 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <ContentTargetFolders>content</ContentTargetFolders>
     </PropertyGroup>
-
+    <ItemGroup>
+        <Content Include="\**" Exclude="**\bin;**\obj" />
+        <Content Include=".template.config\template.json" />
+    </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
         <PackageReference Include="AutoMapper" Version="10.1.1" />
@@ -31,8 +34,6 @@
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.1.1" />
     </ItemGroup>
 
-    <ItemGroup>
-        <Content Include=".template.config\template.json" />
-    </ItemGroup>
+   
 
 </Project>
