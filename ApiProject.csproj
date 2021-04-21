@@ -19,7 +19,7 @@
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
     </PropertyGroup>
     <ItemGroup>
-        <Content Include="ApiProject\**" Exclude="**\bin\**;**\obj\**" />
+        <Content Include="ApiProject\**" Exclude="**\bin\**;**\obj\**;**\.idea\**" />
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="Ardalis.ApiEndpoints" Version="3.0.0" />
