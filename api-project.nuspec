@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <PackageId>Threenine.ApiProject</PackageId>
+        <TargetFramework>net5.0</TargetFramework>
+        <IsPackable>true</IsPackable>
+        <Title>API Project template</Title>
+        <Authors>Gary Woodfine</Authors>
+        <Description>Project template to create Adralis API endpoint project</Description>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>api project, api endpoints,</PackageTags>
+        <RepositoryUrl>https://github.com/threenine/api-template</RepositoryUrl>
+        <Copyright>Copyright © 2005 - 2021 Three Nine Consulting Limited</Copyright>
+        <PackageProjectUrl>https://threenine.co.uk</PackageProjectUrl>
+        <PackageIconUrl>http://static.threenine.co.uk/threenine_icon.png</PackageIconUrl>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <EnableDefaultContentItems>false</EnableDefaultContentItems>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+    </PropertyGroup>
+    <ItemGroup>
+        <Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**"/>
+    </ItemGroup>
+</Project>
