@@ -18,7 +18,6 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
         <NoDefaultExcludes>true</NoDefaultExcludes>
-        <RootNamespace>ApiProject</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
         <Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**" />
