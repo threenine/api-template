@@ -18,7 +18,11 @@ and can be found in the `appsettings.Development.json`  . In order to deploy pro
 ### Installation
 To use the template simply install it using
 ```text
- dotnet new --install threenine.ApiProject::1.0.1
+dotnet new --install Threenine.ApiProject::1.0.18
  ```
+Will enable generating new projects using the template using
+```
+dotnet new apiproject -o YourProjectName
+```
 
 [![threenine logo](http://static.threenine.co.uk/img/github_footer.png)](https://threenine.co.uk/)
