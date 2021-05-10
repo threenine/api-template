@@ -1,6 +1,6 @@
-namespace ApiProject.Content.Responses.Sample
+namespace ApiProject.Activities.Sample.Get
 {
-    public class SampleResponse
+    public class Response
     {
         public string Id { get; set; }
         public string Name { get; set; }

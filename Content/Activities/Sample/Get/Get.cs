@@ -1,7 +1,6 @@
 using System.Threading;
 using System.Threading.Tasks;
-using ApiProject.Content.Requests.Sample;
-using ApiProject.Content.Responses.Sample;
+using ApiProject.Activities.Sample.Get;
 using Ardalis.ApiEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -11,7 +10,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace ApiProject.Content.Activities.Sample
 {
    [Route("sample")]
-    public class Get : BaseAsyncEndpoint.WithRequest<SampleRequest>.WithResponse<SampleResponse>
+    public class Get : BaseAsyncEndpoint.WithRequest<Request>.WithResponse<Response>
     {
         private readonly IMediator _mediator;
 
@@ -26,9 +25,9 @@ namespace ApiProject.Content.Activities.Sample
             OperationId = "EF0A3653-153F-4E73-8D20-621C9F9FFDC9",
             Tags = new[] {"Sample"})
         ]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SampleResponse))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
         [Produces("application/json")]
-        public override async Task<ActionResult<SampleResponse>> HandleAsync([FromRoute] SampleRequest request, CancellationToken cancellationToken = new CancellationToken())
+        public override async Task<ActionResult<Response>> HandleAsync([FromRoute] Request request, CancellationToken cancellationToken = new CancellationToken())
         {
             return await _mediator.Send(request, cancellationToken);
         }
