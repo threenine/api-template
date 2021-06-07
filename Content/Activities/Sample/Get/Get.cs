@@ -9,8 +9,8 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace ApiProject.Content.Activities.Sample
 {
-   [Route("sample")]
-    public class Get : BaseAsyncEndpoint.WithRequest<Request>.WithResponse<Response>
+   [Route(Sample.RouteName)]
+    public class Get : BaseAsyncEndpoint.WithRequest<GetSampleRequest>.WithResponse<GetSampleResponse>
     {
         private readonly IMediator _mediator;
 
@@ -23,13 +23,17 @@ namespace ApiProject.Content.Activities.Sample
             Summary = "Retrieve a sample response by id ",
             Description = "Retrieves a sample response ",
             OperationId = "EF0A3653-153F-4E73-8D20-621C9F9FFDC9",
-            Tags = new[] {"Sample"})
+            Tags = new[] {Sample.RouteName})
         ]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(GetSampleResponse))]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesErrorResponseType(typeof(NotFoundResult))]
         [Produces("application/json")]
-        public override async Task<ActionResult<Response>> HandleAsync([FromRoute] Request request, CancellationToken cancellationToken = new CancellationToken())
+        public override async Task<ActionResult<GetSampleResponse>> HandleAsync([FromRoute] GetSampleRequest getSampleRequest, CancellationToken cancellationToken = new())
         {
-            return await _mediator.Send(request, cancellationToken);
+            var result = await _mediator.Send(getSampleRequest, cancellationToken);
+            if (result == null) return new NotFoundResult();
+            return new OkObjectResult(result);
         }
     }
 }
