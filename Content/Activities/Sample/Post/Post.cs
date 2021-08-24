@@ -37,7 +37,7 @@ namespace ApiProject.Content.Activities.Sample.Post
                 var result = await _mediator.Send(request, cancellationToken);
                 return new CreatedResult(new Uri(RouteNames.Sample, UriKind.Relative), new {id = result});
             }
-            catch (Exception e)
+            catch 
             {
                 return new UnprocessableEntityResult();
             }
