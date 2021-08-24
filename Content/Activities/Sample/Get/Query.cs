@@ -1,9 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ApiProject.Content.Activities.Sample.Post
+namespace ApiProject.Activities.Sample.Get
 {
-    public class PostSampleCommand : IRequest<Unit>
+    public class Query : IRequest<Response>
     {
         [FromRoute(Name = "id")] public string Id { get; set; }
     }

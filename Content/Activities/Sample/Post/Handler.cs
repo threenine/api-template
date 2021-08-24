@@ -4,9 +4,9 @@ using MediatR;
 
 namespace ApiProject.Content.Activities.Sample.Post
 {
-    public class PostSampleHandler : IRequestHandler<PostSampleCommand, Unit>
+    public class Handler : IRequestHandler<Command, Unit>
     {
-        public Task<Unit> Handle(PostSampleCommand request, CancellationToken cancellationToken)
+        public Task<Unit> Handle(Command request, CancellationToken cancellationToken)
         {
             throw new System.NotImplementedException();
         }

@@ -18,7 +18,7 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
         <NoDefaultExcludes>true</NoDefaultExcludes>
-        <PackageReleaseNotes>Updated API endpoints, Automapper &amp; Swagger library references.  Added additional Sample endpoints</PackageReleaseNotes>
+        <PackageReleaseNotes>Added CustomSchemaIds to Swagger end point definitions.  Mediator Logging and Validation Behaviour pipelines implemented</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
         <Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**" />
@@ -28,6 +28,8 @@
         <PackageReference Include="AutoMapper" Version="10.1.1" />
         <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
         <PackageReference Include="Dawn.Guard" Version="1.12.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.1" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.1" />
         <PackageReference Include="MediatR" Version="9.0.0" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
         <PackageReference Include="Serilog" Version="2.10.0" />

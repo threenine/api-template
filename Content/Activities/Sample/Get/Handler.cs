@@ -5,16 +5,16 @@ using MediatR;
 
 namespace ApiProject.Activities.Sample.Get
 {
-    public class GetSampleHandler : IRequestHandler<GetSampleRequest, GetSampleResponse>
+    public class Handler : IRequestHandler<Query, Response>
     {
-        public async Task<GetSampleResponse> Handle(GetSampleRequest getSampleRequest, CancellationToken cancellationToken)
+        public async Task<Response> Handle(Query getSampleQuery, CancellationToken cancellationToken)
         {
             /// Your Logic Goes here 
             // This is only to supply an example and you should do whatever you need to achieve here
-            return await Task.FromResult(new GetSampleResponse
+            return await Task.FromResult(new Response
             {
                 Id = Guid.NewGuid().ToString(),
-                Name = nameof(GetSampleResponse)
+                Name = nameof(Response)
             });
         }
     }

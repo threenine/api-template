@@ -25,6 +25,7 @@ namespace ApiProject.Content
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "ApiProject", Version = "v1"});
+                c.CustomSchemaIds(x => x.FullName);
                 c.EnableAnnotations();
             });
             services.AddMediatR(typeof(Startup));
