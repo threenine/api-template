@@ -1,3 +1,4 @@
+using ApiProject.Behaviours;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -31,6 +32,7 @@ namespace ApiProject.Content
             });
             services.AddMediatR(typeof(Startup));
             services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
             services.AddAutoMapper(typeof(Startup));
         }
 

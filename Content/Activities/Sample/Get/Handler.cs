@@ -7,7 +7,7 @@ namespace ApiProject.Activities.Sample.Get
 {
     public class Handler : IRequestHandler<Query, Response>
     {
-        public async Task<Response> Handle(Query getSampleQuery, CancellationToken cancellationToken)
+        public async Task<Response> Handle(Query request, CancellationToken cancellationToken)
         {
             /// Your Logic Goes here 
             // This is only to supply an example and you should do whatever you need to achieve here

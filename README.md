@@ -26,3 +26,17 @@ dotnet new apiproject -o YourProjectName
 ```
 
 [![threenine logo](http://static.threenine.co.uk/img/github_footer.png)](https://threenine.co.uk/)
+
+### About
+
+This project started off as a repository for a sample project on [how to create project template in .net core](https://garywoodfine.com/how-to-create-project-templates-in-net-core/) which then subsequently resulted into a number of questions and enquiries over email.
+
+
+This project continues to evolve as more developers start to find it useful, I have subsequently posted [Update to API Project template](https://garywoodfine.com/update-to-api-project-template/) to discuss some of the changes made to the project and the rational behind them.
+
+
+
+-----------------------------------------------------------------------------------
+## Sponsored & Supported by 
+[![threenine logo](http://static.threenine.co.uk/img/github_footer.png)](https://threenine.co.uk/)
+
