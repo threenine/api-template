@@ -9,7 +9,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace ApiProject.Content.Activities.Sample
 {
-   [Route(RouteNames.Sample)]
+   [Route(Routes.Sample)]
     public class Get : BaseAsyncEndpoint.WithRequest<Query>.WithResponse<Response>
     {
         private readonly IMediator _mediator;
@@ -23,7 +23,7 @@ namespace ApiProject.Content.Activities.Sample
             Summary = "Retrieve a sample response by id ",
             Description = "Retrieves a sample response ",
             OperationId = "EF0A3653-153F-4E73-8D20-621C9F9FFDC9",
-            Tags = new[] {RouteNames.Sample})
+            Tags = new[] {Routes.Sample})
         ]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
