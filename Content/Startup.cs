@@ -31,6 +31,7 @@ namespace ApiProject.Content
                 c.CustomSchemaIds(x => x.FullName);
                 c.EnableAnnotations();
             });
+            services.AddTransient<ExceptionHandlingMiddleware>();
             services.AddMediatR(typeof(Startup))
                 .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
                 .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
