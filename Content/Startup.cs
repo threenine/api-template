@@ -1,4 +1,5 @@
 using ApiProject.Behaviours;
+using ApiProject.Content.Middleware;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -30,10 +31,10 @@ namespace ApiProject.Content
                 c.CustomSchemaIds(x => x.FullName);
                 c.EnableAnnotations();
             });
-            services.AddMediatR(typeof(Startup));
+            services.AddMediatR(typeof(Startup))
+                .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
+                .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
             services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
             services.AddAutoMapper(typeof(Startup));
         }
 
@@ -47,7 +48,7 @@ namespace ApiProject.Content
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiProject v1"));
             }
-
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
             app.UseHttpsRedirection();
 
             app.UseRouting();

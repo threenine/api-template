@@ -1,12 +1,7 @@
-using FluentValidation;
-
 namespace ApiProject.Activities.Sample.Get
 {
-    public class Validator : AbstractValidator<Query>
+    public class Validator
     {
-        public Validator()
-        {
-            RuleFor(c => c.Id).NotEmpty();
-        }
+        
     }
 }
