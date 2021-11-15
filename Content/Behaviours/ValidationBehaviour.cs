@@ -43,20 +43,7 @@ namespace ApiProject.Behaviours
 
             if (!failures.Any()) return await next();
             
-            var responseType = typeof(TResponse).GetGenericArguments()[0];
-            // TODO: Tidy this up to make use of reflection a little better to get basetype of class
-            if (responseType.BaseType.Name.Contains("SingleResponse"))
-            {
-                var invalidResponseType = typeof(SingleResponse<>).MakeGenericType(responseType);
-                var inValidResponse = Activator.CreateInstance(invalidResponseType, null, failures.ToList()) as TResponse;
-                return inValidResponse;
-            }
-            else
-            {
-                var invalidResponseType = typeof(ListResponse<>).MakeGenericType(responseType);
-                var inValidResponse = Activator.CreateInstance(invalidResponseType, null, failures.ToList()) as TResponse;
-                return inValidResponse;
-            }
+            return Activator.CreateInstance(typeof(TResponse), null, failures.ToList()) as TResponse;
           
 
         }
