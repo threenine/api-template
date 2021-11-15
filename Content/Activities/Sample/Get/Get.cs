@@ -10,7 +10,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace ApiProject.Content.Activities.Sample
 {
    [Route(Routes.Sample)]
-    public class Get : BaseAsyncEndpoint.WithRequest<Query>.WithResponse<Response>
+    public class Get : BaseAsyncEndpoint.WithRequest<Query>.WithResponse<SampleDetail>
     {
         private readonly IMediator _mediator;
 
@@ -25,15 +25,14 @@ namespace ApiProject.Content.Activities.Sample
             OperationId = "EF0A3653-153F-4E73-8D20-621C9F9FFDC9",
             Tags = new[] {Routes.Sample})
         ]
-        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SampleDetail))]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesErrorResponseType(typeof(NotFoundResult))]
         [Produces("application/json")]
-        public override async Task<ActionResult<Response>> HandleAsync([FromRoute] Query query, CancellationToken cancellationToken = new())
+        public override async Task<ActionResult<SampleDetail>> HandleAsync([FromRoute] Query query, CancellationToken cancellationToken = new())
         {
             var result = await _mediator.Send(query, cancellationToken);
-            if (result == null) return new NotFoundResult();
-            return new OkObjectResult(result);
+            return  result.IsValid ?  new OkObjectResult(result.Item) : new BadRequestObjectResult(result.Errors);
         }
     }
 }

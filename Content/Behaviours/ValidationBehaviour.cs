@@ -1,27 +1,30 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ApiProject.Resources;
 using FluentValidation;
 using MediatR;
 using Serilog;
-using ValidationException = ApiProject.Content.Exceptions.ValidationException;
+using Threenine.ApiResponse;
 
 namespace ApiProject.Behaviours
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TResponse : class
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
         private readonly ILogger _logger;
-
-        public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators, ILogger logger )
+        public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators, ILogger logger)
         {
             _validators = validators;
             _logger = logger;
         }
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+
+        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken,
+            RequestHandlerDelegate<TResponse> next)
         {
+
+            if (!typeof(TResponse).IsGenericType) return await next();
             if (!_validators.Any()) return await next();
 
             var context = new ValidationContext<TRequest>(request);
@@ -38,13 +41,24 @@ namespace ApiProject.Behaviours
                     })
                 .ToDictionary(x => x.Key, x => x.Values);
 
-            if (failures.Any())
+            if (!failures.Any()) return await next();
+            
+            var responseType = typeof(TResponse).GetGenericArguments()[0];
+            // TODO: Tidy this up to make use of reflection a little better to get basetype of class
+            if (responseType.BaseType.Name.Contains("SingleResponse"))
             {
-                _logger.Information(failures.ToString());
-                throw new ValidationException(ExceptionMessage.Validation, failures);
+                var invalidResponseType = typeof(SingleResponse<>).MakeGenericType(responseType);
+                var inValidResponse = Activator.CreateInstance(invalidResponseType, null, failures.ToList()) as TResponse;
+                return inValidResponse;
             }
+            else
+            {
+                var invalidResponseType = typeof(ListResponse<>).MakeGenericType(responseType);
+                var inValidResponse = Activator.CreateInstance(invalidResponseType, null, failures.ToList()) as TResponse;
+                return inValidResponse;
+            }
+          
 
-            return await next();
         }
     }
 }

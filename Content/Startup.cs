@@ -32,10 +32,11 @@ namespace ApiProject.Content
                 c.EnableAnnotations();
             });
             services.AddTransient<ExceptionHandlingMiddleware>();
+            services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
             services.AddMediatR(typeof(Startup))
                 .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
-                .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
-            services.AddValidatorsFromAssembly(typeof(Startup).Assembly);
+                .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+           
             services.AddAutoMapper(typeof(Startup));
         }
 
