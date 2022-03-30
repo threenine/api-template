@@ -11,7 +11,7 @@ Log.Logger = new LoggerConfiguration()
 Log.Information("Starting up");
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Host.UseSerilog((ctx, lc) => lc
@@ -31,6 +31,8 @@ builder.Services.AddMediatR(typeof(Program))
     .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
            
 builder.Services.AddAutoMapper(typeof(Program));
+
+
 var app = builder.Build();
 
 app.UseSerilogRequestLogging();
@@ -39,10 +41,11 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ApiProject v1"));
 }
-app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-app.UseRouting();
+app.UseHttpsRedirection();
+
 
 app.UseAuthorization();
-app.UseHttpsRedirection();
+app.MapControllers();
+app.Run();

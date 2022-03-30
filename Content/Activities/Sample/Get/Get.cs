@@ -10,7 +10,7 @@ using Swashbuckle.AspNetCore.Annotations;
 namespace ApiProject.Content.Activities.Sample
 {
    [Route(Routes.Sample)]
-    public class Get : BaseAsyncEndpoint.WithRequest<Query>.WithResponse<SampleDetail>
+    public class Get : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SampleDetail>
     {
         private readonly IMediator _mediator;
 
