@@ -1,41 +1,48 @@
-using System;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Hosting;
+using ApiProject.Behaviours;
+using ApiProject.Content.Middleware;
+using FluentValidation;
+using MediatR;
+using Microsoft.OpenApi.Models;
 using Serilog;
-using Serilog.Events;
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateBootstrapLogger();
 
-namespace ApiProject.Content
+Log.Information("Starting up");
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Host.UseSerilog((ctx, lc) => lc
+    .WriteTo.Console()
+    .ReadFrom.Configuration(ctx.Configuration));
+
+builder.Services.AddSwaggerGen(c =>
 {
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
-                .Enrich.FromLogContext()
-                .WriteTo.Console()
-                .CreateBootstrapLogger();
-            try
-            {
-                Log.Information("ApiProject Application is starting");
-                CreateHostBuilder(args).Build().Run();
-            }
-            catch (Exception ex)
-            {
-                Log.Fatal(ex, "ApiProject application failed to start");
-            }
-            finally
-            {
-                Log.CloseAndFlush();
-            }
-        }
+    c.SwaggerDoc("v1", new OpenApiInfo {Title = "ApiProject", Version = "v1"});
+    c.CustomSchemaIds(x => x.FullName);
+    c.EnableAnnotations();
+});
+builder.Services.AddTransient<ExceptionHandlingMiddleware>();
+builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
+builder.Services.AddMediatR(typeof(Program))
+    .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
+    .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+           
+builder.Services.AddAutoMapper(typeof(Program));
+var app = builder.Build();
 
-        public static IHostBuilder CreateHostBuilder(string[] args) =>
-            Host.CreateDefaultBuilder(args)
-                .UseSerilog((hostContext, LoggerConfiguration) =>
-                {
-                    LoggerConfiguration.ReadFrom.Configuration(hostContext.Configuration);
-                })
-                .ConfigureWebHostDefaults(webBuilder => { webBuilder.UseStartup<Startup>(); });
-    }
+app.UseSerilogRequestLogging();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
+// Configure the HTTP request pipeline.
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+app.UseRouting();
+
+app.UseAuthorization();
+app.UseHttpsRedirection();

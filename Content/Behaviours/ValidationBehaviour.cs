@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 using FluentValidation;
 using MediatR;
 using Serilog;
-using Threenine.ApiResponse;
+using ILogger = Serilog.ILogger;
 
 namespace ApiProject.Behaviours
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TResponse : class
+    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+        where TResponse : class
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
         private readonly ILogger _logger;
+
         public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators, ILogger logger)
         {
             _validators = validators;
@@ -23,7 +25,6 @@ namespace ApiProject.Behaviours
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken,
             RequestHandlerDelegate<TResponse> next)
         {
-
             if (!typeof(TResponse).IsGenericType) return await next();
             if (!_validators.Any()) return await next();
 
@@ -32,7 +33,7 @@ namespace ApiProject.Behaviours
                 await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, cancellationToken)));
             var failures = validationResults.SelectMany(r => r.Errors)
                 .Where(f => f != null)
-                .GroupBy(   x => x.PropertyName,
+                .GroupBy(x => x.PropertyName,
                     x => x.ErrorMessage,
                     (propertyName, errorMessages) => new
                     {
@@ -42,10 +43,8 @@ namespace ApiProject.Behaviours
                 .ToDictionary(x => x.Key, x => x.Values);
 
             if (!failures.Any()) return await next();
-            
-            return Activator.CreateInstance(typeof(TResponse), null, failures.ToList()) as TResponse;
-          
 
+            return Activator.CreateInstance(typeof(TResponse), null, failures.ToList()) as TResponse;
         }
     }
 }
