@@ -10,8 +10,8 @@ using ILogger = Serilog.ILogger;
 
 namespace ApiProject.Behaviours
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TResponse : class
+    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest,TResponse>
+        where TResponse : class where TRequest : IRequest<TResponse>
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
         private readonly ILogger _logger;
