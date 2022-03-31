@@ -19,7 +19,7 @@
         <IncludeBuildOutput>false</IncludeBuildOutput>
         <EnableDefaultContentItems>false</EnableDefaultContentItems>
         <NoDefaultExcludes>true</NoDefaultExcludes>
-        <PackageReleaseNotes>Added CustomSchemaIds to Swagger end point definitions.  Mediator Logging and Validation Behaviour pipelines implemented</PackageReleaseNotes>
+        <PackageReleaseNotes>Added Visual Studio File Nesting capabilities</PackageReleaseNotes>
     </PropertyGroup>
     <ItemGroup>
         <Content Include="**\**" Exclude="**\bin\**;**\obj\**;**\.idea\**" />
