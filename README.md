@@ -11,6 +11,7 @@ The problem is configuring a new project quite become a little repetitive, espec
 
 When developing projects along these lines it became clear to me that I also started adhering to the principles of Vertical Slice Architecture and Implementing more [elements of CQRS](https://garywoodfine.com/what-is-cqrs/ "What is CQRS | Gary Woodfine") into my API projects
 
+[Implementing Vertical Slice Architecture](https://garywoodfine.com/implementing-vertical-slice-architecture/ "Implementing Vertical Slice Architecture | Gary Woodfine") provides details of when and how to implement this project template.
 
 ## Logging
 The template is configured to make use of Serilog to enable structured logging. The logging configuration options have been defined for the Development Environment to print out the Console window and can be found in the `appsettings.Development.json`  . In order to deploy production you will need to define your logging configuration in `appsettings.Product.json`

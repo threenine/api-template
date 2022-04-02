@@ -7,9 +7,9 @@
         <IsPackable>true</IsPackable>
         <Title>API Project template</Title>
         <Authors>Gary Woodfine</Authors>
-        <Description>Project template to create Adralis API endpoint project</Description>
+        <Description>Project template to create vertical slice architecture project</Description>
         <RepositoryType>git</RepositoryType>
-        <PackageTags>api project, api endpoints,</PackageTags>
+        <PackageTags>api project, vertical slice,</PackageTags>
         <RepositoryUrl>https://github.com/threenine/api-template</RepositoryUrl>
         <Copyright>Copyright © 2005 - 2022 Three Nine Consulting Limited</Copyright>
         <PackageProjectUrl>https://threenine.co.uk</PackageProjectUrl>
