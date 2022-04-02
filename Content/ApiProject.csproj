@@ -11,7 +11,7 @@
         <RepositoryType>git</RepositoryType>
         <PackageTags>api project, api endpoints,</PackageTags>
         <RepositoryUrl>https://github.com/threenine/api-template</RepositoryUrl>
-        <Copyright>Copyright © 2005 - 2021 Three Nine Consulting Limited</Copyright>
+        <Copyright>Copyright © 2005 - 2022 Three Nine Consulting Limited</Copyright>
         <PackageProjectUrl>https://threenine.co.uk</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/threenine/api-template/blob/master/LICENSE</PackageLicenseUrl>
         <PackageIconUrl>http://static.threenine.co.uk/threenine_icon.png</PackageIconUrl>
