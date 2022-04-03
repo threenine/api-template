@@ -2,7 +2,7 @@
   "$schema": "http://json.schemastore.org/template",
   "author": "Gary Woodfine",
   "name": "API project template",
-  "description": "Project template to create Adralis API endpoint project",
+  "description": "Project template to implement Vertical Slice Architecture in projects",
   "identity": "Threenine.ApiProject",
   "shortName": "apiproject",
   "tags": {
