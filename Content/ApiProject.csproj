@@ -40,26 +40,4 @@
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.0" />
         <PackageReference Include="Threenine.ApiResponse" Version="0.1.41" />
     </ItemGroup>
-    <ItemGroup>
-      <EmbeddedResource Update="Resources\ExceptionTitle.resx">
-        <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>ExceptionTitle.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
-      <EmbeddedResource Update="Resources\ExceptionMessage.resx">
-        <Generator>ResXFileCodeGenerator</Generator>
-        <LastGenOutput>ExceptionMessage.Designer.cs</LastGenOutput>
-      </EmbeddedResource>
-    </ItemGroup>
-    <ItemGroup>
-      <Compile Update="Resources\ExceptionTitle.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>ExceptionTitle.resx</DependentUpon>
-      </Compile>
-      <Compile Update="Resources\ExceptionMessage.Designer.cs">
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-        <DependentUpon>ExceptionMessage.resx</DependentUpon>
-      </Compile>
-    </ItemGroup>
 </Project> 

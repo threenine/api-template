@@ -23,7 +23,7 @@ I discussed more of the details in [Implementing logging with Serilog](https://g
 ### Installation
 To use the template simply install it using
 ```text
-dotnet new --install Threenine.ApiProject::1.1.8
+dotnet new --install Threenine.ApiProject
  ```
 Will enable generating new projects using the template using
 ```

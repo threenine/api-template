@@ -43,7 +43,6 @@ namespace ApiProject.Content.Middleware
         private static string GetTitle(Exception exception) =>
             exception switch
             {
-                ValidationException ve => ve.Title,
                 NotFoundException nf => nf.Title,
 
                 _ => "Server Error"
@@ -52,7 +51,7 @@ namespace ApiProject.Content.Middleware
         private static int GetStatusCode(Exception exception) =>
             exception switch
             {
-                ValidationException => StatusCodes.Status400BadRequest,
+                
                 NotFoundException => StatusCodes.Status404NotFound,
                 _ => StatusCodes.Status500InternalServerError
             };
@@ -62,12 +61,7 @@ namespace ApiProject.Content.Middleware
         {
             IReadOnlyDictionary<string, string[]> errors = null;
 
-            if (exception is ValidationException validationException)
-            {
-                errors = validationException.Errors;
-            }
-
-            return errors;
+          return errors;
         }
     }
 }
