@@ -7,7 +7,6 @@ namespace Geekiam.Posts.Service.Features.Submit.Post;
 
 public class Command : IRequest<SingleResponse<Response>>
 {
-    
         
 }
 

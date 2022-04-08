@@ -12,9 +12,6 @@ namespace Namespace;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 {
-   
-
-
     public Handler()
     {
        

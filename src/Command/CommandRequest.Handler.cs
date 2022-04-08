@@ -12,10 +12,7 @@ namespace Namespace;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 {
-   
-
-
-    public Handler(IUnitOfWork unitOfWork, IMapper mapper)
+   public Handler(IUnitOfWork unitOfWork, IMapper mapper)
     {
        
     }

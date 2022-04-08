@@ -28,9 +28,7 @@ Query Endpoint        query       [C#]      webapi/cqrs/vertical slice
 
 To create a new project use the following command
 
-``
-dotnet new apiproject -n YourProjectName  -o src/
-``
+`dotnet new apiproject -n YourProjectName  -o src/`
 
 `-n` the name for the created output. If no name is specified, the name of the current directory is used.
 
@@ -40,22 +38,16 @@ dotnet new apiproject -n YourProjectName  -o src/
 
 To Generate a new Query Endpoint use
 
-``
-dotnet new query  -n GetAll --Namespace MyProject.Activities.Sample.GetAll
+`dotnet new query  -n GetAll --Namespace MyProject.Activities.Sample.GetAll`
 
-``
-
-`-n` Name of the Enpoint you would like create
+`-n` Name of the Endpoint you would like create
 `--Namespace` The namespace you would like your End point to be in
 
 ### Create a new Command Endpoint
 
 To Generate a new Command Endpoint use
 
-``
-dotnet new command  -n Post --Namespace MyProject.Activities.Sample.Post
-
-``
+`dotnet new command  -n Post --Namespace MyProject.Activities.Sample.Post`
 
 `-n` Name of the Enpoint you would like create
 `--Namespace` The namespace you would like your End point to be in
