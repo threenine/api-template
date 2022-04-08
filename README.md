@@ -14,7 +14,7 @@ When developing projects along these lines it became clear to me that I also sta
 [Implementing Vertical Slice Architecture](https://garywoodfine.com/implementing-vertical-slice-architecture/ "Implementing Vertical Slice Architecture | Gary Woodfine") provides details of when and how to implement this project template.
 
 ## Logging
-The template is configured to make use of Serilog to enable structured logging. The logging configuration options have been defined for the Development Environment to print out the Console window and can be found in the `appsettings.Development.json`  . In order to deploy production you will need to define your logging configuration in `appsettings.Product.json`
+The template is configured to make use of Serilog to enable structured logging. The logging configuration options have been defined for the Development Environment to print out the Console window and can be found in the `appsettings.Development.json`  . In order to deploy production you will need to define your logging configuration in `appsettings.Production.json`
 
 I discussed more of the details in [Implementing logging with Serilog](https://garywoodfine.com/implementing-logging-with-serilog/ "Implementing logging with Serilog | Gary Woodfine")
 
