@@ -17,3 +17,4 @@ branches:
     tag: beta
 ignore:
   sha: [ ]
+BaseVersionSource:  83a2b22084a08430f2a457f42a5b42974e922868
