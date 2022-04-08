@@ -4,20 +4,27 @@
   "name": "Command Endpoint",
   "description": "Command request for Vertical Slice Architecture",
   "identity": "Command Request",
-  "shortName": "CommandRequest",
+  "shortName": "command",
+  "sourceName": "CommandRequest",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "item"
   },
   "sourceName": "CommandRequest",
   "symbols": {
 	    "operationid" :{
 	     "type": "generated",
 	    "generator": "guid",
-	    "replaces": "myid01",
+	    "replaces": "operationid",
 	    "parameters": {
-	      "defaultFormat":"N"
+	      "defaultFormat":"d"
 	    }
+    },
+     "Namespace": {
+        "type": "parameter",
+        "replaces": "Namespace",
+        "dataType": "string",
+        "defaultValue": "Namespace"
     }
   },
   "classifications": [

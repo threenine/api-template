@@ -1,0 +1,14 @@
+<Project>
+  <PropertyGroup>
+       <Authors>Gary Woodfine</Authors>
+        <Description>Project template to create vertical slice architecture project</Description>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>api project, vertical slice,</PackageTags>
+        <RepositoryUrl>https://github.com/threenine/api-template</RepositoryUrl>
+        <Copyright>Copyright © 2005 - 2022 Three Nine Consulting Limited</Copyright>
+        <PackageProjectUrl>https://threenine.co.uk</PackageProjectUrl>
+        <license>https://github.com/threenine/api-template/blob/master/LICENSE</license>
+        <PackageIcon>icon.png</PackageIcon>
+        <Version></Version>
+  </PropertyGroup>
+</Project>

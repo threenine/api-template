@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
-namespace ApiProject.Content.Activities.Sample
+namespace ApiProject.Activities.Sample
 {
    [Route(Routes.Sample)]
     public class Get : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SampleDetail>

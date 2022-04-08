@@ -8,10 +8,10 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
 
-namespace Namespace;
+namespace Namespace.QueryRequest;
 
-[Route("CommandRequest")]
-public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>
+[Route("QueryRequest")]
+public class QueryRequest : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>
 {
     private readonly IMediator _mediator;
 
@@ -23,10 +23,10 @@ public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionR
         
     [HttpPost]
     [SwaggerOperation(
-        Summary = "CommandRequest",
-        Description = "CommandRequest",
+        Summary = "QueryRequest",
+        Description = "QueryRequest",
         OperationId = "operationid",
-        Tags = new[] { "CommandRequest" })
+        Tags = new[] { "QueryRequest" })
     ]
     [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(Response))]
     public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())

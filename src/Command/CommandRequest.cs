@@ -19,7 +19,14 @@ public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionR
     {
         _mediator = mediator;
     }
-        
+    
+    /*
+      Change [HttpPost] to any of the following HTTP Verbs if you require:
+      [HttpPut]
+      [HttpPatch]
+      [HttpDelete]
+    
+    */    
         
     [HttpPost]
     [SwaggerOperation(
