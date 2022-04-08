@@ -39,6 +39,7 @@ public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionR
     public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-        return result.IsValid ? new AcceptedResult(new Uri(Routes.Submit, UriKind.Relative), new {result.Item.Title,  result.Item.Url }): new BadRequestObjectResult(result.Errors);
+        //TODO: Set your prefered response result
+        return result.IsValid ? new AcceptedResult(new Uri("CommandRequest", UriKind.Relative), new {result.Item.Title,  result.Item.Url }): new BadRequestObjectResult(result.Errors);
     }
 }

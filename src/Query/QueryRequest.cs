@@ -20,7 +20,6 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Command>.WithActionRes
         _mediator = mediator;
     }
         
-        
     [HttpGet]
     [SwaggerOperation(
         Summary = "QueryRequest",
@@ -28,10 +27,11 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Command>.WithActionRes
         OperationId = "operationid",
         Tags = new[] { "QueryRequest" })
     ]
-    [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(Response))]
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
     public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-        return result.IsValid ? new AcceptedResult(new Uri(Routes.Submit, UriKind.Relative), new {result.Item.Title,  result.Item.Url }): new BadRequestObjectResult(result.Errors);
+        //Todo: Set your prefered result
+        return result.IsValid ? new OkObjectResult(result.Item) : new BadRequestObjectResult(result.Errors);
     }
 }
