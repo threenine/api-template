@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <PackageType>Template</PackageType>
+        <IsPackable>true</IsPackable>
+        <PackageId>Threenine.ApiProject</PackageId>
+        <TargetFramework>net6.0</TargetFramework>
+        <Title>API Project template</Title>
+         <PackageReadmeFile>readme.md</PackageReadmeFile>
+        <IncludeContentInPack>true</IncludeContentInPack>
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+        <EnableDefaultContentItems>false</EnableDefaultContentItems>
+        <ContentTargetFolders>content</ContentTargetFolders>
+        <NoDefaultExcludes>true</NoDefaultExcludes>
+     </PropertyGroup>
+    <ItemGroup>
+         <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
+         <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
+         <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
+          <None Include="icon.png" Pack="true" PackagePath="\"/>
+          <None Include="readme.md" Pack="true" PackagePath="\"/>
+         <Compile Remove="**\*" />
+    </ItemGroup>
+</Project> 

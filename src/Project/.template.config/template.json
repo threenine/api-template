@@ -3,7 +3,7 @@
   "author": "Gary Woodfine",
   "name": "API project template",
   "description": "Project template to implement Vertical Slice Architecture in projects",
-  "identity": "Threenine.ApiProject",
+  "identity": "ApiProject",
   "shortName": "apiproject",
   "tags": {
     "language": "C#",

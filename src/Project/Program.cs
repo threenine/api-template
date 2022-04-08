@@ -2,6 +2,9 @@ using ApiProject.Behaviours;
 using ApiProject.Content.Middleware;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Serilog;
 Log.Logger = new LoggerConfiguration()

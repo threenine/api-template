@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Gary Woodfine",
+  "name": "Query Endpoint",
+  "description": "Query request for Vertical Slice Architecture",
+  "identity": "Query Request",
+  "shortName": "query",
+  "sourceName" :"QueryRequest",
+  "preferNameDirectory": "true",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+	    "operationid" :{
+	     "type": "generated",
+	    "generator": "guid",
+	    "replaces": "operationid",
+	    "parameters": {
+	      "defaultFormat":"d"
+	    },
+    },
+     "Namespace": {
+        "type": "parameter",
+        "replaces": "Namespace",
+        "dataType": "string",
+        "defaultValue": "Namespace"
+    }
+  },
+  "classifications": [
+    "webapi", "cqrs", "vertical slice"
+  ]
+}

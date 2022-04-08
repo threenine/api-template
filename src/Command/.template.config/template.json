@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Gary Woodfine",
+  "name": "Command Endpoint",
+  "description": "Command request for Vertical Slice Architecture",
+  "identity": "Command Request",
+  "shortName": "command",
+  "sourceName": "CommandRequest",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "CommandRequest",
+  "symbols": {
+	    "operationid" :{
+	     "type": "generated",
+	    "generator": "guid",
+	    "replaces": "operationid",
+	    "parameters": {
+	      "defaultFormat":"d"
+	    }
+    },
+     "Namespace": {
+        "type": "parameter",
+        "replaces": "Namespace",
+        "dataType": "string",
+        "defaultValue": "Namespace"
+    }
+  },
+  "classifications": [
+    "webapi", "cqrs", "vertical"
+  ]
+}
