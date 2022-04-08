@@ -1,12 +1,10 @@
+next-version: 2.1.0
 branches:
   main:
     tag: ''
     increment: inherit
     source-branches:
-      - develop
-      - release
-      - feature
-      - hotfix
+      - master
     is-release-branch: true
   feature:
     increment: Minor
