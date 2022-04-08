@@ -7,7 +7,6 @@ namespace Namespace;
 
 public class Command : IRequest<SingleResponse<Response>>
 {
-    
         
 }
 

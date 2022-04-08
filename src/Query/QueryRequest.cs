@@ -21,7 +21,7 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Command>.WithActionRes
     }
         
         
-    [HttpPost]
+    [HttpGet]
     [SwaggerOperation(
         Summary = "QueryRequest",
         Description = "QueryRequest",
