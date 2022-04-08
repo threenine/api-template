@@ -4,7 +4,7 @@
         <IsPackable>true</IsPackable>
         <PackageId>Threenine.ApiProject</PackageId>
         <TargetFramework>net6.0</TargetFramework>
-        <Title>API Project template</Title>
+        <Title>Vertical Slice Architecture template</Title>
          <PackageReadmeFile>readme.md</PackageReadmeFile>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
