@@ -15,7 +15,7 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Command>.WithActionRes
 {
     private readonly IMediator _mediator;
 
-    public Post(IMediator mediator)
+    public QueryRequest(IMediator mediator)
     {
         _mediator = mediator;
     }
