@@ -15,14 +15,11 @@ This package provides an easy to implement project template to quickly and easil
 Once installed you can create new projects using the `dotnet new ` CLI commands.
 
 The template pack provides 3 options
-``
-Template Name         Short Name  Language  Tags                      
+`Template Name         Short Name  Language  Tags                      
 --------------------  ----------  --------  --------------------------
 API project template  apiproject  [C#]      webapi/cqrs/vertical      
 Command Endpoint      command     [C#]      webapi/cqrs/vertical      
-Query Endpoint        query       [C#]      webapi/cqrs/vertical slice
-
-``
+Query Endpoint        query       [C#]      webapi/cqrs/vertical slice`
 
 ### Generate New Api Project
 
