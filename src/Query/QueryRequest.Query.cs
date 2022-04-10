@@ -5,7 +5,7 @@ using Threenine.ApiResponse;
 
 namespace Namespace;
 
-public class Command : IRequest<SingleResponse<Response>>
+public class Query : IRequest<SingleResponse<Response>>
 {
         
 }

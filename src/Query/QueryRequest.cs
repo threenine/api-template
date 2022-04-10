@@ -11,7 +11,7 @@ using Threenine.ApiResponse;
 namespace Namespace.QueryRequest;
 
 [Route("QueryRequest")]
-public class QueryRequest : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>
+public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SingleResponse<Response>>
 {
     private readonly IMediator _mediator;
 
