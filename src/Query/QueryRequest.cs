@@ -28,7 +28,7 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResul
         Tags = new[] { "QueryRequest" })
     ]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
-    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
+    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Query request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
         //Todo: Set your prefered result
