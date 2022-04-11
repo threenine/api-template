@@ -10,14 +10,14 @@ using Threenine.ApiResponse;
 
 namespace Namespace;
 
-public class Handler : IRequestHandler<Command, SingleResponse<Response>>
+public class Handler : IRequestHandler<Query, SingleResponse<Response>>
 {
     public Handler()
     {
        
     }
 
-    public async Task<SingleResponse<Response>> Handle(Command request, CancellationToken cancellationToken)
+    public async Task<SingleResponse<Response>> Handle(Query request, CancellationToken cancellationToken)
     {
         return new SingleResponse<Response>(new Response());
     }

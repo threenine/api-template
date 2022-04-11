@@ -3,7 +3,7 @@ using FluentValidation;
 
 namespace Namespace;
 
-public class Validator : AbstractValidator<Command>
+public class Validator : AbstractValidator<Query>
 {
     public Validator()
     {

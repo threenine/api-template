@@ -10,7 +10,7 @@ Originally a project template to accelerate the implementation of the [Adralis A
 
 The problem is configuring a new project quite become a little repetitive, especially if you're a team developing a lot of microservice like API projects. This project template aims to provide everything you need to get up and running quickly.
 
-When developing projects along these lines it became clear to me that I also started adhering to the principles of Vertical Slice Architecture and Implementing more [elements of CQRS](https://garywoodfine.com/what-is-cqrs/ "What is CQRS | Gary Woodfine") into my API projects
+When developing projects along these lines it became clear to me that I also started adhering to the principles of Vertical Slice Architecture and Implementing more [elements of CQRS](https://garywoodfine.com/what-is-cqrs/ "What is CQRS | Gary Woodfine") into my API projects. This also lead me to explore and gain a deeper understanding of [Vertical Slice Architecture (VSA)](https://jimmybogard.com/vertical-slice-architecture/ "Vertical Slice Architecture | Jimmy Bogard")
 
 [Implementing Vertical Slice Architecture](https://garywoodfine.com/implementing-vertical-slice-architecture/ "Implementing Vertical Slice Architecture | Gary Woodfine") provides details of when and how to implement this project template.
 
