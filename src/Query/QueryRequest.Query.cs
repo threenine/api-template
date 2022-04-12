@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Threenine.ApiResponse;
 
-namespace Namespace;
+namespace Namespace.QueryRequest;
 
 public class Query : IRequest<SingleResponse<Response>>
 {

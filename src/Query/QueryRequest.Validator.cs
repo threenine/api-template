@@ -1,7 +1,7 @@
 using System;
 using FluentValidation;
 
-namespace Namespace;
+namespace Namespace.QueryRequest;
 
 public class Validator : AbstractValidator<Query>
 {

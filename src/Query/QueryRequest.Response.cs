@@ -1,6 +1,6 @@
 using System;
 
-namespace Namespace;
+namespace Namespace.QueryRequest;
 
 public class Response
 {

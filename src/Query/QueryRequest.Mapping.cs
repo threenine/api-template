@@ -1,7 +1,7 @@
 using AutoMapper;
 
 
-namespace Namespace;
+namespace Namespace.QueryRequest;
 
 public class Mapping: Profile
 {

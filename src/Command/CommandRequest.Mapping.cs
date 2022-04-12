@@ -1,7 +1,7 @@
 using AutoMapper;
 
 
-namespace Namespace;
+namespace Namespace.CommandRequest;
 
 public class Mapping: Profile
 {

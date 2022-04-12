@@ -3,7 +3,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Threenine.ApiResponse;
 
-namespace Geekiam.Posts.Service.Features.Submit.Post;
+namespace Namespace.CommandRequest;
 
 public class Command : IRequest<SingleResponse<Response>>
 {
