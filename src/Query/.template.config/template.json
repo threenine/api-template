@@ -18,7 +18,7 @@
 	    "replaces": "operationid",
 	    "parameters": {
 	      "defaultFormat":"d"
-	    },
+	    }
     },
      "Namespace": {
         "type": "parameter",

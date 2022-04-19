@@ -6,6 +6,7 @@
   "identity": "Command Request",
   "shortName": "command",
   "sourceName": "CommandRequest",
+  "preferNameDirectory": "true",
   "tags": {
     "language": "C#",
     "type": "item"
