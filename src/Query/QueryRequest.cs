@@ -35,4 +35,4 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResul
         //Todo: Set your prefered result
         return result.IsValid ? new OkObjectResult(result.Item) : new BadRequestObjectResult(result.Errors);
     }
-}snake
+}
