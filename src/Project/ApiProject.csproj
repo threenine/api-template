@@ -15,6 +15,6 @@
         <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.0" />
-        <PackageReference Include="Threenine.ApiResponse" Version="1.0.0" />
+        <PackageReference Include="Threenine.ApiResponse" Version="1.0.4" />
     </ItemGroup>
 </Project> 
