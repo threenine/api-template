@@ -30,6 +30,20 @@ Will enable generating new projects using the template using
 ```
 dotnet new apiproject -o YourProjectName
 ```
+
+### Generating endpoints
+Once the package is installed and you have generated your project there are also item templates included to enable you to quickly generate all the files your feature will most likely include i.e.
+* Endpoint
+* Mapping
+* Handler
+* Validator
+* Response
+
+The package provides 2 templates   Query & Command
+
+The convention is to typically create two Folders Under your Resource Folder in your Activities folder.  For instance if you are adding a User  route then under the User route you'll create two
+
+
 ## Give a Star! :star:
 
 If you like or are using this project to learn or start your solution, please give it a star. 
