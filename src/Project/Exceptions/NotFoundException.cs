@@ -1,7 +1,7 @@
 using System;
 
 
-namespace ApiProject.Content.Exceptions
+namespace ApiProject.Exceptions
 {
     [Serializable]
     public class NotFoundException : ApiProjectException

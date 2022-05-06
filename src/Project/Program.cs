@@ -1,5 +1,5 @@
 using ApiProject.Behaviours;
-using ApiProject.Content.Middleware;
+using ApiProject.Middleware;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Builder;

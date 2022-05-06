@@ -1,6 +1,6 @@
 using System;
 
-namespace ApiProject.Content.Exceptions
+namespace ApiProject.Exceptions
 {
     public class ApiProjectException : Exception
     {

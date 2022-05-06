@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using ApiProject.Content.Exceptions;
 using Microsoft.AspNetCore.Http;
 
-namespace ApiProject.Content.Middleware
+namespace ApiProject.Middleware
 {
     internal class ExceptionHandlingMiddleware : IMiddleware
     {

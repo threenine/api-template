@@ -1,4 +1,4 @@
-namespace ApiProject.Content.Activities
+namespace ApiProject.Activities
 {
     internal static class Routes
     {
