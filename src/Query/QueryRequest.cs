@@ -32,7 +32,7 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResul
     public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromRoute] Query request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-        //Todo: Set your prefered result
+       
         return result.IsValid ? new OkObjectResult(result.Item) : new BadRequestObjectResult(result.Errors);
     }
 }
