@@ -32,6 +32,6 @@ public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionR
     {
         var result = await _mediator.Send(request, cancellationToken);
         //TODO: Set your prefered response result
-        return result.IsValid ? new AcceptedResult(new Uri("CommandRequest", UriKind.Relative), new {result.Item.Title,  result.Item.Url }): new BadRequestObjectResult(result.Errors);
+        return result.IsValid ? new AcceptedResult(new Uri("CommandRequest", UriKind.Relative), new { result.Item }): new BadRequestObjectResult(result.Errors);
     }
 }
