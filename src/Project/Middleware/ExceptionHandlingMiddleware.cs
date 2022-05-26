@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json;
 using System.Threading.Tasks;
-using ApiProject.Content.Exceptions;
+using ApiProject.Exceptions;
 using Microsoft.AspNetCore.Http;
 
 namespace ApiProject.Middleware
