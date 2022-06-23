@@ -1,6 +1,7 @@
 using ApiProject.Behaviours;
 using ApiProject.Middleware;
 using FluentValidation;
+using Kingsbridge.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +27,7 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo {Title = "ApiProject", Version = "v1"});
     c.CustomSchemaIds(x => x.FullName);
+    c.DocumentFilter<JsonPatchDocumentFilter>();
     c.EnableAnnotations();
 });
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
