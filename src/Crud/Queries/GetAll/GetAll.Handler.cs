@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace  Namespace.Resource.Queries.GetAll;
+
+public class Handler : IRequestHandler<Query, SingleResponse<Response>>
+{
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
+
+    public Handler(IUnitOfWork unitOfWork, IMapper mapper)
+    {
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
+    }
+
+    public async Task<SingleResponse<Response>> Handle(Query request, CancellationToken cancellationToken)
+    {
+        var results = await _unitOfWork.GetReadOnlyRepositoryAsync<Model>()
+            .GetListAsync(x => x.Active == true, size: Int32.MaxValue);
+        
+        return new SingleResponse<Response>(new Response { Entity = _mapper.Map<List<Entity>>(results.Items)});
+    }
+}

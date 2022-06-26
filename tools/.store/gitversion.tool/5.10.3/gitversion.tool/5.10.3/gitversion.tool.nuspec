@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GitVersion.Tool</id>
+    <version>5.10.3</version>
+    <authors>GitTools and Contributors</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <icon>package_icon.png</icon>
+    <readme>README.md</readme>
+    <projectUrl>https://github.com/GitTools/GitVersion</projectUrl>
+    <description>Derives SemVer information from a repository following GitFlow or GitHubFlow. This is the .NET Core Global Tool allowing usage of GitVersion from command line.</description>
+    <releaseNotes>https://github.com/GitTools/GitVersion/releases</releaseNotes>
+    <copyright>Copyright GitTools 2022.</copyright>
+    <tags>Git Versioning GitVersion GitFlowVersion GitFlow GitHubFlow SemVer</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <repository type="git" url="https://github.com/GitTools/GitVersion" branch="support/5.x" commit="bc9c9d003e655385e3dd1ba3bd013e04062d2f9b" />
+  </metadata>
+</package>

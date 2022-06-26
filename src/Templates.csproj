@@ -13,7 +13,7 @@
         <NoDefaultExcludes>true</NoDefaultExcludes>
      </PropertyGroup>
     <ItemGroup>
-         <Compile Include="Project\Helpers\JsonPatchDocumentFilter.cs" />
+        <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />

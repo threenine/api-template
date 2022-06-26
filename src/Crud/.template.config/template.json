@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Gary Woodfine",
+  "name": "Basic Crud Endpoints Endpoint",
+  "description": "Query request for Vertical Slice Architecture",
+  "identity": "CRUD Endpoints",
+  "shortName": "crud",
+  "sourceName" :"Crud",
+  "preferNameDirectory": "true",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "symbols": {
+    "operationid" :{
+      "type": "generated",
+      "generator": "guid",
+      "replaces": "operationid",
+      "parameters": {
+        "defaultFormat":"d"
+      }
+    },
+    "Namespace": {
+      "type": "parameter",
+      "replaces": "Namespace",
+      "dataType": "string",
+      "defaultValue": "Namespace"
+    },
+    "Resource": {
+      "type": "parameter",
+      "replaces": "Resource",
+      "dataType": "string",
+      "defaultValue": "Resource"
+    },
+    "Model": {
+      "type": "parameter",
+      "replaces": "Model",
+      "dataType": "string",
+      "defaultValue": "Model"
+    },
+    "DTO": {
+      "type": "parameter",
+      "replaces": "DTO",
+      "dataType": "string",
+      "defaultValue": "DTO"
+    }
+    
+  },
+  "classifications": [
+    "webapi", "cqrs", "vertical slice"
+  ]
+}
