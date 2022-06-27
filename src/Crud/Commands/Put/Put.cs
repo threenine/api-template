@@ -21,10 +21,27 @@ public class Put : EndpointBaseAsync.WithRequest<Command>.WithActionResult<Singl
         Tags = new[] { Routes.Resource })
     ]
     [ProducesResponseType(StatusCodes.Status204NoContent)]
-    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
+    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromRoute] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-       
-        return result.IsValid ? new NoContentResult(): new BadRequestObjectResult(result.Errors);
+
+        if (result.IsValid)
+            new NoContentResult();
+        
+        return await HandleErrors(result.Errors);
+    }
+    
+    private Task<ActionResult> HandleErrors(List<KeyValuePair<string, string[]>> errors)
+    {
+        ActionResult result = null;
+        errors.ForEach(error =>
+        {
+            result = error.Key switch
+            {
+                ErrorKeyNames.Conflict => new ConflictResult(),
+                _ => new BadRequestObjectResult(errors)
+            };
+        });
+        return Task.FromResult(result);
     }
 }

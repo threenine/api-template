@@ -21,10 +21,26 @@ public class Patch : EndpointBaseAsync.WithRequest<Command>.WithActionResult<Sin
         Tags = new[] { Routes.Resource })
     ]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
-    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
+    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromRoute] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-        
-        return result.IsValid ? new OkObjectResult(result.Item) : new BadRequestObjectResult(result.Errors);
+
+        if (result.IsValid)
+            return new OkObjectResult(result.Item);
+             
+        return await HandleErrors(result.Errors);
+    }
+    private Task<ActionResult> HandleErrors(List<KeyValuePair<string, string[]>> errors)
+    {
+        ActionResult result = null;
+        errors.ForEach(error =>
+        {
+            result = error.Key switch
+            {
+                ErrorKeyNames.Conflict => new ConflictResult(),
+                _ => new BadRequestObjectResult(errors)
+            };
+        });
+        return Task.FromResult(result);
     }
 }

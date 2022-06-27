@@ -25,7 +25,13 @@
         "replaces": "Namespace",
         "dataType": "string",
         "defaultValue": "Namespace"
-    }
+    },
+    "Resource": {
+      "type": "parameter",
+      "replaces": "Resource",
+      "dataType": "string",
+      "defaultValue": "Resource"
+    },
   },
   "classifications": [
     "webapi", "cqrs", "vertical slice"

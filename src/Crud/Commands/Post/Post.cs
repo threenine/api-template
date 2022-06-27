@@ -25,7 +25,24 @@ public class Post : EndpointBaseAsync.WithRequest<Command>.WithActionResult<Sing
     public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-       
-        return result.IsValid ? new CreatedResult(new Uri(Routes.ChargeRates, UriKind.Relative), new { result.Item }): new BadRequestObjectResult(result.Errors);
+        
+          
+        if (result.IsValid)
+            return new CreatedResult(new Uri(Routes.Resource, UriKind.Relative), new { result.Item.Id });
+
+        return await HandleErrors(result.Errors);
+    }
+    private Task<ActionResult> HandleErrors(List<KeyValuePair<string, string[]>> errors)
+    {
+        ActionResult result = null;
+        errors.ForEach(error =>
+        {
+            result = error.Key switch
+            {
+                ErrorKeyNames.Conflict => new ConflictResult(),
+                _ => new BadRequestObjectResult(errors)
+            };
+        });
+        return Task.FromResult(result);
     }
 }

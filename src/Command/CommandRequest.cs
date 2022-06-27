@@ -10,7 +10,7 @@ using Threenine.ApiResponse;
 
 namespace Namespace.CommandRequest;
 
-[Route("CommandRequest")]
+[Route(Routes.Resource)]
 public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>
 {
     private readonly IMediator _mediator;
@@ -25,13 +25,30 @@ public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionR
         Summary = "CommandRequest",
         Description = "CommandRequest",
         OperationId = "operationid",
-        Tags = new[] { "CommandRequest" })
+        Tags = new[] { Routes.Resource })
     ]
-    [ProducesResponseType(StatusCodes.Status202Accepted, Type = typeof(Response))]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-        //TODO: Set your prefered response result
-        return result.IsValid ? new AcceptedResult(new Uri("CommandRequest", UriKind.Relative), new { result.Item }): new BadRequestObjectResult(result.Errors);
+        
+        if (result.IsValid)
+            return new CreatedResult(new Uri(Routes.Resource, UriKind.Relative), new { result.Item.Id });
+
+        return await HandleErrors(result.Errors);
+    }
+    
+    private Task<ActionResult> HandleErrors(List<KeyValuePair<string, string[]>> errors)
+    {
+        ActionResult result = null;
+        errors.ForEach(error =>
+        {
+            result = error.Key switch
+            {
+                ErrorKeyNames.Conflict => new ConflictResult(),
+                _ => new BadRequestObjectResult(errors)
+            };
+        });
+        return Task.FromResult(result);
     }
 }

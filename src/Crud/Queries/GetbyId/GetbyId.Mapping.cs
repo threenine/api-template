@@ -5,6 +5,6 @@ public class Mapping: Profile
     public Mapping()
     {
         // TODO: Add Mapping
-        CreateMap<Model, Response>();
+        CreateMap<Model, Response>(MemberList.None);
     }
 }

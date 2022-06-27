@@ -10,7 +10,7 @@ using Threenine.ApiResponse;
 
 namespace Namespace.QueryRequest;
 
-[Route("QueryRequest")]
+[Route(Routes.Resource)]
 public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SingleResponse<Response>>
 {
     private readonly IMediator _mediator;
@@ -25,7 +25,7 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResul
         Summary = "QueryRequest",
         Description = "QueryRequest",
         OperationId = "operationid",
-        Tags = new[] { "QueryRequest" })
+        Tags = new[] { Routes.Resource})
     ]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
     [ProducesErrorResponseType(typeof(BadRequestObjectResult))]
@@ -33,6 +33,23 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResul
     {
         var result = await _mediator.Send(request, cancellationToken);
        
-        return result.IsValid ? new OkObjectResult(result.Item) : new BadRequestObjectResult(result.Errors);
+        if (result.IsValid)
+            return new OkObjectResult(result.Item);
+        
+        return await HandleErrors(result.Errors);
+    }
+    
+    private Task<ActionResult> HandleErrors(List<KeyValuePair<string, string[]>> errors)
+    {
+        ActionResult result = null;
+        errors.ForEach(error =>
+        {
+            result = error.Key switch
+            {
+                ErrorKeyNames.Conflict => new ConflictResult(),
+                _ => new BadRequestObjectResult(errors)
+            };
+        });
+        return Task.FromResult(result);
     }
 }

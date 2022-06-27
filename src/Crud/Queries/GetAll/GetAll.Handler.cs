@@ -21,6 +21,6 @@ public class Handler : IRequestHandler<Query, SingleResponse<Response>>
         var results = await _unitOfWork.GetReadOnlyRepositoryAsync<Model>()
             .GetListAsync(x => x.Active == true, size: Int32.MaxValue);
         
-        return new SingleResponse<Response>(new Response { DTO = _mapper.Map<List<Entity>>(results.Items)});
+        return new SingleResponse<Response>(new Response { DTO = _mapper.Map<List<DTO>>(results.Items)});
     }
 }
