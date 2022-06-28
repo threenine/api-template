@@ -17,8 +17,13 @@
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
+         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Query\**\obj\**" />
           <None Include="icon.png" Pack="true" PackagePath="\" />
           <None Include="readme.md" Pack="true" PackagePath="\" />
          <Compile Remove="**\*" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Solution\src" />
+      <Folder Include="Solution\tests" />
     </ItemGroup>
 </Project> 

@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    container_name: Solution-sql
+    ports:
+      - 1433:1433
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password99()
+    networks:
+      - Solution
+networks:
+    kraken:
+      name: solution

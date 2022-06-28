@@ -1,0 +1,14 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+clone:
+  lfs: true
+  depth: full
+pipelines:
+  default:
+    - step:
+        name: Build
+        services:
+          - docker
+        script:
+          - dotnet new tool-manifest
+          - dotnet tool install Cake.Tool
+          - dotnet cake

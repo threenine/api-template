@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+
+  <ItemGroup>
+    <PackageReference Include="Kingsbridge.Database" Version="0.1.55" />
+  </ItemGroup>
+
+</Project>
