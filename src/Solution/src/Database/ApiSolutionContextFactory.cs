@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
-namespace Database.Solutions;
+namespace Database.ApiSolutions;
 
-internal class SolutionContextFactory : IDesignTimeDbContextFactory<SolutionContext>
+internal class ApiSolutionContextFactory : IDesignTimeDbContextFactory<ApiSolutionContext>
 {
-    public SolutionContext CreateDbContext(string[] args)
+    public ApiSolutionContext CreateDbContext(string[] args)
     {
         DbContextOptionsBuilder<SolutionContext> dbContextOptionsBuilder =
             new();

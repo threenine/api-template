@@ -9,7 +9,7 @@
     "language": "C#",
     "type": "project"
   },
-  "sourceName": "Solution",
+  "sourceName": "ApiSolution",
   "preferNameDirectory": true,
   "symbols": {
     "Framework": {

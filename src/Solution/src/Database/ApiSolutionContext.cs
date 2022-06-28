@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Database.Solutions;
 
-public class SolutionContext : BaseContext<SolutionContext>
+public class ApiSolutionContext : BaseContext<ApiSolutionContext>
 {
-    public SolutionContext(DbContextOptions<SolutionContext> options)
+    public ApiSolutionContext(DbContextOptions<ApiSolutionContext> options)
         : base(options)
     {
     }
