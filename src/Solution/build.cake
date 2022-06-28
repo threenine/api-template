@@ -13,7 +13,7 @@ string projectTag = "";
 
 Task("Clean")
     .Does(() => {
-    DotNetClean("./Solution.sln");
+    DotNetClean("./ApiSolution.sln");
 });
 
 Task("Restore")
