@@ -26,7 +26,7 @@ public class Put : EndpointBaseAsync.WithRequest<Command>.WithActionResult<Singl
         var result = await _mediator.Send(request, cancellationToken);
 
         if (result.IsValid)
-            new NoContentResult();
+            return new NoContentResult();
         
         return await HandleErrors(result.Errors);
     }
