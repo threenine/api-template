@@ -1,10 +1,8 @@
 ﻿using System.Reflection;
-using Kingsbridge.Database;
-using Kingsbridge.Engagements;
 using Microsoft.EntityFrameworkCore;
+using Threenine;
 
-
-namespace Database.Solutions;
+namespace Database.ApiSolutions;
 
 public class ApiSolutionContext : BaseContext<ApiSolutionContext>
 {
@@ -13,12 +11,10 @@ public class ApiSolutionContext : BaseContext<ApiSolutionContext>
     {
     }
 
-    //TODO: ADD your DbSets here
-
-   
+  
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema("Solution");
+        modelBuilder.HasDefaultSchema("ApiSolution");
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }

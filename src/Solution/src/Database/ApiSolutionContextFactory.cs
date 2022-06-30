@@ -1,5 +1,4 @@
 ﻿
-using Database.Solutions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 

@@ -2,7 +2,7 @@ version: '3.8'
 services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2017-latest
-    container_name: Solution-sql
+    container_name: ApiSolution-sql
     ports:
       - 1433:1433
     environment:

@@ -1,6 +1,6 @@
 using Api.Behaviours;
 using Api.Middleware;
-using Database.Solutions;
+using Database.ApiSolutions;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -55,7 +55,7 @@ app.UseMiddleware<ExceptionHandlingMiddleware>();
 // Database migrations
 using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
 {
-    var context = serviceScope.ServiceProvider.GetService<SolutionContext>();
+    var context = serviceScope.ServiceProvider.GetService<ApiSolutionContext>();
     context?.Database.Migrate();
 }
 
