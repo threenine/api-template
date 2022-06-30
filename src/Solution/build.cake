@@ -17,7 +17,7 @@ Task("Clean")
 });
 
 Task("Restore")
-.IsDependentOn("Clean")
+    .IsDependentOn("Clean")
     .Description("Restoring the solution dependencies")
     .Does(() => {
     
@@ -37,7 +37,7 @@ Task("Restore")
 
 Task("Version")
   .IsDependentOn("Restore")
-    .Does(() =>
+   .Does(() =>
 {
    var result = GitVersion(new GitVersionSettings {
         UpdateAssemblyInfo = true
@@ -105,8 +105,7 @@ Task("Publish")
 Task("Docker-Build")
  .IsDependentOn("Publish")
 .Does(() => {
-     // TODO:  Add you project tag here
-     
+    
     string [] tags = new string[]  {  $"{projectTag}:{version}";};
       Information("Building : Actors Docker Image");
     var settings = new DockerImageBuildSettings { Tag=tags};
