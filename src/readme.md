@@ -16,13 +16,21 @@ Once installed you can create new projects using the `dotnet new ` CLI commands.
 
 The template pack provides 3 options
 
-`Template Name         Short Name  Language  Tags`                      
-`--------------------  ----------  --------  --------------------------`
+`Template Name             Short Name     Language  Tags`                      
+`--------------------     ----------     --------  --------------------------  `
+`API Solution template     apisolution    [C#]      webpai/CQRS/vertical slice `
+`API project template      apiproject     [C#]      webapi/CQRS/vertical       ` 
+`CRUD Endpoints            crud           [C#}      webapi/CQRS/Vertical Slice `
+`Command Endpoint          command        [C#]      webapi/CQRS/vertical       `     
+`Query Endpoint            query          [C#]      webapi/CQRS/vertical slice `
 
-`API project template  apiproject  [C#]      webapi/cqrs/vertical `     
-`Command Endpoint      command     [C#]      webapi/cqrs/vertical `     
-`Query Endpoint        query       [C#]      webapi/cqrs/vertical slice`
 
+### Generate a new API Solution
+This template will generate an opinionated full REST API solution based on the API Project template and include Build Scripts using cake which will also create
+and publish your built docker container to Docker Hub.
+
+To generate a new solution use the following command
+`dotnet new apisolution -n <YourProjectName> --Root <YourRootNameSpace>`
 ### Generate New Api Project
 
 To create a new project use the following command
@@ -48,6 +56,6 @@ To Generate a new Command Endpoint use
 
 `dotnet new command  -n Post --Namespace MyProject.Activities.Sample.Post`
 
-`-n` Name of the Enpoint you would like create
+`-n` Name of the Endpoint you would like create
 `--Namespace` The namespace you would like your End point to be in
 

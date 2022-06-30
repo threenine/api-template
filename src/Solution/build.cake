@@ -4,8 +4,8 @@ var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
 string version = String.Empty;
 
-/// TODO: Update Project Tag Name for Docker Container name
-string projectTag = "";
+string projectTag = "ApiSolution";
+string rootNameSpace = "Root";
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
@@ -106,13 +106,18 @@ Task("Docker-Build")
  .IsDependentOn("Publish")
 .Does(() => {
     
-    string [] tags = new string[]  {  $"{projectTag}:{version}";};
+    string [] tags = new string[]  {  $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}";};
       Information("Building : Actors Docker Image");
     var settings = new DockerImageBuildSettings { Tag=tags};
     DockerBuild(settings, "./");
 });
 
-
+Task("Docker-Push")
+ .IsDependentOn("Docker-Build")
+.Does(() => {
+  
+    DockerPush( $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}");
+});
 
 //////////////////////////////////////////////////////////////////////
 // EXECUTION

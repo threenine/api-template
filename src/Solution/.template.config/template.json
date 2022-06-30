@@ -12,6 +12,12 @@
   "sourceName": "ApiSolution",
   "preferNameDirectory": true,
   "symbols": {
+    "Root": {
+      "type": "parameter",
+      "replaces": "Root",
+      "dataType": "string",
+      "defaultValue": "Threenine"
+    },
     "Framework": {
       "type": "parameter",
       "description": "The target framework for the project.",

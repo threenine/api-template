@@ -6,6 +6,6 @@
         <ImplicitUsings>true</ImplicitUsings>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
-        <RootNamespace>Threenine</RootNamespace>
+        <RootNamespace>Root</RootNamespace>
     </PropertyGroup>
 </Project>
