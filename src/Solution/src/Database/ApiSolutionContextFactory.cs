@@ -1,4 +1,5 @@
 ﻿
+using Database.Solutions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -8,10 +9,10 @@ internal class ApiSolutionContextFactory : IDesignTimeDbContextFactory<ApiSoluti
 {
     public ApiSolutionContext CreateDbContext(string[] args)
     {
-        DbContextOptionsBuilder<SolutionContext> dbContextOptionsBuilder =
+        DbContextOptionsBuilder<ApiSolutionContext> dbContextOptionsBuilder =
             new();
 
         dbContextOptionsBuilder.UseSqlServer(@"localBuild");
-        return new SolutionContext(dbContextOptionsBuilder.Options);
+        return new ApiSolutionContext(dbContextOptionsBuilder.Options);
     }
 }
