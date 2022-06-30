@@ -1,6 +1,7 @@
 using ApiProject.Behaviours;
 using ApiProject.Middleware;
 using FluentValidation;
+using Kingsbridge.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;

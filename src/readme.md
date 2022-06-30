@@ -14,7 +14,8 @@ This package provides an easy to implement project template to quickly and easil
 
 Once installed you can create new projects using the `dotnet new ` CLI commands.
 
-The template pack provides 3 options
+The template pack provides several options
+
 
 `Template Name             Short Name     Language  Tags`                      
 `--------------------     ----------     --------  --------------------------  `
