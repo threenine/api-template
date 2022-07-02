@@ -1,3 +1,7 @@
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Threenine.ApiResponse;
+
 namespace Namespace.Resource.Queries.GetbyId;
 
 public class Query : IRequest<SingleResponse<Response>>

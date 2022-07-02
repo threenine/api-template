@@ -1,3 +1,4 @@
+using Dtos;
 namespace Namespace.Resource.Queries.GetbyId;
 
 public class Response

@@ -1,3 +1,4 @@
+using Dtos;
 namespace Namespace.Resource.Queries.GetAll;
 
 public class Response
