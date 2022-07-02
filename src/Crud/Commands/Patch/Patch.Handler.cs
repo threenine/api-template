@@ -5,9 +5,9 @@ namespace Namespace.Resource.Commands.Patch;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 {
-    private readonly IDatabaseServices _services;
+    private readonly IDataService _services;
 
-    public Handler(IDatabaseServices services)
+    public Handler(IDataService services)
     {
         _services = services;
     }
