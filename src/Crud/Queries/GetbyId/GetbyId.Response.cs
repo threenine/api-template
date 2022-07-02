@@ -2,5 +2,5 @@ namespace Namespace.Resource.Queries.GetbyId;
 
 public class Response
 {
-   // TODO: Add properties
+  public DTO DTO { get; set; }
 }

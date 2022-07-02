@@ -5,7 +5,3 @@ public class Response
     public List<DTO> DTO { get; set; }
 }
 
-public class DTO
-{
-    
-}

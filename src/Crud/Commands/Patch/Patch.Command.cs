@@ -6,7 +6,3 @@ public class Command : IRequest<SingleResponse<Response>>
         [FromBody]  public JsonPatchDocument<DTO> DTO{ get; set; }
 }
 
-public class DTO
-{
-      // TODO: Add Properties for object  
-}
