@@ -1,7 +1,6 @@
 using Dtos;
 using MediatR;
 using Threenine;
-using MediatR;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Threenine.ApiResponse;

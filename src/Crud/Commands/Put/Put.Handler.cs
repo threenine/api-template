@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Dtos;
 using MediatR;
 using Threenine;
-using MediatR;
 using Threenine.ApiResponse;
 
 namespace  Namespace.Resource.Commands.Put;
