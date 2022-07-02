@@ -1,3 +1,6 @@
+using AutoMapper;
+using Dtos;
+
 namespace Namespace.Resource.Queries.GetAll;
 
 public class Mapping: Profile

@@ -1,3 +1,6 @@
+using AutoMapper;
+using Dtos;
+
 namespace  Namespace.Resource.Commands.Post;
 
 public class Mapping: Profile

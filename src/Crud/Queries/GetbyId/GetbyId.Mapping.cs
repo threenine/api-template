@@ -1,3 +1,6 @@
+using AutoMapper;
+using Dtos;
+
 namespace Namespace.Resource.Queries.GetbyId;
 
 public class Mapping: Profile
