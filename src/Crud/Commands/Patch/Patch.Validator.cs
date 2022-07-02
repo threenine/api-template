@@ -1,3 +1,4 @@
+using FluentValidation;
 namespace Namespace.Resource.Commands.Patch;
 
 public class Validator : AbstractValidator<Command>
