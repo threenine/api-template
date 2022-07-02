@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
+using AutoMapper;
+using MediatR;
+using Threenine.ApiResponse;
+using Threenine.Data;
 
 namespace  Namespace.Resource.Queries.GetAll;
 

@@ -1,3 +1,7 @@
+using AutoMapper;
+using MediatR;
+using Threenine.ApiResponse;
+using Threenine.Data;
 namespace Namespace.Resource.Queries.GetbyId;
 
 public class Handler : IRequestHandler<Query, SingleResponse<Response>>
