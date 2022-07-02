@@ -81,7 +81,7 @@ Task("Pack")
         NoRestore = true,
         MSBuildSettings = new DotNetMSBuildSettings()
                         .WithProperty("PackageVersion", version)
-                        .WithProperty("Copyright", $"Copyright threenine.co.uk {DateTime.Now.Year}")
+                        .WithProperty("Copyright", $"© Copyright threenine.co.uk {DateTime.Now.Year}")
                         .WithProperty("Version", version)
     };
     
