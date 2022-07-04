@@ -1,5 +1,5 @@
 using AutoMapper;
-using Dtos;
+using Dtos.DTOs.Post;
 
 namespace  Namespace.Resource.Commands.Post;
 

@@ -2,6 +2,8 @@ using AutoMapper;
 using MediatR;
 using Threenine.ApiResponse;
 using Threenine.Data;
+using Dtos.DTOs.Get;
+
 namespace Namespace.Resource.Queries.GetbyId;
 
 public class Handler : IRequestHandler<Query, SingleResponse<Response>>
@@ -18,7 +20,7 @@ public class Handler : IRequestHandler<Query, SingleResponse<Response>>
     public async Task<SingleResponse<Response>> Handle(Query request, CancellationToken cancellationToken)
     {
         var result = await _unitOfWork.GetReadOnlyRepositoryAsync<Model>()
-            .SingleOrDefaultAsync(x => x.Id == request.Id);
+            .SingleOrDefaultAsync(predicate: x => x.Id == request.Id);
         
         return new SingleResponse<Response>(_mapper.Map<Response>(result));
     }

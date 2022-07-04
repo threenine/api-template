@@ -2,6 +2,8 @@ using Dtos;
 using MediatR;
 using Threenine;
 using Threenine.ApiResponse;
+using Dtos.DTOs.Post;
+
 namespace Namespace.Resource.Commands.Post;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>

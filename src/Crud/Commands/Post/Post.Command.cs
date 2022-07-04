@@ -1,4 +1,4 @@
-using Dtos;
+using Dtos.DTOs.Post;
 using Threenine;
 using MediatR;
 using Threenine.ApiResponse;

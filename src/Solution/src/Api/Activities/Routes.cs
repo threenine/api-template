@@ -1,6 +1,6 @@
 namespace Api.Activities;
 
-public static class Routes
+internal static class Routes
 {
     // Add Your Resource Names here
    

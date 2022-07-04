@@ -13,12 +13,8 @@
         <NoDefaultExcludes>true</NoDefaultExcludes>
      </PropertyGroup>
     <ItemGroup>
-        <Compile Include="Dto\DTOs\Get\CustomerType.cs" />
-        <Compile Include="Dto\DTOs\Patch\CustomerType.cs" />
-        <Compile Include="Dto\DTOs\Post\CustomerType.cs" />
-        <Compile Include="Dto\DTOs\Put\CustomerType.cs" />
         <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
-        <Content Include="Dto\.template.config\template.json" />
+        <Content Include="Dto\**\*"  Exclude="Dto\bin\**;Dto\obj\**" />
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />

@@ -3,6 +3,7 @@ using Dtos;
 using MediatR;
 using Threenine.ApiResponse;
 using Threenine.Data;
+using Dtos.DTOs.Get;
 
 namespace  Namespace.Resource.Queries.GetAll;
 

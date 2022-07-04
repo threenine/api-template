@@ -1,4 +1,4 @@
-using Dtos;
+using Dtos.DTOs.Patch;
 using MediatR;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;

@@ -1,5 +1,5 @@
 using AutoMapper;
-using Dtos;
+using Dtos.DTOs.Get;
 
 namespace Namespace.Resource.Queries.GetbyId;
 

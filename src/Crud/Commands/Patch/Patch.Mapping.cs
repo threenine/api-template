@@ -1,5 +1,5 @@
 using AutoMapper;
-using Dtos;
+using Dtos.DTOs.Patch;
 
 namespace Namespace.Resource.Commands.Patch;
 
