@@ -6,7 +6,7 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6" />
-    <PackageReference Include="Threenine.Database.Configuration" Version="0.1.3" />
+    <PackageReference Include="Threenine.Database.Configuration" Version="0.1.4" />
       
   </ItemGroup>
 

@@ -1,3 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <ItemGroup>
+    <PackageReference Include="Threenine.Database.Configuration" Version="0.1.4" />
+  </ItemGroup>
 </Project>
