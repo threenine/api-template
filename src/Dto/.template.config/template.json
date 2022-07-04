@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Gary Woodfine",
+  "name": "API project template",
+  "description": "Project template to implement Vertical Slice Architecture in projects",
+  "identity": "DTO",
+  "shortName": "dto",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "DTO",
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project.",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net6.0"
+        }
+      ],
+      "defaultValue": "net6.0"
+    }
+  },
+  "classifications": [
+    "webapi", "cqrs", "vertical"
+  ]
+}
