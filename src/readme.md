@@ -31,7 +31,10 @@ This template will generate an opinionated full REST API solution based on the A
 and publish your built docker container to Docker Hub.
 
 To generate a new solution use the following command
+
 `dotnet new apisolution -n <YourProjectName> --Root <YourRootNameSpace>`
+
+
 ### Generate New Api Project
 
 To create a new project use the following command

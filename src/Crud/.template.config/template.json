@@ -47,6 +47,6 @@
     
   },
   "classifications": [
-    "webapi", "cqrs", "vertical slice"
+    "webapi", "cqrs", "vertical slice", "crud", "endpoints"
   ]
 }

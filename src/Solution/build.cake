@@ -5,7 +5,7 @@ var configuration = Argument("configuration", "Release");
 string version = String.Empty;
 
 string projectTag = "ApiSolution";
-string rootNameSpace = "Root";
+string rootNamespace = "Root";
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
@@ -106,7 +106,7 @@ Task("Docker-Build")
  .IsDependentOn("Publish")
 .Does(() => {
     
-    string [] tags = new string[]  {  $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}";};
+    string [] tags = new string[]  {  $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}"};
       Information("Building : Actors Docker Image");
     var settings = new DockerImageBuildSettings { Tag=tags};
     DockerBuild(settings, "./");

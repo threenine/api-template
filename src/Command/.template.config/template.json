@@ -35,6 +35,6 @@
     }
   },
   "classifications": [
-    "webapi", "cqrs", "vertical"
+    "webapi", "cqrs", "vertical", "endpoint"
   ]
 }

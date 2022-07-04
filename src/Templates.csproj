@@ -22,7 +22,7 @@
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
-         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Query\**\obj\**;Solution\.idea" />
+         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Query\**\obj\**;Solution\.idea;Solution\tools" />
           <None Include="icon.png" Pack="true" PackagePath="\" />
           <None Include="readme.md" Pack="true" PackagePath="\" />
          <Compile Remove="**\*" />

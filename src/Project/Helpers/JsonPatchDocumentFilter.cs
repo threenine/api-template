@@ -40,15 +40,10 @@ public class JsonPatchDocumentFilter : IDocumentFilter
             Description = "Array of operations to perform"
         });
 
-
         foreach (var path in swaggerDoc.Paths.SelectMany(p => p.Value.Operations)
                      .Where(p => p.Key == OperationType.Patch))
         {
-            // Any PATCH operation that needs to be excluded from assigning JsonPatchDocument contract resolver
-            // include the operation ID here
-            if (path.Value.OperationId.Contains("0c77c6c0-7689-44dc-aafd-a354c4336086")) continue;
-
-            foreach (var item in path.Value.RequestBody.Content.Where(c => c.Key != JsonPatchApplication))
+             foreach (var item in path.Value.RequestBody.Content.Where(c => c.Key != JsonPatchApplication))
                 path.Value.RequestBody.Content.Remove(item.Key);
 
             var response = path.Value.RequestBody.Content.SingleOrDefault(c => c.Key == JsonPatchApplication);

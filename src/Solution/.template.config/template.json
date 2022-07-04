@@ -31,6 +31,6 @@
     }
   },
   "classifications": [
-    "Solution"
+    "webapi", "cqrs", "vertical", "Solution"
   ]
 }
