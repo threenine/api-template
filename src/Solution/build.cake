@@ -107,7 +107,7 @@ Task("Docker-Build")
 .Does(() => {
     
     string [] tags = new string[]  {  $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}"};
-      Information("Building : Actors Docker Image");
+      Information("Building : Docker Image");
     var settings = new DockerImageBuildSettings { Tag=tags};
     DockerBuild(settings, "./");
 });
@@ -115,8 +115,11 @@ Task("Docker-Build")
 Task("Docker-Push")
  .IsDependentOn("Docker-Build")
 .Does(() => {
-  
-    DockerPush( $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}");
+   if (BuildSystem.GitHubActions.IsRunningOnGitHubActions)
+   {
+      Information("Pushing : Docker Image");
+      DockerPush( $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}");
+    }
 });
 
 //////////////////////////////////////////////////////////////////////
@@ -130,6 +133,7 @@ Task("Default")
        .IsDependentOn("Build")
        .IsDependentOn("Test")
        .IsDependentOn("Publish")
-       .IsDependentOn("Docker-Build");
+       .IsDependentOn("Docker-Build")
+       .IsDependentOn("Docker-Push");
 
 RunTarget(target);
