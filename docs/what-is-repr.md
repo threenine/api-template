@@ -1,6 +1,8 @@
 ---
 layout: page
 title: "What is the REPR pattern"
+parent: index
+nav_order: 1
 permalink: /what-is-repr-pattern
 ---
 
