@@ -8,7 +8,7 @@
         <PackageTags>api project, vertical slice,</PackageTags>
         <RepositoryUrl>https://github.com/threenine/api-template</RepositoryUrl>
         <Copyright>Copyright © $([System.DateTime]::Now.ToString("yyyy")) Three Nine Consulting Limited</Copyright>
-        <PackageProjectUrl>https://threenine.co.uk</PackageProjectUrl>
+        <PackageProjectUrl>https://www.apitemplatepack.com</PackageProjectUrl>
         <license>https://github.com/threenine/api-template/blob/master/LICENSE</license>
         <PackageIcon>icon.png</PackageIcon>
         <Version></Version>
