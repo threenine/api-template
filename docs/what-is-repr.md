@@ -1,6 +1,8 @@
+---
 layout: page
 title: "What is the REPR pattern"
 permalink: /what-is-repr-pattern
+---
 
 The REPR Design Pattern defines web API endpoints as having three components: 
 

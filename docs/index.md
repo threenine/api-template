@@ -1,6 +1,8 @@
-layout: page
-title: "API Template Pack"
-permalink: /
+---
+title:  API Template Pack
+has_children: true
+nav_order: 1
+---
 
 ![Image](apitemplatepack.png)
 
