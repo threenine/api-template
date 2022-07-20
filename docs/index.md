@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## API Template Pack
 
 You can use the [editor on GitHub](https://github.com/threenine/api-template/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
