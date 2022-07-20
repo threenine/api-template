@@ -10,7 +10,7 @@ The REPR Design Pattern defines web API endpoints as having three components:
 
 1. Request
 2. Endpoint
-3. Response. 
+3. Response 
 
 Providing a simplified concept to enable the development REST API endpoints and enforcing the Single Responsibility Principle for endpoints.
 
