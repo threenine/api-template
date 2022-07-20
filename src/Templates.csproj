@@ -3,8 +3,7 @@
         <PackageType>Template</PackageType>
         <IsPackable>true</IsPackable>
         <PackageId>Threenine.ApiProject</PackageId>
-        <TargetFramework>net6.0</TargetFramework>
-        <Title>Vertical Slice Architecture template</Title>
+       
          <PackageReadmeFile>readme.md</PackageReadmeFile>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -18,9 +17,8 @@
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
-         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Query\**\obj\**;Solution\.idea;Solution\tools" />
-          <None Include="icon.png" Pack="true" PackagePath="\" />
-          <None Include="readme.md" Pack="true" PackagePath="\" />
+         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\.idea;Solution\tools\**" />
+         <None Include="readme.md" Pack="true" PackagePath="\" />
          <Compile Remove="**\*" />
     </ItemGroup>
 </Project> 
