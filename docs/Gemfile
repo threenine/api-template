@@ -6,7 +6,7 @@ source "https://rubygems.org"
 
 group :jekyll_plugins do
   gem 'just-the-docs'
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed"
   gem "github-pages"
 end
 
