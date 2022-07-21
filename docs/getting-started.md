@@ -28,4 +28,14 @@ Provides the ability to generate an entire API Solution project. Which includes:
 - Github Action configuration
 - Bitbucket Pipeline 
 - Dotnet Cake Build Script
-- 
+
+To create a new solution using the `apisolution` template simply open a terminal window and execute the command with the supplied parameters below in chosen directory
+
+`dotnet new apisolution -n <name of your solution>  --Root <your chosen root namespace>`
+
+- `-n`  Is a name switch that is used to provide your project a name for instance _Cms_ 
+- `--Root` is a root namespace you would like to use for your project i.e. Your company name or some such.
+
+As an example we may want to develop a Headless CMS system for our company _Threenine_ with so you can execute the command as follows:
+
+`dotnet new apisolution -n Cms --Root Threenine`
