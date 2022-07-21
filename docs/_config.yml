@@ -13,7 +13,7 @@ twitter_username: threenine39
 github_username:  threenine
 remote_theme: just-the-docs/just-the-docs
 # Build settings
-theme: "just-the-docs"
+#theme: "just-the-docs"
 plugins:
   - jekyll-feed
     
