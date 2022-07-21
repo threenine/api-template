@@ -6,14 +6,14 @@ description: >- # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://apitemplatepack.com" 
+url: "https://www.apitemplatepack.com" 
 color_scheme: dark
 logo: "/assets/images/site-logo.png"
 twitter_username: threenine39
 github_username:  threenine
 remote_theme: just-the-docs/just-the-docs
 # Build settings
-#theme: "just-the-docs"
+
 plugins:
   - jekyll-feed
     
@@ -52,5 +52,6 @@ kramdown:
     block:
       line_numbers: false
 
+footer_content: "&copy 2022 <a href=\"https://www.threenine.co.uk\">threenine.co.uk</a>"
 
       
