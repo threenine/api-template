@@ -11,7 +11,7 @@ color_scheme: dark
 logo: "/assets/images/site-logo.png"
 twitter_username: threenine39
 github_username:  threenine
-
+remote_theme: just-the-docs/just-the-docs
 # Build settings
 theme: "just-the-docs"
 plugins:
