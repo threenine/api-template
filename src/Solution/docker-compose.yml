@@ -9,17 +9,20 @@ services:
     environment:
       ACCEPT_EULA: Y
   postgres:
-      container_name: ApiSolution_postgre
-      image: postgres
-      env_file:
-        - .env
-      
-      volumes:
-        - postgres:/data/postgres
-      ports:
-        - "5432:5432"
+    container_name: ApiSolution_postgre
+    image: postgres
+    env_file:
+      - .env
+    
+    volumes:
+      - postgres:/data/postgres
+    ports:
+      - "5432:5432"
     networks:
       - ApiSolution
+    restart: unless-stopped
 networks:
-    ApiSolution:
-      name: ApiSolution
+  ApiSolution:
+    driver: bridge
+volumes:
+  postgres:

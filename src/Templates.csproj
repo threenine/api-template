@@ -13,7 +13,7 @@
      </PropertyGroup>
     <ItemGroup>
         <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
-        <Content Include="Dto\**\*"  Exclude="Dto\bin\**;Dto\obj\**" />
+        <Content Include="Dto\**\*" Exclude="Dto\bin\**;Dto\obj\**" />
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />

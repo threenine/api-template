@@ -13,7 +13,7 @@ The API Template Pack is available as a Custom template for `dotnet new`  via nu
 
 ### Installation
 
-To install the API Template Pack you can simply do so by opening a terminal window and executing the following dotnet command line
+To install the API Template Pack you can simply do so by opening a terminal window and executing the following [dotnet new](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new-install) command line.
 
 ```shell
 
