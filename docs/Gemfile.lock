@@ -264,6 +264,7 @@ DEPENDENCIES
   github-pages
   http_parser.rb (~> 0.6.0)
   jekyll-feed
+  jekyll-seo-tag
   just-the-docs
   webrick (~> 1.7)
 

@@ -7,9 +7,12 @@ permalink: /docs/getting-started
 ---
 # Getting Started with API Template Pack
 
-The API Template Pack is available as a Custom template for `dotnet new`  via nuget package.
+The API Template Pack is available as a Custom template for `dotnet new`  via nuget package. 
+
+[Custom templates](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates) enable you to install from a NuGet package on any NuGet feed, by referencing a NuGet `.nupkg` file directly, or by specifying a file system directory that contains the template.
 
 ### Installation
+
 To install the API Template Pack you can simply do so by opening a terminal window and executing the following dotnet command line
 
 ```shell

@@ -12,10 +12,11 @@ logo: "/assets/images/site-logo.png"
 twitter_username: threenine39
 github_username:  threenine
 remote_theme: just-the-docs/just-the-docs
-# Build settings
+
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
     
 search_enabled: true
 search:

@@ -2,7 +2,7 @@
 layout: default
 title: "API Solution Template"
 parent: "Getting Started"
-nav_order: 3
+nav_order: 1
 ---
 # API Solution Template
 
