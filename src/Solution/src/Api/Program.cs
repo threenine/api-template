@@ -41,7 +41,7 @@ builder.Services.AddMediatR(typeof(Program))
     .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 
 var connectionString = builder.Configuration.GetConnectionString(ConnectionsStringName);
-builder.Services.AddDbContext<ApiSolutionContext>(x => x.UseSqlServer(connectionString)).AddUnitOfWork<ApiSolutionContext>();
+builder.Services.AddDbContext<ApiSolutionContext>(x => x.UseNpgsql(connectionString)).AddUnitOfWork<ApiSolutionContext>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddTransient<IDataService, DataService>();
