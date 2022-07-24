@@ -21,7 +21,12 @@ Once you have [installed the API Template Pack](../start/getting-started "Instal
 
 For the purpose of this tutorial we're going to assume you are working Ubuntu and using [Jetbrains Rider IDE](https://www.jetbrains.com/rider/), but the steps will be exactly the same on whichever [operating system with  .net 6 installed](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60).
 
-The project will start developing in this walk-through tutorial is a hypothetical Headless Content Management System for a Geek News service, for a *Geekiam*.  We'll be outputting our solution to a code folder and sub directory named Cms
+The project will start developing in this walk-through tutorial is a hypothetical Headless Content Management System for a Geek News service, for a *Geekiam*.  We'll be outputting our solution to a code folder and sub directory named `Cms`
+
+The full source Code for this  tutorial and is available at [Geek-I-Am
+/
+cms
+](https://github.com/Geek-I-Am/cms)
 
 To start the project we'll simply use the command below, the command switches are discussed in [API Solution Template](../../start/api-solution).
 
@@ -104,14 +109,87 @@ So we can simply add a C# class file and name it `Content.cs`. Once the class is
 
 We can simplify this process by making use of the BaseEntity abstract class which has all these properties pre-defined for us. All we need to do is inherit this class in our new `Content.cs`.
 
-BaseEntity will be in the `Threenine.Models` namespace that is already referenced in your `Models.csproj`.
+`BaseEntity` will be in the `Threenine.Models` namespace that is already referenced in your `Models.csproj`.
 
 ```csharp
 public class Content : BaseEntity
 {
     public string Title { get; set; }
     public string Summary { get; set; }
-    public string Motive { get; set; }
+    public string Body { get; set; }
+}
+
+```
+
+We will need a means to tag particular content so we will create a `Tags` Model
+
+```csharp
+public class Tag : BaseEntity
+{
+    public string Name { get; set; }
+    public string Permalink { get; set; }    
 }
 ```
+
+We will also need a mechanism to associate tags to content which will be a many to many relationship
+
+```csharp
+public class ContentTags
+{
+    public Guid ContentId { get; set; }
+    public Guid TagId { get; set; }
+    
+}
+```
+
+
+# Entity Type Configuration
+
+This is an area that the API Template Pack takes an opinionated stance, as we prefer making use of the Fluent Configurations over the Data Annotations, and this is due to the fact that the Fluent Configurations are purely far more powerful from a functionality perspective. In our opinion, the Fluent Configurations are also far more readable and understandable.
+
+The downsides to the Data Annotations relationships are all about conventions so breaking that is extremely hard whereas in Fluent Configuration it’s really easy. Microsoft have also admitted that Fluent Configuration for EF Core is an “Advanced” feature.
+
+We also take the opinion that Fluent Configurations are far closer to Clean Code principles. 
+
+The Database project is configured by default to make use of the Fluent Configuration and the API Template pack has some built in features to further make this easier for developers.
+ 
+For our simple project we'll add some Entity Type Configurations by making use of one of these features.
+
+We'll  create our first Entity Type Configuration by adding a new File to the `Database -> Configurations` folder and name it `ContentConfiguration.cs`
+
+We'll update the file with the following
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Models.Cms;
+using Threenine.Configurations.PostgreSql;
+
+namespace Database.Cmss.Configurations;
+
+public class ContentConfiguration : BaseEntityTypeConfiguration<Content>
+{
+    public override void Configure(EntityTypeBuilder<Content> builder)
+    {
+        builder.ToTable(nameof(Content));
+       
+        builder.Property(x => x.Title)
+            .HasColumnType(ColumnTypes.Varchar)
+            .HasMaxLength(75)
+            .IsRequired();
+
+        builder.Property(x => x.Summary)
+            .HasColumnType(ColumnTypes.Varchar)
+            .HasMaxLength(300)
+            .IsRequired();
+
+        builder.Property(x => x.Body)
+            .HasColumnType(ColumnTypes.Text);
+    }
+}
+```
+
+A key points to note with the changes we implement in this file is that, as you may remember when we created our `Content` model we inherited the `BaseEntity`  type. Which inludes some default properties on our class.  You'll notice that `ContentConfiguration` inherits the `BaseEntityTypeConfiguration` which will automatically configure these fields for us on our entity enabling us to purely focus on the fields we need to configure.
+
+We also need to mention a feature of the library that helps to eliminate the use of Magic Strings within our configurations, when we make use of `ColumnTypes`  which we import using the `Threenine.Configurations.PostgreSql` namespace.  This namespace includes all the possible Postgres data types you're likely to use in the tables of your API.
 
