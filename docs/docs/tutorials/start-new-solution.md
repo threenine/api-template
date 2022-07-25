@@ -2,7 +2,9 @@
 layout: default
 title: "How to start a new API Solution"
 parent: "Tutorials"
-nav_order: 1
+has_children: true
+nav_order: 2
+permalink: /docs/tutorials/start-new-solution
 ---
 
 # How to start a new API Solution using API Template Pack
@@ -40,8 +42,7 @@ We can  now open our Solution file in Rider to inspect the generated projects.
 
 ![Generated Solution](../../assets/images/api-solution-view.png)
 
-We have successfully generated our project and can set up our local develop environment we'll need to start developing.  We will need to get our preferred Database setup. API Template pack has chosen to use
-PostgreSQL as our preferred database.
+We have successfully generated our project and can set up our local develop environment we'll need to start developing.  We will need to get our preferred Database setup. API Template pack has chosen to use PostgreSQL as our preferred database system. To understand more about this specific choice of please read [Why use PostgreSQL for your database](../knowledge/postgres.md)
 
 To get Postgres up and running is as simple as starting the Docker Compose. Our preferred means of doing is using [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider/)
 
@@ -51,6 +52,12 @@ In the current implementation this  will spin up 2 systems that the API Template
 
 - [PostgresSQL database](../knowledge/postgres.md)
 - [SEQ Centralised Logging](https://datalust.co/seq) 
+
+## Root Namespace
+
+Before we proceed to connecting to the Database it is worth taken time to understand the purpose of the `--Root` switch. Primarily this is used to set the Root Namespace of your Solution, so all assemblies of your Solution will reside under specific namespace. This is implmented in the `Directory.Build.props` file of the solution, so you can change this at anytime without having to change multiple files. 
+
+[Learn more about Directory.Build.props](https://garywoodfine.com/what-is-this-directory-build-props-file-all-about "What is this Directory.Build.props file all about? - Gary Woodfine")
 
 # Connect to the Database
 
