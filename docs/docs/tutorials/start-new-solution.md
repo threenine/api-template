@@ -2,8 +2,7 @@
 layout: default
 title: "How to start a new API Solution"
 parent: "Tutorials"
-has_children: true
-nav_order: 2
+nav_order: 1
 permalink: /docs/tutorials/start-new-solution
 ---
 
@@ -203,3 +202,67 @@ A key points to note with the changes we implement in this file is that, as you 
 
 We also need to mention a feature of the library that helps to eliminate the use of Magic Strings within our configurations, when we make use of `ColumnTypes`  which we import using the `Threenine.Configurations.PostgreSql` namespace.  This namespace includes all the possible Postgres data types you're likely to use in the tables of your API.
 
+### Database Migrations
+
+To add database migrations to our solution after you have finished configuring your entities  is really easy.  
+
+#### Terminal window
+
+Using the terminal window change into the Database project directory
+
+```shell
+cd src/Database
+```
+
+We can then simply use the Entity Framework tools to generate migrations.
+
+```shell
+dotnet ef migrations add initial
+```
+
+The migrations will then be generated and stored in folder in the Database project.
+
+
+### Generate Data Transfer Objects
+
+In the field of programming a data transfer object (DTO) is an object that carries data between processes. The motivation for its use is that communication between processes is usually done resorting to remote interfaces (e.g., web services), where each call is an expensive operation. Because the majority of the cost of each call is related to the round-trip time between the client and the server, one way of reducing the number of calls is to use an object (the DTO) that aggregates the data that would have been transferred by the several calls, but that is served by one call only.
+
+The difference between data transfer objects and business objects or data access objects is that a DTO does not have any behavior except for storage, retrieval, serialization and deserialization of its own data (mutators, accessors, parsers and serializers). In other words, DTOs are simple objects that should not contain any business logic but may contain serialization and deserialization mechanisms for transferring data over the wire.
+
+What we primarily use DTO's for in the API Template pack is to basically transform our Data Models into outwardly facing contracts.
+
+Each end point will have a slightly different need or representation of this data, so you'll not want to try and use one object across all endpoints.  
+
+The API Template pack provides a convenient tool to generate your DTO classes for you.
+
+In your terminal window change into your DTO project directory
+
+```shell
+cd src/Dto
+```
+
+Then we can use the CLI tool to generate our DTO place holder objects and their associated folders.
+
+```shell
+
+dotnet new dto -n <name of your choice>
+```
+
+so for example if we wanted to create a Blog data transfer object, we could simply use
+
+```shell
+dotnet new dto -n Blog
+```
+ This will generate the place holder objects in the DTOs project
+
+![](../../assets/images/dto-generation.png)
+
+
+### Generate CRUD Endpoints
+
+The API Template Pack enables generating some basic CRUD endpoints to quickly enabling some endpoints to preform basic actions on the objects of your choice
+
+```shell
+
+dotnet new crud --Resource Blogs --Namespace Threenine.Api.Activities.Blog  --Model  Content --DTO Blog
+```
