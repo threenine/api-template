@@ -17,9 +17,9 @@ Many of the decisions and configuration options that have been implemented in th
 
 The typical API Template Pack solution come preconfigured with Logging, EntityFramework, Validation, Mapping, Unit Testing tools and more. We attempt to provide an entire local Docker Compose development environment with a PostgreSQL database and Seq as your centralised logging dashboard. We will be adding more as this project continues to evolve.
 
-### Start a new Solution
+## Start a new API Solution
 
-Once you have [installed the API Template Pack](../start/getting-started "Install API Template Pack") you ready to start generating your new project.
+Once you have [installed the API Template Pack](../../getting-started "Install API Template Pack") you ready to start generating your new project.
 
 For the purpose of this tutorial we're going to assume you are working Ubuntu and using [Jetbrains Rider IDE](https://www.jetbrains.com/rider/), but the steps will be exactly the same on whichever [operating system with  .net 6 installed](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60).
 

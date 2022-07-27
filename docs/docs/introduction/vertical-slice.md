@@ -2,22 +2,21 @@
 layout: default
 title: "Vertical Slice Architecture"
 parent: Introduction
-nav_order: 3
+nav_order: 4
 ---
-
 # What is Vertical Slice Architecture
 
-The Vertical Slice Architecture (VSA) is a technique that helps developing maintainable applications by separating the application around Features, Activity or Vertical Slice. 
+The *Vertical Slice Architecture (VSA)* is a technique that helps developing maintainable applications by separating the application around Features, Activity or Vertical Slice.
 
 This practice is influenced by an Agile project management practice of **Vertical Slicing**, where a work item is slimmed donw to a narrow focus. In other works, breaking the work into smaller pieces. Yet, the pieces have all the functions to be stand-alone. It may or may not require more features to be truly useful. However, as a piece of the system, it works on it's own.
 
 The key concept to note is that you will need all pieces of the system components to be included, so that the work can function with this piece of work.
 
 Ultimately, Vertical Slicing is a process of breaking work up, splitting up larger functionalut into more bite-sized pieces of work. Work that an Agile Sosftware development team can go execute on. This also ensures that once executed, it could be completed and the business or system gain value from it.
- 
+
 In the software developmnet approach we think of the application code in terms of features rather than the specific layer that it sits in. We treat each feature as a vertical slice, because every feature within the application is a separate component and it change change and evolve independently.
 
-When developing applications using this approach we consider every request and response as distinct use cases. Taking this a step further and thinking about REST API' we can further break the Requests into either **Queries** or **Commands**, which ultimately is also derived from **CQRS (Command Query Responsiblity Segregation)** 
+When developing applications using this approach we consider every request and response as distinct use cases. Taking this a step further and thinking about REST API' we can further break the Requests into either **Queries** or **Commands**, which ultimately is also derived from **CQRS (Command Query Responsiblity Segregation)**
 
 ![Vertical Slice](../../../assets/images/vertical-slice.png)
 

@@ -1,0 +1,14 @@
+@for $index from 1 through 6 {
+  h#{$index} {
+    color: #F78D14;
+    margin: 20px;
+  }
+}
+
+a {
+  color: #F78D14;
+}
+a:hover {
+  font-size: larger;
+  text-underline-color: fuchsia;
+}

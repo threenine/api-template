@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Why use PostgreSQL for your database"
-parent: "Knowledge"
+parent: "Knowledge Base"
 nav_order: 1
 ---
 

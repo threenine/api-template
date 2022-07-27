@@ -7,7 +7,9 @@ permalink: /docs/getting-started
 ---
 # Getting Started with API Template Pack
 
-The API Template Pack is available as a Custom template for `dotnet new`  via nuget package. 
+Creating a resilient, stable and secure REST API's is a difficult task, and many of the tasks you'll need to perform are quite repetitive and can be error prone if completed incorrectly.  The API Template pack aims to minimise the need to carry out these tasks, enabling you to only focus on the tasks that add real business value quickly.
+
+The API Template Pack is available as a Custom template for `dotnet new`  via a nuget package. 
 
 [Custom templates](https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates) enable you to install from a NuGet package on any NuGet feed, by referencing a NuGet `.nupkg` file directly, or by specifying a file system directory that contains the template.
 
@@ -36,3 +38,5 @@ Should for you for whatever reason need to uninstall the API Template pack this 
 dotnet new -u Threenine.ApiProject
 
 ```
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XuzlL-1V6oI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
