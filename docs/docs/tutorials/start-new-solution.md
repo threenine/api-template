@@ -100,7 +100,7 @@ Once you're connected you can then go select the schemas you're going to interes
 
 ### Building your Models and Database
 
-We can now start defining our Models for our database. An Entity Framework Core model is a conceptual model of an application's domain. 
+We can now start defining our Models for our database. An Entity Framework Core model is a conceptual model of an application's domain. It's important to re-iterate that your Data Model is not your resource model, as discussed in [Resources are not Data Models.](https://www.apitemplatepack.com/docs/introduction/resource-based-api/#resources-are-not-data-models)
 
 The domain includes all topics relevant to the problem solving areas of interest to the application users. The model includes data and can also include behaviour. _Typically, models for CRUD applications don't tend to incorporate a lot of behaviour_.
 
@@ -156,7 +156,10 @@ This is an area that the API Template Pack takes an opinionated stance, as we pr
 
 The downsides to the Data Annotations relationships are all about conventions so breaking that is extremely hard whereas in Fluent Configuration it’s really easy. Microsoft have also admitted that Fluent Configuration for EF Core is an “Advanced” feature.
 
-We also take the opinion that Fluent Configurations are far closer to Clean Code principles. 
+We also take the opinion that Fluent Configurations are far closer to Clean Code principles. The key advantages of Fluent Configurations are:
+
+- The Fluent API provides greater scope for configuration than attributes.
+- Configuration can be located in one place, away from the model classes.
 
 The Database project is configured by default to make use of the Fluent Configuration and the API Template pack has some built in features to further make this easier for developers.
  
