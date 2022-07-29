@@ -2,7 +2,7 @@
 layout: default
 title: "Vertical Slice Architecture"
 parent: Introduction
-nav_order: 4
+nav_order: 5
 ---
 # What is Vertical Slice Architecture
 

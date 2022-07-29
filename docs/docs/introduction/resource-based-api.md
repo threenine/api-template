@@ -14,7 +14,7 @@ Resource-based API's focus on the interactions across a network, independent of 
 
 It is vitally important to recognize that *resources are not the same thing as a data model*
 
-A data model, often refelected as a schema design in a database, is optimised for the read and write operations nexessary to support the required Input/Output (I/O) operations necessary to support the required I/O performance and reporting needs of a solution.
+A data model, often reflected as a schema design in a database, is optimised for the read and write operations necessary to support the required Input/Output (I/O) operations necessary to support the required I/O performance and reporting needs of a solution.
 
 Data operations may in fact be part of an API, the data model should not be use as the basis of the API Design.  Data models meet a specific set of requirements, including the read and write performance, data storage optimisations, query support, which mean that data models are optimised for the internal details of an application.
 
@@ -29,3 +29,22 @@ Web API's generally seek to address entirely different sets of goals including:
 API's are generally used as an integration layer between systems therefore they should remain stable over long periods of time, whereas data models may change to accomodate new or changing data access requirements.
 
 *API's may have an impact on a Data Model, they should evovle completely separately*.
+
+# Resources are not object or Domain Models
+
+Objects support collaboration with a codebase, and are often used to map to data models into code for easier manipulation.  Domain models are typically comprised of object used to represent the sepcific business domain, and used in a variety of ways to address the needs of the system often traversing different transactional contexts based on how they are applied.
+
+Object and Domain models can suffer from the same issues as exposed data models:
+- Constant Code Changes
+- Network chattiness
+- Data inconsistencies
+
+Web API's are most effective when they take the transactional boundaries into consideration rather than directly exposing the internal domain of object model behaviour.
+
+Great API's designs avoid leaking internal details, including database design choices or object mapping by shifting data design to message design.
+
+# Resource-based API's exchange messages.
+
+Resource-based API's are used to facilitate conversations between the business and users or remote systems.
+
+API design considers the conversational message exchange between system to produce desired outcomes by customers, partners and workforces. A great API design considers how these conversations evolve as requirements change.
