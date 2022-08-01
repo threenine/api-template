@@ -8,7 +8,14 @@ nav_order: 2
 
 A resource is a digital representation of a concept, often an entity or collection of entities that may change over time. It consists of unique name or identifier that can reference documents, images, collections of other resources or a digital representation of anything in the real world such as a person or thing.  Resources may even represent business processes and workflows.
 
-Resource-based API's focus on the interactions across a network, independent of how they are stored in a database or manifested as objects. The provide different operations or affordances as possible interactions with a specific resource.  Resources support multiple representations that allow Web Apps, Mobile Apps and reporting tools to interact with the resource using different media formats such as JSON or XM.
+Resource-based API's focus on the interactions across a network, independent of how they are stored in a database or manifested as objects. The provide different operations or affordances as possible interactions with a specific resource.  Resources support multiple representations that allow Web Apps, Mobile Apps and reporting tools to interact with the resource using different media formats such as JSON or XML.
+
+> The key abstraction of information in REST is a resource. Any information that can be named can be a resource: a document or image, a temporal service (e.g. "today's weather in Los Angeles"), a collection of other resources, a non-virtual object (e.g. a person), and so on. In other words, any concept that might be the target of an author's hypertext reference must fit within the definition of a resource. A resource is a conceptual mapping to a set of entities, not the entity that corresponds to the mapping at any particular point in time. - [Roy Fielding](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm#sec_5_2_1_1)
+> 
+>
+
+Resources form the nucleus of any REST API design. Resource identifiers (URI), Resource representations, API operations etc. are all built around the concept of *Resources*. It is very important to select the right resources and model the resources at the right granularity while designing the REST API so that the API consumers get the desired functionality from the APIs, the APIs behave correctly and the APIs are maintainable.
+
 
 ### Resources are not Data Models.
 
