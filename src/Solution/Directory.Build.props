@@ -6,6 +6,6 @@
         <ImplicitUsings>true</ImplicitUsings>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>disable</Nullable>
-        <RootNamespace>Root</RootNamespace>
+        <RootNamespace>placeHolder</RootNamespace>
     </PropertyGroup>
 </Project>

@@ -14,7 +14,7 @@
   "symbols": {
     "Root": {
       "type": "parameter",
-      "replaces": "Root",
+      "replaces": "placeHolder",
       "dataType": "string",
       "defaultValue": "Threenine"
     },
