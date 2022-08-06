@@ -13,6 +13,28 @@ At its most fundamental basic level the CQRS pattern primary focus is primarily 
 
 For the most part CQRS does not necessarily have any opinionated solution in regards to the databases etc. , although many may think the pattern itself implies you need different Write AND Read datastores.  This is most definitely not the case.  However, depending on the complexity and requirements of your project CQRS can be and is used to fulfil this kind of architecture, but it is by no means a hard requirement.
 
+#### Commands & Queries
+
+In CQRS Write & Read operations are defined as  Commands & Queries
+
+##### Commands
+
+A Command is an operation that can mutate the data without returning a value. Which are essentially any write operations, such as **Create**, **Update** and **Delete** operations.
+
+##### Queries
+
+Queries are operations that will never mutate data and will always return values and mostly comprise of **Read** operations.
+
+
+The API Template Pack steers you down the path of helping you to generate Commands & Queries folders for your endpoints and will also assist in helping you to generate individual folders for each command and query objects.  This ensures the implementation of the **Single Responsibility Principle** , which is also a leading concept within the implementation of the logic itself.  Each class within the Endpoint has a Single Responsibility, and only provides the functionality required to fulfil its purpose.  All classes combined combined together fulfil the purpose of the endpoint, but individually they only fulfil their specific purpose. These purposes are:
+
+- Endpoint
+- Validation
+- Mapping
+- Handler 
+- Request 
+- Response
+
 
 
 
