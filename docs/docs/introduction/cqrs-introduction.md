@@ -35,7 +35,68 @@ The API Template Pack steers you down the path of helping you to generate Comman
 - Request 
 - Response
 
+In each of the endpoints developed the _Request_ object is typically named as the either *Command* or *Query* this is done to enforce logical comprehension and manifest to the developer of what they are developing.
 
+### Domain Driven Design
 
+The API Template Pack may at first provide a misconception that it steers you away from implementing Domain Driven Design(DDD), however it does in many ways actually steer you down the path of a DDD.  One of the concepts we borrow rather heavily from DDD is the concept of *Ubiquitos Language*
+
+### Ubiquitos Language
+
+> A project needs a common language that is more robust than the lowest common denominator. With a conscious effort by the team, the domain modelcan provide the backbone for that common language, while connecting team communication to the software implementation. **The language can be ubiquitous in the team's work**
+> 
+
+In API development and more so in [Resource-Based API Design](https://www.apitemplatepack.com/docs/introduction/resource-based-api/ "Resource-Based API | API Template Pack") this language is primarily focused on Resources provided by the API and the operations that can be executed on the resources, which are primarily the **4 Verbs: Create, Read, Update and Delete**
+
+By narrowing the language of the project to Resource and 4 Verbs helps everyone to effectively communicate across the project effectively and even the code becomes easier to manage and communicate to other stakeholders.
+
+In the API Template Pack we further expand on this notion by including a majority of the REST Verbs into the vocabulary:
+
+* GET
+* POST
+* PUT
+* PATCH
+* DELETE
+* OPTIONS
+
+Typically most Resource Endpoints can be broken down to the following
+
+```shell
+├── Resource 
+│   └── Commands
+│       └── POST
+│       └── PATCH
+│       └── PUT
+│       └── DELETE
+│   └── Queries
+│       └── GET
+│       └── GETALL
+│       └── OPTIONS
+```
+
+### Custom HTTP Methods
+
+In chapter 9 of the [API Design Patterns](https://amzn.to/3vMrVcC) introduces the concept of _Custom Methods_ which are typically actions that cannot be expressed as one of the standard methods. While these behaviours could technically be handled by a resource standard method the bahavourial requirements of these operations would be quite out of place for a standard method.
+
+To address this API Template Pack helps to safely and predictably support these actions on a Web API while maintaining a simple, predictable and functional API using *custom methods*
+
+#### Implementation 
+
+Custom Methods look just like standard methods, although there are a few differences, one being the format of the HTTP request.  While standard methods rely on a combination of the request path and the HTTP method to indicate the behaviour of the method i.e. PATCH on a resource always indicates an update standard method.  Custom Methods cannot rely on the same mechanism. Primarily, because HTTP verbs are quite limited in their scope.
+
+Custom Methods have their own special format that puts the relevant information in the path of the request.
+
+There are basic rules to follow when implementing Custom Methods.
+
+1. Custom methods almost always use POST HTTP method. There are some very rare occasions where GET Or DELETE HTTP methods may be used.
+2. We use a Colon character `:` to indicate the resource has ended and the custom method has begun.
+
+### Additional Resources
+
+- [CQRS Documents by Greg Young](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf "CQRS Documents by Greg Young")
+- [Book Review: Domain Driven Design](https://garywoodfine.com/book-review-domain-driven-design "Book Review: Domain Driven Design | Gary Woodfine")
+- [Book Review: Implementing Domain Driven Design](https://garywoodfine.com/book-review-implementing-domain-driven-design "Book Review: Implementing Domain Driven Design | Gary Woodfine")
+- [Book Review: API Design Patterns](https://garywoodfine.com/book-review-api-design-patterns/ "Book Review: API Design Patterns | Gary Woodfine")
+- [Book Review: Principles of Web API Design](https://garywoodfine.com/book-review-principles-of-web-api-design/ "Book Review: Principles of Web API Design | Gary Woodfine")
 
 
