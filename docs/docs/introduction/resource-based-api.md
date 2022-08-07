@@ -55,3 +55,7 @@ Great API's designs avoid leaking internal details, including database design ch
 Resource-based API's are used to facilitate conversations between the business and users or remote systems.
 
 API design considers the conversational message exchange between system to produce desired outcomes by customers, partners and workforces. A great API design considers how these conversations evolve as requirements change.
+
+### Additional Resources
+- [API Design Patterns](https://garywoodfine.com/book-review-api-design-patterns/)
+- [Principles of Web API Design](https://garywoodfine.com/book-review-principles-of-web-api-design/)

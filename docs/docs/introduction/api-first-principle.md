@@ -37,6 +37,19 @@ A great DX is vital to the success of an API. When a great DX is delivered, deve
 
 DX is also vitally important if your API is to be used by internal developers too. 
 
+### API Design First 
+
+The goal of API Design is to make it easier to discover, integrate and deploy solutions in a way that is scalalbe for the organisation and external parties.
+
+Taking API design first approach starts by indentifying the capabilities to deliver then move toward an API design to deliver the desired outcomes - All before writing a line of code.
+
+An API design-first approach has 5 rapidly executed, iterative phases :
+
+1. **Discover** - Determine the digital capabilities the API needs to deliver
+2. **Design** - Produce an initial design or improve on existing API design to address the digital capabilities defined
+3. **Prototype** - produce a prototype or mmock API to gain feedback 
+4. **Deliver** - Deliver the API through a parallelised effort across developers, QA, Ops and documentation teams.
+5. **Onboard** - Ensure customers, partners, and/or internal developers are onboard with the API.
 
 
 ### Additional Resources
