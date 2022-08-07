@@ -91,6 +91,10 @@ There are basic rules to follow when implementing Custom Methods.
 1. Custom methods almost always use POST HTTP method. There are some very rare occasions where GET Or DELETE HTTP methods may be used.
 2. We use a Colon character `:` to indicate the resource has ended and the custom method has begun.
 
+Custom methods are nothing more API calls that fall outside the scope of a standard method and therefore aren't subject to the strict requirements that we impose on standard methods.
+
+![HTTP Custom Method](../../assets/images/custom-method.png)
+
 ### Additional Resources
 
 - [CQRS Documents by Greg Young](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf "CQRS Documents by Greg Young")
