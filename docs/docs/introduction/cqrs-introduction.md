@@ -5,7 +5,7 @@ parent: Introduction
 nav_order: 6
 ---
 
-The API Template Pack leads down to an opinionated path to implementing a [CQRS pattern](https://garywoodfine.com/what-is-cqrs/ "What is CQRS | Gary Woodfine"), the real benefits of introducing this pattern will come to fruition in later versions of the API Template Pack when we start delving more into the Microservices, Event-Storming and the Event-Driven Architecture aspects of the API Template Pack. However, at this early stage it is still quite important to understand the fundamental basics of CQRS and the how and why the API Template Pack starts you on the path from the very beginning.
+The API Template Pack leads down to an opinionated path to implementing a [CQRS pattern](https://garywoodfine.com/what-is-cqrs/ "What is CQRS - Gary Woodfine"), the real benefits of introducing this pattern will come to fruition in later versions of the API Template Pack when we start delving more into the Microservices, Event-Storming and the Event-Driven Architecture aspects of the API Template Pack. However, at this early stage it is still quite important to understand the fundamental basics of CQRS and the how and why the API Template Pack starts you on the path from the very beginning.
 
 ### Splitting Models into Read & Write Operations
 
@@ -46,7 +46,7 @@ The API Template Pack may at first provide a misconception that it steers you aw
 > A project needs a common language that is more robust than the lowest common denominator. With a conscious effort by the team, the domain modelcan provide the backbone for that common language, while connecting team communication to the software implementation. **The language can be ubiquitous in the team's work**
 > 
 
-In API development and more so in [Resource-Based API Design](https://www.apitemplatepack.com/docs/introduction/resource-based-api/ "Resource-Based API | API Template Pack") this language is primarily focused on Resources provided by the API and the operations that can be executed on the resources, which are primarily the **4 Verbs: Create, Read, Update and Delete**
+In API development and more so in [Resource-Based API Design](https://www.apitemplatepack.com/docs/introduction/resource-based-api/ "Resource-Based API - API Template Pack") this language is primarily focused on Resources provided by the API and the operations that can be executed on the resources, which are primarily the **4 Verbs: Create, Read, Update and Delete**
 
 By narrowing the language of the project to Resource and 4 Verbs helps everyone to effectively communicate across the project effectively and even the code becomes easier to manage and communicate to other stakeholders.
 
@@ -98,9 +98,9 @@ Custom methods are nothing more API calls that fall outside the scope of a stand
 ### Additional Resources
 
 - [CQRS Documents by Greg Young](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf "CQRS Documents by Greg Young")
-- [Book Review: Domain Driven Design](https://garywoodfine.com/book-review-domain-driven-design "Book Review: Domain Driven Design | Gary Woodfine")
-- [Book Review: Implementing Domain Driven Design](https://garywoodfine.com/book-review-implementing-domain-driven-design "Book Review: Implementing Domain Driven Design | Gary Woodfine")
-- [Book Review: API Design Patterns](https://garywoodfine.com/book-review-api-design-patterns/ "Book Review: API Design Patterns | Gary Woodfine")
-- [Book Review: Principles of Web API Design](https://garywoodfine.com/book-review-principles-of-web-api-design/ "Book Review: Principles of Web API Design | Gary Woodfine")
+- [Book Review: Domain Driven Design](https://garywoodfine.com/book-review-domain-driven-design "Book Review: Domain Driven Design - Gary Woodfine")
+- [Book Review: Implementing Domain Driven Design](https://garywoodfine.com/book-review-implementing-domain-driven-design "Book Review: Implementing Domain Driven Design - Gary Woodfine")
+- [Book Review: API Design Patterns](https://garywoodfine.com/book-review-api-design-patterns/ "Book Review: API Design Patterns - Gary Woodfine")
+- [Book Review: Principles of Web API Design](https://garywoodfine.com/book-review-principles-of-web-api-design/ "Book Review: Principles of Web API Design - Gary Woodfine")
 
 

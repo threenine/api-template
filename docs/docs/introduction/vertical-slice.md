@@ -55,4 +55,4 @@ The API Template Pack does not necessarily stop or get in the way of you impleme
 
 - [Vertical Slice Architecture - Jimmy Bogard](https://jimmybogard.com/vertical-slice-architecture/ "Vertical Slice Architecture - Jimmy Bogard")
 - [How to Implement Vertical Slice Architecture - Gary Woodfine](https://garywoodfine.com/implementing-vertical-slice-architecture/ "How to Implement Vertical Slice Architecture - Gary Woodfine")
-- [Book Review: Fundamentals of Software Architecture](https://garywoodfine.com/book-review-fundamentals-of-software-architecture "Book Review: Fundamentals of Software Architecture | Gary Woodfine")
+- [Book Review: Fundamentals of Software Architecture](https://garywoodfine.com/book-review-fundamentals-of-software-architecture "Book Review: Fundamentals of Software Architecture - Gary Woodfine")
