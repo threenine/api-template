@@ -12,15 +12,26 @@ This practice is influenced by an Agile project management practice of **Vertica
 
 The key concept to note is that you will need all pieces of the system components to be included, so that the work can function with this piece of work.
 
-Ultimately, Vertical Slicing is a process of breaking work up, splitting up larger functionalut into more bite-sized pieces of work. Work that an Agile Sosftware development team can go execute on. This also ensures that once executed, it could be completed and the business or system gain value from it.
+Ultimately, Vertical Slicing is a process of breaking work up, splitting up larger functionality into more bite-sized pieces of work that an Agile Software development team can go execute on. This also ensures that once executed, it could be completed and the business or system gain value from it.
 
-In the software developmnet approach we think of the application code in terms of features rather than the specific layer that it sits in. We treat each feature as a vertical slice, because every feature within the application is a separate component and it change change and evolve independently.
+In the software development approach we think of the application code in terms of features rather than the specific layer that it sits in. We treat each feature as a vertical slice, because every feature within the application is a separate component and it change change and evolve independently.
 
-When developing applications using this approach we consider every request and response as distinct use cases. Taking this a step further and thinking about REST API' we can further break the Requests into either **Queries** or **Commands**, which ultimately is also derived from **CQRS (Command Query Responsiblity Segregation)**
+When developing applications using this approach we consider every request and response as distinct use cases. Taking this a step further and thinking about REST API' we can further break the Requests into either **Queries** or **Commands**, which ultimately is also derived from **[CQRS (Command Query Responsiblity Segregation)](https://www.apitemplatepack.com/docs/introduction/cqrs-introduction/)**
 
 ![Vertical Slice](../../../assets/images/vertical-slice.png)
 
 A feature or slice covers all the layers of a traditional architecture design and instead of coupling across a layer, we couple along the “slice”. The aim is to **maximize cohesion in the slice while minimizing coupling between the slices**.
+
+### Principles of Vertical Slice Architecture
+
+#### Use-case Driven
+System are developed based on a slice and structured around Features and Capabilities. Splitting off features/capabilities for things like scaling out is much less difficult.
+
+#### Melting Abstractions
+There are no gates or barriers across layers - everything needed for the system to do something is included in the slice itself where possible.
+
+#### Axis Of Change
+a core tenet of vertical slicing is a belief tha things that change together should be near each other. Whenever a feature is added, removed, or changed the things that change should not be scattered across the entire code base. Therefore removing, deleting or editing a feature can be done by working in one folder.
 
 ### Advantages of Vertical Slice Architecture
 
