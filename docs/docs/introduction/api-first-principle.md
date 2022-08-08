@@ -51,6 +51,7 @@ An API design-first approach has 5 rapidly executed, iterative phases :
 4. **Deliver** - Deliver the API through a parallelised effort across developers, QA, Ops and documentation teams.
 5. **Onboard** - Ensure customers, partners, and/or internal developers are onboard with the API.
 
+The goal of the API first approach is to gather sufficient details to limit the risk of breaking changes in the future.  API first and Agile software development practices are ideal companions
 
 ### Additional Resources
 

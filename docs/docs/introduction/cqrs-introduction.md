@@ -13,15 +13,15 @@ At its most fundamental basic level the CQRS pattern primary focus is primarily 
 
 For the most part CQRS does not necessarily have any opinionated solution in regards to the databases etc. , although many may think the pattern itself implies you need different Write AND Read datastores.  This is most definitely not the case.  However, depending on the complexity and requirements of your project CQRS can be and is used to fulfil this kind of architecture, but it is by no means a hard requirement.
 
-#### Commands & Queries
+### Commands & Queries
 
 In CQRS Write & Read operations are defined as  Commands & Queries
 
-##### Commands
+#### Commands
 
 A Command is an operation that can mutate the data without returning a value. Which are essentially any write operations, such as **Create**, **Update** and **Delete** operations.
 
-##### Queries
+#### Queries
 
 Queries are operations that will never mutate data and will always return values and mostly comprise of **Read** operations.
 
@@ -74,6 +74,28 @@ Typically most Resource Endpoints can be broken down to the following
 │       └── OPTIONS
 ```
 
+The API template pack simplifies the return value types to be expected from the standard methods with the focus of delivering _unsurprising API's_ or consistent API's
+
+> Unsurprising API's rely on repeated patterns applied to both API surface definition and the behaviour
+> 
+> [API Design Patterns](https://amzn.to/3BM12ZV)
+
+To this end API template steers you down the path of attempting to ensure all methods follow a standard return codes and error codes.
+
+| Verb | Action | Success | Failure |
+|--|--------|---------|---------|
+| GET |  Fetches a record or set of resources       | 200     | 404     |
+| POST |  creates a resource      |    201     |    404, 409     |
+| PUT |  Updates or replaces the given record      |  200, 204      |   404      |
+| PATCH  |  modifies or partially updates a given record     |  200, 204       |   404      |
+| DELETE |  Deletes the given resource      |   200      |    404     |
+| OPTIONS | Fetches all available REST operations | 200 | - |
+
+
+
+
+
+
 ### Custom HTTP Methods
 
 In chapter 9 of the [API Design Patterns](https://amzn.to/3vMrVcC) introduces the concept of _Custom Methods_ which are typically actions that cannot be expressed as one of the standard methods. While these behaviours could technically be handled by a resource standard method the bahavourial requirements of these operations would be quite out of place for a standard method.
@@ -91,9 +113,12 @@ There are basic rules to follow when implementing Custom Methods.
 1. Custom methods almost always use POST HTTP method. There are some very rare occasions where GET Or DELETE HTTP methods may be used.
 2. We use a Colon character `:` to indicate the resource has ended and the custom method has begun.
 
-Custom methods are nothing more API calls that fall outside the scope of a standard method and therefore aren't subject to the strict requirements that we impose on standard methods.
+Custom methods are nothing more than API calls that fall outside the scope of a standard method and therefore aren't subject to the strict requirements that we impose on standard methods.
 
 ![HTTP Custom Method](../../assets/images/custom-method.png)
+
+
+
 
 ### Additional Resources
 
