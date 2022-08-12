@@ -26,3 +26,5 @@ services:
 networks:
   apisolution:
     driver: bridge
+volumes:
+  postgres:
