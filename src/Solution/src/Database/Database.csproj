@@ -11,8 +11,8 @@
             <PrivateAssets>all</PrivateAssets>
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
-        <PackageReference Include="Npgsql" Version="6.0.8" />
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.8" />
+        <PackageReference Include="Npgsql" Version="6.0.6" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.6" />
         <PackageReference Include="Threenine.Database.Configuration" Version="0.2.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.8" />
     </ItemGroup>
