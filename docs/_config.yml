@@ -15,6 +15,7 @@ remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
     
 search_enabled: true
 search:
