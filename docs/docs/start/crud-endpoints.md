@@ -17,7 +17,7 @@ The basic crud endpoints will generate a whole set of CRUD (Create, Read, Update
 - *DTO* - The name of we're targeting
 
 
-To generaate new CRUD endpoints, assuming you have created your Model and DTO claases. You change into the `Activities` folder of your API in your terminal window. i.e.  `cd src/Api/Activities` 
+To generate new CRUD endpoints, assuming you have created your Model and DTO classes. You change into the `Activities` folder of your API in your terminal window. i.e.  `cd src/Api/Activities` 
 
 ```shell
 
