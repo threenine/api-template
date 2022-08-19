@@ -14,7 +14,7 @@ Resource-based API's focus on the interactions across a network, independent of 
 > 
 >
 
-Resources form the nucleus of any REST API design. Resource identifiers (URI), Resource representations, API operations etc. are all built around the concept of *Resources*. It is very important to select the right resources and model the resources at the right granularity while designing the REST API so that the API consumers get the desired functionality from the APIs, the APIs behave correctly and the APIs are maintainable.
+Resources form the nucleus of any [REST API design](what-is-rest). Resource identifiers (URI), Resource representations, API operations etc. are all built around the concept of *Resources*. It is very important to select the right resources and model the resources at the right granularity while designing the REST API so that the API consumers get the desired functionality from the APIs, the APIs behave correctly and the APIs are maintainable.
 
 
 ### Resources are not Data Models.

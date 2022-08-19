@@ -27,4 +27,3 @@ API documentation is the most important user interface for developers and should
 
 API's are forever, so you need to plan accordingly. A thoughtful API design combined with an evolutionary design approach makes API's resilient to change.
 
-API 
