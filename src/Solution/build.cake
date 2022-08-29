@@ -5,7 +5,7 @@ var configuration = Argument("configuration", "Release");
 string version = String.Empty;
 
 string projectTag = "ApiSolution";
-string rootNamespace = "Root";
+string rootNamespace = "placeHolder";
 
 //////////////////////////////////////////////////////////////////////
 // TASKS
