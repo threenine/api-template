@@ -39,3 +39,4 @@ dotnet new -u Threenine.ApiProject
 
 ```
 
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/api-template-pack-install/f2e725223b40144f7b6b77c9601120946fa3d303?r=DUjCQUL6MekhtSGNTPSWv8Ek7S28w12a" allowfullscreen></iframe>
