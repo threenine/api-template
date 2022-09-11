@@ -1,16 +1,18 @@
 @for $index from 1 through 6 {
   h#{$index} {
     color: #F78D14;
-    margin: 20px;
+    margin: 25px;
   }
 }
-
+p{ line-height: 1.5em;}
 a {
-  color: #F78D14;
+   color: #F78D14;
+   text-decoration: none;
 }
 a:hover {
   font-size: larger;
-  text-underline-color: fuchsia;
+  text-underline-color: #F78D14;
+  text-decoration: underline;
 }
 
 blockquote{
