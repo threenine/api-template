@@ -89,10 +89,19 @@ This command will generate a full API Solution template
 
 This will generate a full API Solution stub containing the typical project configuration for your solution. Enabling you to focus on the aspects of your project that really add value.
 
-> The API solution makes use of Semantic Versioning and makes use of **GitVersion** which requires a Git Repository, so all you
-> need to do to activate this is to create a Git Repository by Changing into the root of your created directory and using `git init`  [How to create a Git Repository](https://geekiam.io/how-to-create-git-repository "How To Create A Git Repository - geekiam.io")
 
 ### Running the generated project
+
+From the outset the API Solution template, is ready for you to start your development projects and you can start coding and implementing the business value required with just a couple of additional steps after creating your project.
+
+The first step, you're most likely want to take when creating your project, is initiating your preferred Version Control repository. By convention, a vast majority of software developers predominantly make use of [Git - Version Control](https://geekiam.io/what-is-git "What is Git - geekiam.io"). 
+
+
+> The API solution makes use of Semantic Versioning and makes use of **GitVersion** which requires a Git Repository, so all you
+> need to do to activate this is to create a Git Repository by Changing into the root of your created directory and using:
+> 
+> `git init`  
+> [How to create a Git Repository](https://geekiam.io/how-to-create-git-repository "How To Create A Git Repository - geekiam.io")
 
 The API template Pack, takes an opinionated view, on defining PostgreSQL as the default database to base API's from. We have detailed the number of [reasons why we chose PostgreSQL](../../knowledge/postgres) as the default database option.   As such we we included a Docker-compose script that will setup a local PostgreSQL database for you.
 

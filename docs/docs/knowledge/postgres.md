@@ -7,15 +7,24 @@ nav_order: 1
 
 # Why use PostgreSQL for your database
 
-There are a number of database management systems to choose from, form Document Database Systems to Relational Database Management (RDBMS).   if the relational model best represents your data, then PostgreSQL is one of the most popular and well-regarded open-source relational databases in the world.
+There are a number of database management systems to choose from, form Document Database Systems to Relational Database Management (RDBMS).   if the relational model best represents your data, then PostgreSQL is one of the most popular and well-regarded open-source _relational databases_ in the world.
 
 This article will cover some of the primary reasons so many developers choose PostgreSQL for their data management needs. These range from feature availability and standards compliance to community support and project governance.
+
+
+### Object Oriented Database
+
+One of the most fundamental ways that PostgreSQL is different from most other relational databases comes from its core design.
+
+Most relational databases are best described as Relational Database Management Systems (RDBMS). Essentially RDBMS is software suite specifically designed to handle relational databases, where data is stored in _table-like_ structures with predefined columns and data types. Data can be queried, modified, and retrieved using techniques based on relational algebra, usually through structured query language (SQL).
+
+PostgreSQL, is technically an [Object-Relational Database Management System (ORDBMS)](https://en.wikipedia.org/wiki/Object%E2%80%93relational_database). This means that it has the same relational capabilities as an RDBMS, but additionally has a number of object-oriented features.
 
 ## Rich Feature Set
 
 One of the primary reasons for choosing to use PostgreSQL is its large list of features. PostgreSQL possesses an incredible number of features related to performance, security, programming extensions, and configuration among others.
 
-Some of the features that PostgreSQL offers include:
+The following is a list of Some of the features that PostgreSQL offers that make it a perfect database for microservice and API based projects:
 
 Support for writing database functions using:
 - SQL
@@ -53,11 +62,3 @@ Robust [authentication](https://www.postgresql.org/docs/current/auth-methods.htm
 [Comments on database objects](https://www.postgresql.org/docs/current/sql-comment.html): The ability to attach comments on tables, databases, columns, and other individual database objects allows you to document decisions or implementation details.
 
 [Write-Ahead Logging](https://www.postgresql.org/docs/current/wal-intro.html) to provide [point-in-time recovery](https://www.postgresql.org/docs/current/continuous-archiving.html), [failover](https://www.postgresql.org/docs/current/warm-standby-failover.html), and [streaming replication](https://www.postgresql.org/docs/current/warm-standby.html): These technologies help ensure that your database remains consistent even if the software crashes, and helps you copy data between systems for scaling and backing up data.
-
-### Object Oriented Database
-
-One of the most fundamental ways that PostgreSQL is different from most other relational databases comes from its core design.
-
-Most relational databases are best described as Relational Database Management Systems (RDBMSs). RDBMSs are software specifically designed to handle relational databases, where data is stored in table-like structures with predefined columns and data types. Data can be queried, modified, and retrieved using techniques based on relational algebra, usually through structured query language (SQL).
-
-PostgreSQL, is technically an [Object-Relational Database Management System (ORDBMS)](https://en.wikipedia.org/wiki/Object%E2%80%93relational_database). This means that it has the same relational capabilities as an RDBMS, but additionally has some object-oriented features.

@@ -39,6 +39,16 @@ If you are too focused on the API design before you know what your audience is t
 
 API Elements is a structure for describing APIs and the complex data structures used within them. It also provides structures for defining parsing results for parsing API definitions from formats like API Blueprint and Swagger/OpenAPI Format.
 
+A key component to consider is the [API First Principle](api-first-principle.md) and again the important drivers of this principle are:
+
+* Design the API first, before you start to think about technology details.
+* APIs exist to solve a business problem, like improving service quality, increasing sales, reducing costs, easing integration issues etc. Therefore, we should focus on achieving the business goals, these goals are typically focused on 3 basic categories
+1. Reducing time/cost to market
+2. Increasing productivity and efficiency
+3. Providing solutions to business problems
+
+
+
 ### Principle 4
 
 **API documentation is the most important user interface for developers**
