@@ -10,8 +10,7 @@ Provides the ability to generate an entire API Solution project including:
 
 - API Project
 - Unit & Integration test projects
-- Github Action configuration
-- Bitbucket Pipeline
+- Github Action or Bitbucket Pipeline configuration
 - Dotnet Cake Build Script
 - Semantic Versioning
 - Docker Configuration
@@ -107,5 +106,10 @@ The API template Pack, takes an opinionated view, on defining PostgreSQL as the 
 
 All you need to do to get this up and running is to execute the command `docker-compose up -d` in the root directory of your project.  Alternatively, if you are using Rider you can learn [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider "How to run docker compose files in Rider - Gary Woodfine")
 
+### Additional Resources
+* [What is this Directory.Build.props file all about?](https://garywoodfine.com/what-is-this-directory-build-props-file-all-about/ "What is this Directory.Build.props file all about? - Gary Woodfine")
+* [How to use Cake with Github Actions](https://garywoodfine.com/how-to-use-cake-with-github-actions/ "
+  How to use Cake with Github Actions - Gary Woodfine")
+* [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider/ "How to run docker compose files in Rider - Gary Woodfine")
 
 ## Video
