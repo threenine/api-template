@@ -13,6 +13,8 @@ Provides the ability to generate an entire API Solution project including:
 - Github Action configuration
 - Bitbucket Pipeline
 - Dotnet Cake Build Script
+- Semantic Versioning
+- Docker Configuration
 
 To create a new solution using the `apisolution` template simply open a terminal window and execute the command with the supplied parameters below in chosen directory
 
@@ -25,11 +27,11 @@ dotnet new apisolution -n <name of your solution>  --Root <your chosen root name
 - `-n`  Is a name switch that is used to provide your project a name for instance _Cms_
 - `--Root` is a root namespace you would like to use for your project i.e. Your company name or some such.
 
-As an example we may want to develop a Headless CMS system for our company _Threenine_ with so you can execute the command as follows:
+As an example we may want to develop the Stop Web Crawlers API project for our company _Threenine_ with so you can execute the command as follows:
 
 ```shell
 
-dotnet new apisolution -n Cms --Root Threenine
+dotnet new apisolution -n SwcApi --Root Threenine
 
 ```
 
@@ -39,7 +41,7 @@ This command will generate a full API Solution template
 .
 ├── bitbucket-pipelines.yml
 ├── build.cake
-├── Cms.sln
+├── SwcApi.sln
 ├── Directory.Build.props
 ├── docker-compose.yml
 ├── Dockerfile
@@ -84,3 +86,17 @@ This command will generate a full API Solution template
         └── Unit.csproj
 
 ```
+
+This will generate a full API Solution stub containing the typical project configuration for your solution. Enabling you to focus on the aspects of your project that really add value.
+
+> The API solution makes use of Semantic Versioning and makes use of **GitVersion** which requires a Git Repository, so all you
+> need to do to activate this is to create a Git Repository by Changing into the root of your created directory and using `git init`  [How to create a Git Repository](https://geekiam.io/how-to-create-git-repository "How To Create A Git Repository - geekiam.io")
+
+### Running the generated project
+
+The API template Pack, takes an opinionated view, on defining PostgreSQL as the default database to base API's from. We have detailed the number of [reasons why we chose PostgreSQL](../../knowledge/postgres) as the default database option.   As such we we included a Docker-compose script that will setup a local PostgreSQL database for you.
+
+All you need to do to get this up and running is to execute the command `docker-compose up -d` in the root directory of your project.  Alternatively, if you are using Rider you can learn [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider "How to run docker compose files in Rider - Gary Woodfine")
+
+
+## Video

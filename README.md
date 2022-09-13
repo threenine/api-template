@@ -15,6 +15,9 @@ If you like or are using this project to learn or start your solution, please gi
 
 This helps us to understand and learn how to improve the project over time.
 
+## Feedback
+
+We would certainly appreciate feedback and learning how you are making use of this project. We have enabled the [Github discussions](https://github.com/threenine/api-template/discussions) on this repository so please feel free to ask any questions, propose ideas etc over there and we will respond as soon as possible.
 
 
 -----------------------------------------------------------------------------------
