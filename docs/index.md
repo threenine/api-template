@@ -4,15 +4,32 @@ description: The API Template pack provides an opinionated implementation guide 
 ---
 
 ![Image](assets/images/apitemplatepack.png)
-Over the past few years there has been an explosion in the usage of API (Application Programmeable Interface) which are the interfaces that software apps use to communicate with each other.
 
-A survey published in early 2022 revealed that 90.5% of developers responding were expecting to use APIs more or the same as in 2021, while only 3.8% think they’ll use fewer. The challenge is, as new APIs and protocols emerge, some aren’t supported by existing API management, development and security platforms.
+[![NuGet Badge](https://buildstats.info/nuget/threenine.ApiProject)](https://www.nuget.org/packages/threenine.ApiProject/) [![NuGet Downloads](http://img.shields.io/nuget/dt/threenine.ApiProject.svg?style=flat)](https://www.nuget.org/packages/threenine.ApiProject/)  [![Twitter Follow](https://img.shields.io/twitter/follow/threenine39.svg?style=social?maxAge=2592000)](https://twitter.com/threenine39)
+[![license](https://img.shields.io/github/license/threenine/api-template?color=blue&label=license&logo=Github&style=flat-square)](https://github.com/threenine/api-template/blob/master/README.md) [![GitHub stars](https://img.shields.io/github/stars/threenine/api-template)](https://github.com/threenine/api-template/stargazers) 
 
-Software Development teams are struggling to make APIs use-able as a result, leading to duplicated efforts, wasted engineering hours, and missed revenue opportunities.
+ **Documentation:** [API Template Pack](https://www.apitemplatepack.com/docs/introduction)
 
-An Effective, Secure and Scalable API are the lifeblood of innovative companies. Whether it’s internally delivering and consuming APIs to more rapidly and efficiently take new products to market, or monetizing consumer-facing APIs as a revenue stream, APIs are now the core building blocks of successful businesses.  More and more more organizations make synchronous and asynchronous API ecosystems a focal point of their business, technical teams now more than ever need to embrace the oncoming API complexity without sacrificing security.
+ **Source Code:** [https://github.com/threenine/api-template](https://github.com/threenine/api-template)
 
-At [threenine](https://threenine.co.uk "Threenine - Software Development Company"), had become frustrated by the lack of innovation in the API tooling space, particularly when it came to be being able to quickly and efficiently starting a new API focused microservices project.
 
-It is important to note that API's will also become a top cyber-security attack vector, therefore it is now more important than ever to develop API's with a security first mindset, and to focus on trusted and reliable patterns and practices based approaches. This is why Threenine will remain committed to ensuring that the API Template Pack is the most feature-packed open source API solution on the market while delivering the robust scalability and features required by the most demanding of enterprise customers.
+ API Template Pack is modern, fast web framework for building API and microservices with dotnet framework and C# with a focus on implementing secure, stable, cross platform and performant services using trusted and reliable patterns & practices and tools.
+ 
+### Key Features
 
+* **Fast:** High performance using the dotnet frame
+* **Cross platform:** Supported on Windows, Linux, and macOS Build apps for any device Build native apps for Android, iOS, macOS and Windows from a single codebase with .NET Multi-platform 
+* **Fast to code:** Increase the speed to develop features by about 200% to 300%.
+* **Fewer Bugs:** Reduce about 40% of human induced errors.
+* **Intuitive:** Reuse and implement common patterns and practices
+* **Easy:** Designed to be easy to use and learn. Less time reading docs.
+* **Robust:** Develop production ready code 
+* **Standards based:** : Based on the open standards for APIs: OpenAPI and JSON Schema.
+
+### Sponsored by
+
+<div class="sponsor">
+ <a href="https://threenine.co.uk" target="_blank" title="threenine.co.uk | Cultivate, Develop & Sustain innovation" ><img src="assets/images/threenine-sponsor.png" alt="threenine.co.uk" /></a>
+ <a href="https://napptive.com/" target="_blank" title="napptive.com | Create environments, deploy, and manage
+cloud-native apps without worrying about Kubernetes" ><img src="assets/images/napptive-sponsor.png" alt="napptive.com" /></a>
+</div>

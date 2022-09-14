@@ -9,6 +9,14 @@ a {
    color: #F78D14;
    text-decoration: none;
 }
+a:active {
+  color: #F78D14;
+  text-decoration: none;
+}
+a:link {
+  color: #F78D14;
+  text-decoration: none;
+}
 a:hover {
   font-size: larger;
   text-underline-color: #F78D14;
@@ -20,4 +28,19 @@ blockquote{
   font-size: 16pt;
   border-radius: 10px;
   padding: 20px;
+}
+
+.sponsor {
+  margin-top: 15px;
+}
+.sponsor a {
+  text-decoration: none;
+  margin: 3px;
+  
+}
+
+.sponsor img{
+  width: 250px;
+  border: 0px solid;
+  border-radius: 25px;
 }
