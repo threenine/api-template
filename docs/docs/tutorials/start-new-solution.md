@@ -60,6 +60,8 @@ Before we proceed to connecting to the Database it is worth taken time to unders
 
 # Connect to the Database
 
+In this scenario we will be connecting to the development database in the development environment, we typically make use of [Rider - the cross platform dotnet IDE from Jetbrains](https://www.jetbrains.com/rider/ "Rider - the cross platform dotnet IDE from Jetbrains"), check out [How to connect to databases in Rider](https://garywoodfine.com/how-to-connect-to-databases-in-rider/ "How to connect to databases in Rider - Gary Woodfine") which provides a deeper explanation of how to do this.
+
 By default for ease of development the Database connectivity has been  defined, the Docker Compose file references a `.env` file which contain some of the connectivity, which will have the same name as your solution.
 
 ```shell

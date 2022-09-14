@@ -17,7 +17,7 @@ description: The API Template pack provides an opinionated implementation guide 
  
 ### Key Features
 
-* **Fast:** High performance using the dotnet frame
+* **Fast:** High performance using the dotnet framework
 * **Cross platform:** Supported on Windows, Linux, and macOS Build apps for any device Build native apps for Android, iOS, macOS and Windows from a single codebase with .NET Multi-platform 
 * **Fast to code:** Increase the speed to develop features by about 200% to 300%.
 * **Fewer Bugs:** Reduce about 40% of human induced errors.
