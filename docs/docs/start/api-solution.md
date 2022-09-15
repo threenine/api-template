@@ -131,3 +131,5 @@ All you need to do to get this up and running is to execute the command `docker-
 * 
 
 ## Video
+
+<iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/api-solution-template/fa90baa0bca9de8d7d480b66118c62220086098c?r=DUjCQUL6MekhtSGNTPSWv8Ek7S28w12a" allowfullscreen></iframe>
