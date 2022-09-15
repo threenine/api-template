@@ -8,7 +8,7 @@ description: The API Template pack provides an opinionated implementation guide 
 [![NuGet Badge](https://buildstats.info/nuget/threenine.ApiProject)](https://www.nuget.org/packages/threenine.ApiProject/) [![NuGet Downloads](http://img.shields.io/nuget/dt/threenine.ApiProject.svg?style=flat)](https://www.nuget.org/packages/threenine.ApiProject/)  [![Twitter Follow](https://img.shields.io/twitter/follow/threenine39.svg?style=social?maxAge=2592000)](https://twitter.com/threenine39)
 [![license](https://img.shields.io/github/license/threenine/api-template?color=blue&label=license&logo=Github&style=flat-square)](https://github.com/threenine/api-template/blob/master/README.md) [![GitHub stars](https://img.shields.io/github/stars/threenine/api-template)](https://github.com/threenine/api-template/stargazers) 
 
- **Documentation:** [API Template Pack](https://www.apitemplatepack.com/docs/introduction)
+ **Documentation:** [API Template Pack](/docs/introduction "Getting Started with API Template Pack - API Template Pack")
 
  **Source Code:** [https://github.com/threenine/api-template](https://github.com/threenine/api-template)
 
@@ -24,7 +24,8 @@ description: The API Template pack provides an opinionated implementation guide 
 * **Intuitive:** Reuse and implement common patterns and practices
 * **Easy:** Designed to be easy to use and learn. Less time reading docs.
 * **Robust:** Develop production ready code 
-* **Standards based:** : Based on the open standards for APIs: OpenAPI and JSON Schema.
+* **Standards based:** Based on the open standards for APIs: OpenAPI and JSON Schema.
+* **Patterns & Practices based:** prevent known development issues to reduce maintenance issues
 
 ### Sponsored by
 

@@ -22,18 +22,18 @@ Once you have [installed the API Template Pack](../../getting-started "Install A
 
 For the purpose of this tutorial we're going to assume you are working Ubuntu and using [Jetbrains Rider IDE](https://www.jetbrains.com/rider/), but the steps will be exactly the same on whichever [operating system with  .net 6 installed](https://docs.microsoft.com/en-us/dotnet/core/install/windows?tabs=net60).
 
-The project will start developing in this walk-through tutorial is a hypothetical Headless Content Management System for a Geek News service, for a *Geekiam*.  We'll be outputting our solution to a code folder and sub directory named `Cms`
+The project will start developing in this walk-through tutorial is a hypothetical Headless Content Management System for a Stop Web Crawlers Api, for a *Threenine*.  We'll be outputting our solution to a code folder and sub directory named `Swc`
 
-The full source Code for this  tutorial and is available at [Geek-I-Am
+The full source Code for this  tutorial and is available at [threenine
 /
-cms
-](https://github.com/Geek-I-Am/cms)
+Stop-Web-Crawlers-API
+](https://github.com/threenine/Stop-Web-Crawlers-API)
 
 To start the project we'll simply use the command below, the command switches are discussed in [API Solution Template](../../start/api-solution).
 
 ```shell
 
-dotnet new apisolution -n Cms --Root Geekiam -o code/cms
+dotnet new apisolution -n Swc --Root Geekiam -o code/Swc
 
 ```
 
@@ -65,17 +65,17 @@ In this scenario we will be connecting to the development database in the develo
 By default for ease of development the Database connectivity has been  defined, the Docker Compose file references a `.env` file which contain some of the connectivity, which will have the same name as your solution.
 
 ```shell
-POSTGRES_USER=Cms
+POSTGRES_USER=Swc
 POSTGRES_PASSWORD=Password12@
-POSTGRES_DB=Cms
+POSTGRES_DB=Swc
 PGDATA: /data/postgres
 ```
 
 The `appsettings.Development.json` will have the database connection defined which will enable the application to communicate the database out the box.
 
 ```json
- "ConnectionStrings": {
-    "Local_DB": "User ID=Cms;Password=Password12@;Host=localhost;Port=5432;Database=Cms;Pooling=true;Integrated Security=true;"
+ "ConnectionStrings" : {
+    "Local_DB": "User ID=Swc;Password=Password12@;Host=localhost;Port=5432;Database=Cms;Pooling=true;Integrated Security=true;"
   },
 ```
 

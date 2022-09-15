@@ -26,11 +26,13 @@ dotnet new apisolution -n <name of your solution>  --Root <your chosen root name
 - `-n`  Is a name switch that is used to provide your project a name for instance _Cms_
 - `--Root` is a root namespace you would like to use for your project i.e. Your company name or some such.
 
-As an example we may want to develop the Stop Web Crawlers API project for our company _Threenine_ with so you can execute the command as follows:
+#### Example solution creation using the API Template Pack
+
+As an example we may want to develop the _Diogel_ project for our company _Threenine_ with so you can execute the command as follows:
 
 ```shell
 
-dotnet new apisolution -n SwcApi --Root Threenine
+dotnet new apisolution -n Diogel --Root Threenine
 
 ```
 
@@ -40,7 +42,7 @@ This command will generate a full API Solution template
 .
 ├── bitbucket-pipelines.yml
 ├── build.cake
-├── SwcApi.sln
+├── Diogel.sln
 ├── Directory.Build.props
 ├── docker-compose.yml
 ├── Dockerfile
@@ -65,8 +67,8 @@ This command will generate a full API Solution template
 │   │   └── README.md
 │   ├── Database
 │   │   ├── appsettings.json
-│   │   ├── CmsContext.cs
-│   │   ├── CmsContextFactory.cs
+│   │   ├── DiogelContext.cs
+│   │   ├── DiogelContextFactory.cs
 │   │   ├── Configurations
 │   │   ├── Database.csproj
 │   │   └── README.md
@@ -89,20 +91,35 @@ This command will generate a full API Solution template
 This will generate a full API Solution stub containing the typical project configuration for your solution. Enabling you to focus on the aspects of your project that really add value.
 
 
-### Running the generated project
+### Enable version control
 
-From the outset the API Solution template, is ready for you to start your development projects and you can start coding and implementing the business value required with just a couple of additional steps after creating your project.
+From the outset the API Solution template, is ready for you to start your development projects and you can start coding and implementing the business value required. However, there is one step that is required before getting started with your coding tasks - which is setting up your version control. 
 
-The first step, you're most likely want to take when creating your project, is initiating your preferred Version Control repository. By convention, a vast majority of software developers predominantly make use of [Git - Version Control](https://geekiam.io/what-is-git "What is Git - geekiam.io"). 
+#### Initiating a Git repository
+
+By convention, a vast majority of software developers predominantly make use of [Git - Version Control](https://geekiam.io/what-is-git "What is Git - geekiam.io"). 
 
 
-> The API solution makes use of Semantic Versioning and makes use of **GitVersion** which requires a Git Repository, so all you
-> need to do to activate this is to create a Git Repository by Changing into the root of your created directory and using:
+> The API solution makes use of Semantic Versioning and makes use of **GitVersion** which requires a Git Repository, so all you create a Git Repository by Changing into the root of your created directory and using:
 > 
-> `git init`  
+> `git init` 
+> 
 > [How to create a Git Repository](https://geekiam.io/how-to-create-git-repository "How To Create A Git Repository - geekiam.io")
 
-The API template Pack, takes an opinionated view, on defining PostgreSQL as the default database to base API's from. We have detailed the number of [reasons why we chose PostgreSQL](../../knowledge/postgres) as the default database option.   As such we we included a Docker-compose script that will setup a local PostgreSQL database for you.
+The API template Pack, takes an opinionated view, on defining PostgreSQL as the default database to base API's from. We have detailed the number of [reasons why we chose PostgreSQL](../../knowledge/postgres "Why use PostgreSQL for your database - API Template Pack") as the default database option.   As such we we included a Docker-compose script that will setup a local PostgreSQL database for you.
+
+### Opening the Solution project
+
+You can open the Solution file in any IDE _(Intergrated Development Environment)_ that supports Dotnet Solution files this includes some of the most preferred editors in the Dotnet Community including:
+* [Rider - Fast & powerful cross-platform .NET IDE](https://www.jetbrains.com/rider/ "Jetbrains Rider")
+* [Visual Studio 2022 IDE - Programming Tool for Software Developers](https://visualstudio.microsoft.com/vs/ "Microsoft Visual Studio")
+* [Visual Studio Code](https://code.visualstudio.com/)
+
+The image below is a screen shot of the Solution we created open in Rider
+
+![Solution Rider](../../../assets/images/solution-view.png)
+
+#### Running Docker-compose to create development environment
 
 All you need to do to get this up and running is to execute the command `docker-compose up -d` in the root directory of your project.  Alternatively, if you are using Rider you can learn [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider "How to run docker compose files in Rider - Gary Woodfine")
 
@@ -111,5 +128,6 @@ All you need to do to get this up and running is to execute the command `docker-
 * [How to use Cake with Github Actions](https://garywoodfine.com/how-to-use-cake-with-github-actions/ "
   How to use Cake with Github Actions - Gary Woodfine")
 * [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider/ "How to run docker compose files in Rider - Gary Woodfine")
+* 
 
 ## Video

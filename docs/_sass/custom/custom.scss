@@ -1,10 +1,11 @@
 @for $index from 1 through 6 {
   h#{$index} {
     color: #F78D14;
-    margin: 25px;
+    margin-top: 25px;
+    margin-bottom: 30px;
   }
 }
-p{ line-height: 1.5em;}
+p{ line-height: 1.5em; }
 a {
    color: #F78D14;
    text-decoration: none;
@@ -28,6 +29,14 @@ blockquote{
   font-size: 16pt;
   border-radius: 10px;
   padding: 20px;
+}
+
+blockquote a{
+  font-size: 12pt;
+}
+
+blockquote a:hover{
+  font-size: 12pt;
 }
 
 .sponsor {
