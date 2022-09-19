@@ -4,7 +4,7 @@ title: "REPR pattern"
 parent: Introduction
 nav_order: 4
 ---
-# What is the REPR pattern
+# What is the REPR design pattern
 
 The REPR pattern is a software design pattern for developing API Endpoints implementing a simple Request EndPoint Response flow.
 
