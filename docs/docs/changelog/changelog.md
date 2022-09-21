@@ -17,5 +17,6 @@ permalink: /docs/changelog
 * Update Read me's  with link to change log  - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Update library references in the API Solution Template  - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Started Models project documentation - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Added Twitter Card to front page - [@gary_woodfine](https://twitter.com/gary_woodfine)
 
 
