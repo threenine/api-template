@@ -10,11 +10,10 @@ public class ApiSolutionContext : BaseContext<ApiSolutionContext>
         : base(options)
     {
     }
-
   
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.HasDefaultSchema("ApiSolution");
+        modelBuilder.HasDefaultSchema(DefaultSchema.Name);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 }

@@ -11,7 +11,7 @@ internal class ApiSolutionContextFactory : IDesignTimeDbContextFactory<ApiSoluti
         DbContextOptionsBuilder<ApiSolutionContext> dbContextOptionsBuilder =
             new();
 
-        dbContextOptionsBuilder.UseNpgsql(@"localBuild");
+        dbContextOptionsBuilder.UseNpgsql(ConnectionStringNames.LocalBuild);
         return new ApiSolutionContext(dbContextOptionsBuilder.Options);
     }
 }

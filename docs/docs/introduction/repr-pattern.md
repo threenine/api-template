@@ -6,7 +6,7 @@ nav_order: 4
 ---
 # What is the REPR design pattern
 
-The REPR pattern is a software design pattern for developing API Endpoints implementing a simple Request EndPoint Response flow.
+The REPR pattern is a software design pattern for developing API Endpoints implementing a simple _Request EndPoint Response_ flow.
 
 ![REPR Pattern](../../../assets/images/repr-pattern.png)
 
@@ -16,7 +16,7 @@ The REPR Design Pattern defines web API endpoints as having three components:
 2. **Endpoint** - Logic the endpoint performs given a request
 3. **Response** - The shape of the data the endpoint returns
 
-Providing a simplified concepts to enable the development REST API endpoints and enforcing the Single Responsibility Principle for endpoints. The only Models that
+Providing a simplified concepts to enable the development REST API endpoints and enforcing the _Single Responsibility Principle_ for endpoints. The only Models that
 the Developers need to care about are the Request and Response.
 
 Not all endpoints will require data for their Request or Response, in some cases taking in no inputs or returning just an HTTP status code. But an empty request or response is still a valid one in this pattern.
