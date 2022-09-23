@@ -3,6 +3,8 @@ layout: default
 title: "API Design Principles"
 parent: Introduction
 nav_order: 3
+description: "The important 5 principles to API design that should be considered in your API Design approach."
+image: "../../../assets/images/5-principles-api-design.png"
 ---
 
 # API Design Principles

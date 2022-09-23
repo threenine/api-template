@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Vertical Slice Architecture"
+description: "The Vertical Slice Architecture (VSA) is a technique that helps developing maintainable applications by separating the application around Features, Activity or Vertical Slice."
+image: "../../../assets/images/vertical-slice.png"
 parent: Introduction
 nav_order: 5
 ---

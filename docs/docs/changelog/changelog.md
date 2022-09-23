@@ -7,6 +7,15 @@ permalink: /docs/changelog
 
 # Change log
 
+
+### 3.2.90
+
+#### Updates
+
+* Updating Meta Descriptions for all documentation pages to improve SEO- [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updating Twitter Card for pages to improve SEO and sharing - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Added logo image to Readme  [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 ### 3.2.89 
   
 #### Updates
