@@ -57,7 +57,7 @@ Enforcing high cohesion within a slice, code for the feature is only used by the
 
 Layered architecture or as it is also commonly known Onion Architecture or Hexagonal Architecture or even N-Tier architecture is almost the defacto pattern that a majority of developers will try to implement when starting to develop systems.  Primarily, because it is the by far the easiest and simplest pattern to understand for many it makes logical sense. But, this does not mean to say it makes it the best choice for all software applications. 
 
-In fact, in the [Fundamentals of Software Architecture: An Engineering Approach](https://amzn.to/3zz8apP) the overall ranking of the pattern is poor to medium and only really excels in the Simplicity and initial cost of development but generally rates poorly in most other catergories.
+In fact, in the [Fundamentals of Software Architecture: An Engineering Approach](https://amzn.to/3zz8apP) the overall ranking of the pattern is poor to medium and only really excels in *simplicity and initial cost of development* but generally rates poorly in most other categories, including **scalability, elasticity, evolutionary, modularity and deployability**.
 
 In some respects belief in the Layered Architecture pattern has reached religious proportions with many developers attempting to justify and defend it against all odds.
 
@@ -69,3 +69,4 @@ The API Template Pack does not necessarily stop or get in the way of you impleme
 - [Vertical Slice Architecture - Jimmy Bogard](https://jimmybogard.com/vertical-slice-architecture/ "Vertical Slice Architecture - Jimmy Bogard")
 - [How to Implement Vertical Slice Architecture - Gary Woodfine](https://garywoodfine.com/implementing-vertical-slice-architecture/ "How to Implement Vertical Slice Architecture - Gary Woodfine")
 - [Book Review: Fundamentals of Software Architecture](https://garywoodfine.com/book-review-fundamentals-of-software-architecture "Book Review: Fundamentals of Software Architecture - Gary Woodfine")
+- [Why I don’t like layered architecture for microservices](https://garywoodfine.com/why-i-dont-like-layered-architecture-for-microservices/ "Why I don’t like layered architecture for microservices - Gary Woodfine")

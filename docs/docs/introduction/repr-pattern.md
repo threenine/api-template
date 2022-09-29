@@ -3,7 +3,7 @@ layout: default
 title: "REPR pattern"
 parent: Introduction
 description: "The REPR pattern is a software design pattern for developing API Endpoints implementing a simple _Request EndPoint Response_ flow."
-image: "../../../assets/images/repr-pattern.png"
+image: "../../../assets/images/twitter/repr-pattern.png"
 nav_order: 4
 ---
 # What is the REPR design pattern

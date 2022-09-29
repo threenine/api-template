@@ -7,6 +7,12 @@ permalink: /docs/changelog
 
 # Change log
 
+### 3.2.91
+
+#### Updates
+
+* Tweak to Twitter Card images - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 
 ### 3.2.90
 
