@@ -7,16 +7,37 @@ permalink: /docs/changelog
 
 # Change log
 
+
+### 3.2.93
+
+#### Feature
+* Set Root parameter to be lower case on api solution template after request from users who prefer all arguments to be lowercase on terminal commands as that fits in with typical industry standards. - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated Behaviour event handlers to conform to latest Mediatr library -[@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated Project Libary references -[@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated Project behaviour handlers -[@gary_woodfine](https://twitter.com/gary_woodfine)
+
+#### Documentation Updates
+* Update to documentation for the root parameter  - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+#### Bug
+
+* Renamed folder in Models project to be **Data** because to enable different types of Models to be created - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+#### Documentation Updates
+
+* Tweak to Twitter Card images - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* 
+
 ### 3.2.91
 
-#### Updates
+#### Documentation Updates
 
 * Tweak to Twitter Card images - [@gary_woodfine](https://twitter.com/gary_woodfine)
 
 
 ### 3.2.90
 
-#### Updates
+#### Documentation Updates
 
 * Updating Meta Descriptions for all documentation pages to improve SEO- [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Updating Twitter Card for pages to improve SEO and sharing - [@gary_woodfine](https://twitter.com/gary_woodfine)
@@ -24,7 +45,7 @@ permalink: /docs/changelog
 
 ### 3.2.89 
   
-#### Updates
+#### Documentation Updates
 * Removed magic strings from the ContextFactory to make use of Internal Constants  - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Updated Documentation to include details about how to make use of the Database project  - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Updated REPR pattern image in documentation  - [@gary_woodfine](https://twitter.com/gary_woodfine)

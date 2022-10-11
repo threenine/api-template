@@ -12,7 +12,7 @@
   "sourceName": "ApiSolution",
   "preferNameDirectory": true,
   "symbols": {
-    "Root": {
+    "root": {
       "type": "parameter",
       "replaces": "placeHolder",
       "dataType": "string",

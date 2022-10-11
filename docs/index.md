@@ -13,6 +13,7 @@ image: "assets/images/apitemplatepack.png"
 
  **Source Code:** [https://github.com/threenine/api-template](https://github.com/threenine/api-template)
 
+The Low-code solution to developing rich, faster and scalable REST API's with a Dotnet based development platform, to speed up the process to develop functional API's for your business.
 
  API Template Pack is modern, fast web framework for building API and microservices with dotnet framework and C# with a focus on implementing secure, stable, cross platform and performant services using trusted and reliable patterns & practices and tools.
  

@@ -24,7 +24,8 @@ dotnet new apisolution -n <name of your solution>  --Root <your chosen root name
 ````
 
 - `-n`  Is a name switch that is used to provide your project a name for instance _Cms_
-- `--Root` is a root namespace you would like to use for your project i.e. Your company name or some such.
+- `--root` is a root namespace you would like to use for your project i.e. Your company name or some such.   
+- 
 
 #### Example solution creation using the API Template Pack
 
@@ -32,7 +33,7 @@ As an example we may want to develop the _Diogel_ project for our company _Three
 
 ```shell
 
-dotnet new apisolution -n Diogel --Root Threenine
+dotnet new apisolution -n Diogel --root Threenine
 
 ```
 
