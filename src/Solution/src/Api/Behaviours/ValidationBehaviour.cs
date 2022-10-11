@@ -22,7 +22,7 @@ namespace Api.Behaviours
             _logger = logger;
         }
 
-        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
+        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             if (!typeof(TResponse).IsGenericType) return await next();
             if (!_validators.Any()) return await next();

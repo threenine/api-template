@@ -8,15 +8,17 @@ permalink: /docs/changelog
 # Change log
 
 
-### 3.2.93
+### 3.2.94
 
 #### Feature
+
 * Set Root parameter to be lower case on api solution template after request from users who prefer all arguments to be lowercase on terminal commands as that fits in with typical industry standards. - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Updated Behaviour event handlers to conform to latest Mediatr library -[@gary_woodfine](https://twitter.com/gary_woodfine)
 * Updated Project Libary references -[@gary_woodfine](https://twitter.com/gary_woodfine)
 * Updated Project behaviour handlers -[@gary_woodfine](https://twitter.com/gary_woodfine)
 
 #### Documentation Updates
+
 * Update to documentation for the root parameter  - [@gary_woodfine](https://twitter.com/gary_woodfine)
 
 #### Bug
