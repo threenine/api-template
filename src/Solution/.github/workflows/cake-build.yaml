@@ -21,8 +21,9 @@ jobs:
       - name: Run cake
         shell : bash
         env:
-          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
           GITHUB_TOKEN: ${{ github.token }}
+          REGISTRY_TOKEN: ${{ github.token }} #TODO: By default we use the Github Token, change to your preferred secret
+          CONTAINER_REGISTRY: "ghcr.io"
         run: |
           dotnet new tool-manifest
           dotnet tool install Cake.Tool

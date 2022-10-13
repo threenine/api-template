@@ -7,6 +7,8 @@ string version = String.Empty;
 string projectTag = "ApiSolution";
 string rootNamespace = "placeHolder";
 
+string packageName = string.Empty;
+string containerRegistry = EnvironmentVariable("CONTAINER_REGISTRY");
 //////////////////////////////////////////////////////////////////////
 // TASKS
 //////////////////////////////////////////////////////////////////////
@@ -102,11 +104,23 @@ Task("Publish")
 
 });
 
-Task("Docker-Build")
+Task("Docker-Login")
  .IsDependentOn("Publish")
 .Does(() => {
+  
+   if (BuildSystem.GitHubActions.IsRunningOnGitHubActions || BuildSystem.IsRunningOnBitbucketPipelines)
+     {
+        var loginSettings = new DockerRegistryLoginSettings{ Password = EnvironmentVariable("REGISTRY_TOKEN") , Username= "USERNAME" };
+        DockerLogin(loginSettings, $"{containerRegistry}");
+    }
+});
+
+Task("Docker-Build")
+ .IsDependentOn("Docker-Login")
+.Does(() => {
     
-    string [] tags = new string[]  {  $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}"};
+     packageName = $"{containerRegistry}/{ rootNamespace.ToLower() }/{ projectTag.ToLower() }";
+       string [] tags = new string[]  {  $"{ packageName}:{version}"};
       Information("Building : Docker Image");
     var settings = new DockerImageBuildSettings { Tag=tags};
     DockerBuild(settings, "./");
@@ -115,7 +129,7 @@ Task("Docker-Build")
 Task("Docker-Push")
  .IsDependentOn("Docker-Build")
 .Does(() => {
-   if (BuildSystem.GitHubActions.IsRunningOnGitHubActions)
+   if (BuildSystem.GitHubActions.IsRunningOnGitHubActions || BuildSystem.IsRunningOnBitbucketPipelines)
    {
       Information("Pushing : Docker Image");
       DockerPush( $"{ rootNamespace.ToLower() }/{ projectTag.ToLower() }:{version}");
@@ -133,6 +147,7 @@ Task("Default")
        .IsDependentOn("Build")
        .IsDependentOn("Test")
        .IsDependentOn("Publish")
+       .IsDependentOn("Docker-Login")
        .IsDependentOn("Docker-Build")
        .IsDependentOn("Docker-Push");
 

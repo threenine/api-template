@@ -1,11 +1,29 @@
 ---
 title: "Change log"
 layout: default
-nav_order: 7
+nav_order: 8
 permalink: /docs/changelog
 ---
 
 # Change log
+
+### 3.2.96
+
+#### Bug
+
+* Remove NUGET_API_KEY from Github Action environment variable configuration on Solution Template because this is not required and is carry over from the initial configuration when we started the project - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* 
+#### Feature
+
+* Added Docker Container Build and Publish steps to Cake Build script - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+#### Documentation Update
+
+* Added Build section to documentation - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Provided introduction to Cake - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Added detail regarding REST  - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+
 
 ### 3.2.95
 

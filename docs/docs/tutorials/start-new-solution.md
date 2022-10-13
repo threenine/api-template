@@ -70,6 +70,7 @@ POSTGRES_PASSWORD=Password12@
 POSTGRES_DB=Swc
 PGDATA: /data/postgres
 ```
+> The environment details and docker compose should only be used to create a local development environment 
 
 The `appsettings.Development.json` will have the database connection defined which will enable the application to communicate the database out the box.
 
