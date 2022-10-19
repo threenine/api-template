@@ -7,7 +7,7 @@ permalink: /docs/changelog
 
 # Change log
 
-### 4.0.1   
+### 4.0.2   
 
 **Breaking changes**
 
