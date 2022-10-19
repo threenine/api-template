@@ -3,7 +3,7 @@ layout: default
 title: "What is REST"
 parent: Introduction
 description: "A REST-based API is an API that conforms to the design principles of the Representational State Transfer software architectural style"
-image: "../../../assets/images/twitter/repr-pattern.png"
+image: "../../../assets/images/twitter/rest-api.png"
 nav_order: 8
 ---
 

@@ -1,5 +1,5 @@
 ﻿namespace DTOs;
 
-public class Dto1
+public class Domain1
 {
 }

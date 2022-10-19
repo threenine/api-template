@@ -7,6 +7,24 @@ permalink: /docs/changelog
 
 # Change log
 
+### 3.3.0   
+
+**Breaking changes**
+
+#### Enhancement
+
+* Renaming of the `DTOs` project to `Domain` this is inline with discussion item detailed on Github [Creating Database Folder for Database project](https://github.com/threenine/api-template/discussions/16) - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+### Feature
+
+* Added Model Configuration Template for issue [#19](https://github.com/threenine/api-template/issues/19) - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+
+#### Documentation Updates
+
+* Renamed DTO generation to Domain Generation
+* Added Model Configuration documentation
+
 ### 3.2.96
 
 #### Bug
