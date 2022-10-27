@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Gary Woodfine",
+  "author": "API Template Pack",
   "name": "API solution template",
   "description": "Solution template to implement Vertical Slice Architecture in projects",
   "identity": "ApiSolution",

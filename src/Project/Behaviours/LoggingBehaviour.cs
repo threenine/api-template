@@ -9,14 +9,17 @@ using ILogger = Serilog.ILogger;
 
 namespace ApiProject.Behaviours
 {
-    public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
+    public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
+        where TRequest : IRequest<TResponse>
     {
         private readonly ILogger _logger;
         public LoggingBehaviour(ILogger logger)
         {
             _logger = logger;
         }
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+      
+
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             //Query
             _logger.Information($"Handling {typeof(TRequest).Name}");
@@ -32,8 +35,7 @@ namespace ApiProject.Behaviours
             _logger.Information($"Handled {typeof(TResponse).Name}");
             return response;
         }
-
-       
     }
+
 
 }

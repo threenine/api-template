@@ -7,6 +7,23 @@ permalink: /docs/changelog
 
 # Change log
 
+### 4.1.0
+
+#### Feature
+
+* Added Database project template to be able to add Databases to existing API Projects - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+#### Enhancement
+
+* Added Entity Validation functionality in database projects as per [Entity Validation to database projects](https://github.com/threenine/api-template/discussions/20) - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated [Threenine.Dataservice](https://www.nuget.org/packages/threenine.Dataservice/) reference to enable functionality -  [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+### Documentation
+
+* Implemented Mermaid within the documentation theme in order to be able to create useful diagrams in documentation -  [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Added and created initial version of the Domain project documentation - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Added Database project template documentation - [@gary_woodfine](https://twitter.com/gary_woodfine) 
+* Tidied up style sheet on hover links - [@gary_woodfine](https://twitter.com/gary_woodfine)
 ### 4.0.2   
 
 **Breaking changes**

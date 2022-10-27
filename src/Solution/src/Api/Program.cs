@@ -35,7 +35,7 @@ builder.Services.AddSwaggerGen(c =>
     c.EnableAnnotations();
 });
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
-builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
+builder.Services.AddValidatorsFromAssemblies(new[] { typeof(Program).Assembly , typeof(ApiSolutionContext).Assembly});
 builder.Services.AddMediatR(typeof(Program))
     .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
     .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
@@ -44,7 +44,8 @@ var connectionString = builder.Configuration.GetConnectionString(ConnectionsStri
 builder.Services.AddDbContext<ApiSolutionContext>(x => x.UseNpgsql(connectionString)).AddUnitOfWork<ApiSolutionContext>();
 
 builder.Services.AddAutoMapper(typeof(Program));
-builder.Services.AddTransient<IDataService, DataService>();
+builder.Services.AddTransient(typeof(IEntityValidationService<>),typeof(EntityValidationService<>));
+builder.Services.AddTransient(typeof(IDataService<>), typeof(DataService<>));
 
 
 var app = builder.Build();

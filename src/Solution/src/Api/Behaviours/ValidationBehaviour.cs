@@ -1,11 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
 using FluentValidation;
 using MediatR;
-using Serilog;
 using ILogger = Serilog.ILogger;
 
 namespace Api.Behaviours
@@ -21,8 +15,9 @@ namespace Api.Behaviours
             _validators = validators;
             _logger = logger;
         }
+        
 
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             if (!typeof(TResponse).IsGenericType) return await next();
             if (!_validators.Any()) return await next();

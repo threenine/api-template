@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Gary Woodfine",
+  "author": "API Template Pack",
   "name": "Basic Crud Endpoints template",
   "description": "Query request for Vertical Slice Architecture",
   "identity": "CRUD Endpoints",
@@ -20,29 +20,29 @@
         "defaultFormat":"d"
       }
     },
-    "Namespace": {
+    "namespace": {
       "type": "parameter",
       "replaces": "Namespace",
       "dataType": "string",
       "defaultValue": "Namespace"
     },
-    "Resource": {
+    "resource": {
       "type": "parameter",
       "replaces": "Resource",
       "dataType": "string",
       "defaultValue": "Resource"
     },
-    "Model": {
+    "model": {
       "type": "parameter",
       "replaces": "Model",
       "dataType": "string",
       "defaultValue": "Model"
     },
-    "DTO": {
+    "domain": {
       "type": "parameter",
-      "replaces": "DTO",
+      "replaces": "Domain",
       "dataType": "string",
-      "defaultValue": "DTO"
+      "defaultValue": "Domain"
     }
     
   },

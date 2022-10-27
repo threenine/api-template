@@ -11,6 +11,8 @@ twitter_username: threenine39
 github_username:  threenine
 remote_theme: just-the-docs/just-the-docs
 
+mermaid:
+ version: "9.1.3"
 
 plugins:
   - jekyll-feed
