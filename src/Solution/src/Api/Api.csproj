@@ -24,6 +24,7 @@
         <PackageReference Include="Threenine.Data" Version="3.2.14" />
     </ItemGroup>
     <ItemGroup>
+       <ProjectReference Include="..\Common\Common.csproj" />
        <ProjectReference Include="..\Database\Database\Database.csproj" />
        <ProjectReference Include="..\Domain\Domain.csproj" />
     </ItemGroup>

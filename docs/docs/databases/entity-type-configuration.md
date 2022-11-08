@@ -72,3 +72,7 @@ public class PostsConfiguration : BaseEntityTypeConfiguration<Posts>
 }
 ```
 
+
+### Additional resources
+
+* [Use fluent API to configure a model](https://learn.microsoft.com/en-us/ef/core/modeling/#use-fluent-api-to-configure-a-model)

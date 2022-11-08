@@ -7,6 +7,25 @@ permalink: /docs/changelog
 
 # Change log
 
+### 4.1.2
+
+#### Documentation
+
+* Fixed issue with the Models and Domain modelling menu options referring to the same item  - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated more details to the Entity Type Configuration - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+#### Enhancement
+
+* Added a Common Project which can be used to share common constants, methods and properties for all projects - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Moved Regular Expressions to Common project - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* 
+
+### 4.1.1 
+
+#### Administration
+
+* Added Funding option to enable Sponsorship of the project - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 ### 4.1.0
 
 #### Feature

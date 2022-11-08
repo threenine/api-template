@@ -2,4 +2,7 @@
   <ItemGroup>
     <PackageReference Include="Threenine.Database.Configuration" Version="0.2.3" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj" />
+  </ItemGroup>
 </Project>

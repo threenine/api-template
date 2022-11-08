@@ -38,7 +38,10 @@ Validating the structure of data is just as important as validating the data its
 
 The API Template Pack provides capability to validate data at a number of points within the typical Request/Response pipeline.
 
-Wdefinit  
+
+#### Additional Resources
+
+* [Entity Validation with EF Core](https://garywoodfine.com/data-entity-validation-efcore "Entity Validation with EF Core - Gary Woodfine")
 
 
 
