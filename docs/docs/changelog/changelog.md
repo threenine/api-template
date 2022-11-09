@@ -7,6 +7,12 @@ permalink: /docs/changelog
 
 # Change log
 
+### 4.1.3
+
+### Bug
+
+* Fixed issue with Github upgrading to Cake 3.0 DotnetCore* settings stopped working, updated cake scripts - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 ### 4.1.2
 
 #### Documentation

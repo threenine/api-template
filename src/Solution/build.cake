@@ -53,7 +53,7 @@ Task("Version")
 Task("Build")
     .IsDependentOn("Version")
     .Does(() => {
-     var buildSettings = new DotNetCoreBuildSettings {
+     var buildSettings = new DotNetBuildSettings {
                         Configuration = configuration,
                        };
      var projects = GetFiles("./**/**/*.csproj");
@@ -70,7 +70,7 @@ Task("Test")
     .IsDependentOn("Build")
     .Does(() => {
 
-       var testSettings = new DotNetCoreTestSettings  {
+       var testSettings = new DotNetTestSettings  {
                                   Configuration = configuration,
                                   NoBuild = true,
                               };
