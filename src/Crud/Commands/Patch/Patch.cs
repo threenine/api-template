@@ -1,12 +1,11 @@
-using System.Threading;
-using System.Threading.Tasks;
+using Api.Activities;
 using Ardalis.ApiEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
-using Api.Activities;
-namespace Namespace.Resource.Commands.Patch;
+
+namespace Namespace.Activities.Resource.Commands.Patch;
 
 [Route(Routes.Resource)]
 public class Patch : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>

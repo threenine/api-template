@@ -11,7 +11,7 @@ The basic crud endpoints will generate a whole set of CRUD (Create, Read, Update
 
 ### Switches
 
-- *namespace* - The namespace we're creating the namespace
+- *namespace* - The root namespace typically your project of company name
 - *resource* - The name of the Resource we are creating.
 - *model* The model we are targeting
 - *domain* - The name of we're targeting
@@ -24,8 +24,10 @@ To generate new CRUD endpoints, assuming you have created your Model and DTO cla
 
 ```shell
 
-dotnet new crud -n Blogs --resource Blogs --namespace Threenine.Api.Activities.Blog --model Content --domain Article -o /src/Api/Activities
+dotnet new crud -n Blogs --resource Blogs --namespace Threenine --model Content --domain Article -o /src/Api/Activities
 ```
+
+Everything in the API Template Pack relies heavily on namespaces for Cohesion.
 
 This command will generate a number Files and Folders which will contain some the standard CRUD functionality for typical endpoints
 separated into the `Commands` and `Queries`  [CQRS Structure](../../../introduction/cqrs-introduction)

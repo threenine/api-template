@@ -1,7 +1,8 @@
 using AutoMapper;
-using Dtos.DTOs.Patch;
+using Namespace.Data;
+using Namespace.Resource.Patch;
 
-namespace Namespace.Resource.Commands.Patch;
+namespace Namespace.Activities.Resource.Commands.Patch;
 
 public class Mapping: Profile
 {
@@ -11,9 +12,9 @@ public class Mapping: Profile
         
         CreateMap<Model, Response>(MemberList.None);
  
-        CreateMap<Model, DTO>(MemberList.None);
+        CreateMap<Model, DomainObject>(MemberList.None);
 
-        CreateMap<DTO, Model>(MemberList.None);
+        CreateMap<DomainObject, Model>(MemberList.None);
 
     }
 }

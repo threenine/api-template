@@ -40,7 +40,7 @@
     },
     "domain": {
       "type": "parameter",
-      "replaces": "Domain",
+      "replaces": "DomainObject",
       "dataType": "string",
       "defaultValue": "Domain"
     }

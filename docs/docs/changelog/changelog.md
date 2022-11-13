@@ -7,6 +7,16 @@ permalink: /docs/changelog
 
 # Change log
 
+### 4.1.4
+
+### Bug 
+
+* Fixed issue with CRUD endpoint generation, Namespace conflicts were being created. - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+### Documentation
+
+* Provided additional detail on how to make use of the CRUD endpoint generation - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 ### 4.1.3
 
 ### Bug

@@ -1,7 +1,7 @@
-using Dtos.DTOs.Get;
-namespace Namespace.Resource.Queries.GetbyId;
+using Namespace.Resource.Get;
+namespace Namespace.Activities.Resource.Queries.GetbyId;
 
 public class Response
 {
-  public DTO DTO { get; set; }
+  public DomainObject DomainObject { get; set; }
 }

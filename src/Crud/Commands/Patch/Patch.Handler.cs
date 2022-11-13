@@ -1,12 +1,11 @@
-using Dtos;
 using MediatR;
 using Threenine;
-using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.AspNetCore.Mvc;
 using Threenine.ApiResponse;
-using Dtos.DTOs.Patch;
+using Namespace.Resource.Patch;
+using Namespace.Data;
 
-namespace Namespace.Resource.Commands.Patch;
+
+namespace Namespace.Activities.Resource.Commands.Patch;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 {
@@ -19,7 +18,7 @@ public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 
     public async Task<SingleResponse<Response>> Handle(Command request, CancellationToken cancellationToken)
     {
-        return await _services.Patch<Domain, Response>(x => x.Id == request.Id,
-            request.Domain);
+        return await _services.Patch<DomainObject, Response>(x => x.Id == request.Id,
+            request.DomainObject);
     }
 }

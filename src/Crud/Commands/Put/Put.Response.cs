@@ -1,6 +1,6 @@
 using System;
 
-namespace  Namespace.Resource.Commands.Put;
+namespace  Namespace.Activities.Resource.Commands.Put;
 
 public class Response
 {

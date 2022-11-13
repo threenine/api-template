@@ -1,14 +1,14 @@
-using Dtos.DTOs.Post;
+using Namespace.Resource.Post;
 using Threenine;
 using MediatR;
 using Threenine.ApiResponse;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Namespace.Resource.Commands.Post;
+namespace Namespace.Activities.Resource.Commands.Post;
 
 public class Command : IRequest<SingleResponse<Response>>
 {
-      [FromBody] public DTO DTO { get; set; }  
+      [FromBody] public DomainObject DomainObject { get; set; }  
 }
 
 

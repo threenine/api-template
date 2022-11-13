@@ -1,11 +1,10 @@
 using AutoMapper;
-using Dtos;
 using MediatR;
 using Threenine.ApiResponse;
 using Threenine.Data;
-using Dtos.DTOs.Get;
-
-namespace  Namespace.Resource.Queries.GetAll;
+using Namespace.Data;
+using Namespace.Resource.Get;
+namespace Namespace.Activities.Resource.Queries.GetAll;
 
 public class Handler : IRequestHandler<Query, SingleResponse<Response>>
 {
@@ -23,6 +22,6 @@ public class Handler : IRequestHandler<Query, SingleResponse<Response>>
         var results = await _unitOfWork.GetReadOnlyRepositoryAsync<Model>()
             .GetListAsync( size: Int32.MaxValue);
         
-        return new SingleResponse<Response>(new Response { DTO = _mapper.Map<List<DTO>>(results.Items)});
+        return new SingleResponse<Response>(new Response { DomainObjects = _mapper.Map<List<DomainObject>>(results.Items)});
     }
 }

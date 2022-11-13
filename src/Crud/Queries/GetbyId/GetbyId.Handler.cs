@@ -2,9 +2,10 @@ using AutoMapper;
 using MediatR;
 using Threenine.ApiResponse;
 using Threenine.Data;
-using Dtos.DTOs.Get;
+using Namespace.Resource.Get;
+using Namespace.Data;
 
-namespace Namespace.Resource.Queries.GetbyId;
+namespace Namespace.Activities.Resource.Queries.GetbyId;
 
 public class Handler : IRequestHandler<Query, SingleResponse<Response>>
 {

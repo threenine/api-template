@@ -1,13 +1,13 @@
 using AutoMapper;
-using Dtos.DTOs.Put;
-
-namespace  Namespace.Resource.Commands.Put;
+using Namespace.Resource.Put;
+using Namespace.Data;
+namespace  Namespace.Activities.Resource.Commands.Put;
 
 public class Mapping: Profile
 {
     public Mapping()
     {
-        CreateMap<DTO, Model>(MemberList.None)
+        CreateMap<DomainObject, Model>(MemberList.None)
             // TODO: Implement Mapping here
           ;
 

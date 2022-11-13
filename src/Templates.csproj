@@ -13,7 +13,7 @@
      </PropertyGroup>
     <ItemGroup Label="API Template Pack">
         <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
-        <Content Include="Database\**\*" Exclude="Database\bin\**;Database\obj\**" />
+        <Content Include="Database\**\*" Exclude="Database\DatabaseProject\bin\**;Database\DatabaseProject\obj\**;Models\bin\**;Models\obj\**" />
         <Content Include="Domain\**\*" Exclude="Domain\bin\**;Domain\obj\**" />
         <Content Include="ModelConfiguration\**\*" Exclude="ModelConfiguration\bin\**;ModelConfiguration\obj\**" />
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />

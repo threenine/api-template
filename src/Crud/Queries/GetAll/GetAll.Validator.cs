@@ -1,5 +1,5 @@
 using FluentValidation;
-namespace Namespace.Resource.Queries.GetAll;
+namespace Namespace.Activities.Resource.Queries.GetAll;
 
 public class Validator : AbstractValidator<Query>
 {

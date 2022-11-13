@@ -1,12 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
-using Dtos;
 using MediatR;
 using Threenine;
 using Threenine.ApiResponse;
-using Dtos.DTOs.Put;
-
-namespace  Namespace.Resource.Commands.Put;
+using Namespace.Resource.Put;
+using Namespace.Data;
+namespace  Namespace.Activities.Resource.Commands.Put;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 {
@@ -19,7 +18,7 @@ public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 
     public async Task<SingleResponse<Response>> Handle(Command request, CancellationToken cancellationToken)
     {
-        return await _services.Update<Domain, Response>(x =>
-            x.Id == request.Id, request.Domain);
+        return await _services.Update<DomainObject, Response>(x =>
+            x.Id == request.Id, request.DomainObject);
     }
 }

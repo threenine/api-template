@@ -1,13 +1,11 @@
-using System.Threading;
-using System.Threading.Tasks;
+using Api.Activities;
 using Ardalis.ApiEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
-using Api.Activities;
 
-namespace Namespace.Resource.Queries.GetbyId;
+namespace Namespace.Activities.Resource.Queries.GetbyId;
 
 [Route(Routes.Resource)]
 public class GetbyId : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SingleResponse<Response>>

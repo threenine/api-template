@@ -1,7 +1,7 @@
 using AutoMapper;
-using Dtos.DTOs.Get;
-
-namespace Namespace.Resource.Queries.GetbyId;
+using Namespace.Resource.Get;
+using Namespace.Data;
+namespace Namespace.Activities.Resource.Queries.GetbyId;
 
 public class Mapping: Profile
 {

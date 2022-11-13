@@ -1,14 +1,12 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
 using Ardalis.ApiEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
 using Api.Activities;
+using Namespace.Resource.Post;
 
-namespace Namespace.Resource.Commands.Post;
+namespace Namespace.Activities.Resource.Commands.Post;
 
 [Route(Routes.Resource)]
 public class Post : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>

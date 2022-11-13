@@ -1,4 +1,4 @@
-namespace Namespace.Resource.Commands.Patch;
+namespace Namespace.Activities.Resource.Commands.Patch;
 
 public class Response
 {

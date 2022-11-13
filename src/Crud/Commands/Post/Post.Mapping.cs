@@ -1,7 +1,7 @@
 using AutoMapper;
-using Dtos.DTOs.Post;
-
-namespace  Namespace.Resource.Commands.Post;
+using Namespace.Resource.Post;
+using Namespace.Data;
+namespace  Namespace.Activities.Resource.Commands.Post;
 
 public class Mapping: Profile
 {
@@ -9,7 +9,7 @@ public class Mapping: Profile
     {
         // TODO: Complete Mapping
         
-        CreateMap<DTO, Model>(MemberList.None);
+        CreateMap<DomainObject, Model>(MemberList.None);
         // TODO: Add Mapping Here 
 
         CreateMap<Model, Response>(MemberList.None)
