@@ -1,9 +1,6 @@
-using System.Collections.Generic;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using Threenine.ApiResponse;
-
-namespace Namespace.CommandRequest;
+namespace Namespace.Activities.Resource.Commands.CommandRequest;
 
 public class Command : IRequest<SingleResponse<Response>>
 {

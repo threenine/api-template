@@ -8,7 +8,7 @@ using MediatR;
 using Threenine.ApiResponse;
 
 
-namespace Namespace.QueryRequest;
+namespace Namespace.Activities.Resource.Queries.QueryRequest;
 
 public class Handler : IRequestHandler<Query, SingleResponse<Response>>
 {

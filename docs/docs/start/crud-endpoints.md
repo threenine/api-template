@@ -7,7 +7,14 @@ nav_order: 3
 
 # Basic Crud Endpoints template
 
-The basic crud endpoints will generate a whole set of CRUD (Create, Read, Update and Delete) endpoints, based on providing a set of criteria provided via the switch arguments.
+A common requirement can occur when developing API's maybe to develop a set of Seeding or common data administration end points to populate core tables within the API for with standing data or provide a set of End points to an administration application to manage the data. These can be very boring to develop because they are mostly CRUD based endpoints. 
+
+The basic crud endpoints will generate a set of CRUD (Create, Read, Update and Delete) endpoints, based on providing a set of criteria provided via the switch arguments.
+
+The endpoints will not be a comprehensive list, but rather the common simple starting points to enable the quick development of really simple basic crud endpoints to enable developers to focus on the more complicated functionality.
+
+
+
 
 ### Switches
 

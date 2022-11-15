@@ -20,13 +20,13 @@
 	      "defaultFormat":"d"
 	    }
     },
-     "Namespace": {
+     "namespace": {
         "type": "parameter",
         "replaces": "Namespace",
         "dataType": "string",
         "defaultValue": "Namespace"
     },
-    "Resource": {
+    "resource": {
       "type": "parameter",
       "replaces": "Resource",
       "dataType": "string",

@@ -16,10 +16,11 @@ Resource-based API's focus on the interactions across a network, independent of 
 
 Resources form the nucleus of any [REST API design](https://www.apitemplatepack.com/docs/introduction/what-is-rest/). Resource identifiers (URI), Resource representations, API operations etc. are all built around the concept of *Resources*. It is very important to select the right resources and model the resources at the right granularity while designing the REST API so that the API consumers get the desired functionality from the APIs, the APIs behave correctly and the APIs are maintainable.
 
+[Identifying resources on the Web](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web "MDN Web Docs")
 
 ### Resources are not Data Models.
 
-It is vitally important to recognize that *resources are not the same thing as a data model*
+It is vitally important to recognize that **resources are not the same thing as a data model**
 
 A data model, often reflected as a schema design in a database, is optimised for the read and write operations necessary to support the required Input/Output (I/O) operations necessary to support the required I/O performance and reporting needs of a solution.
 
@@ -35,11 +36,16 @@ Web API's generally seek to address entirely different sets of goals including:
 
 API's are generally used as an integration layer between systems therefore they should remain stable over long periods of time, whereas data models may change to accomodate new or changing data access requirements.
 
-*API's may have an impact on a Data Model, they should evovle completely separately*.
+*API's may have an impact on a Data Model, they should evolve completely separately*.
 
-# Resources are not object or Domain Models
+> A key point to always remember is that a Resource does not need to be an entity or data model.  
+> 
+> **A Resource can be whatever you want it to be.**
 
-Objects support collaboration with a codebase, and are often used to map to data models into code for easier manipulation.  Domain models are typically comprised of object used to represent the sepcific business domain, and used in a variety of ways to address the needs of the system often traversing different transactional contexts based on how they are applied.
+
+# Resources are not Objects or Domain Models
+
+Objects support collaboration with a codebase, and are often used to map to data models into code for easier manipulation.  Domain models are typically comprised of object used to represent the specific business domain, and used in a variety of ways to address the needs of the system often traversing different transactional contexts based on how they are applied.
 
 Object and Domain models can suffer from the same issues as exposed data models:
 - Constant Code Changes

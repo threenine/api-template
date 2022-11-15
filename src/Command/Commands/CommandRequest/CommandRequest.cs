@@ -1,6 +1,8 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
+using Api.Activities;
 using Ardalis.ApiEndpoints;
 using MediatR;
 using Microsoft.AspNetCore.Http;
@@ -8,34 +10,33 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
 
-namespace Namespace.QueryRequest;
+namespace Namespace.Activities.Resource.Commands.CommandRequest;
 
 [Route(Routes.Resource)]
-public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SingleResponse<Response>>
+public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>
 {
     private readonly IMediator _mediator;
 
-    public QueryRequest(IMediator mediator)
+    public CommandRequest(IMediator mediator)
     {
         _mediator = mediator;
     }
-        
-    [HttpGet]
+    
+    [HttpPost]
     [SwaggerOperation(
-        Summary = "QueryRequest",
-        Description = "QueryRequest",
+        Summary = "CommandRequest",
+        Description = "CommandRequest",
         OperationId = "operationid",
-        Tags = new[] { Routes.Resource})
+        Tags = new[] { Routes.Resource })
     ]
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Response))]
-    [ProducesErrorResponseType(typeof(BadRequestObjectResult))]
-    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromRoute] Query request, CancellationToken cancellationToken = new())
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    public override async Task<ActionResult<SingleResponse<Response>>> HandleAsync([FromBody] Command request, CancellationToken cancellationToken = new())
     {
         var result = await _mediator.Send(request, cancellationToken);
-       
-        if (result.IsValid)
-            return new OkObjectResult(result.Item);
         
+        if (result.IsValid)
+            return new CreatedResult(new Uri(Routes.Resource, UriKind.Relative), new { result.Item });
+
         return await HandleErrors(result.Errors);
     }
     

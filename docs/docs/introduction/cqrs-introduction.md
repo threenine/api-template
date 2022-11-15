@@ -5,6 +5,8 @@ parent: Introduction
 nav_order: 6
 ---
 
+# Introduction to CQRS
+
 The API Template Pack leads down to an opinionated path to implementing a [CQRS pattern](https://garywoodfine.com/what-is-cqrs/ "What is CQRS - Gary Woodfine"), the real benefits of introducing this pattern will come to fruition in later versions of the API Template Pack when we start delving more into the Microservices, Event-Storming and the Event-Driven Architecture aspects of the API Template Pack. However, at this early stage it is still quite important to understand the fundamental basics of CQRS and the how and why the API Template Pack starts you on the path from the very beginning.
 
 ### Splitting Models into Read & Write Operations

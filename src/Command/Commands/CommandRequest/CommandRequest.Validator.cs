@@ -1,7 +1,5 @@
-using System;
 using FluentValidation;
-
-namespace Namespace.CommandRequest;
+namespace Namespace.Activities.Resource.Commands.CommandRequest;
 
 public class Validator : AbstractValidator<Command>
 {

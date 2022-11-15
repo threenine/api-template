@@ -7,6 +7,17 @@ permalink: /docs/changelog
 
 # Change log
 
+### 4.1.5
+
+### Enhancement
+
+* Command & Query template updated with lowercasing of parameters and improved folder layout. - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+### Documentation 
+
+* Updated Command & Query Template with improved instructions on how to make use of them - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
+
 ### 4.1.4
 
 ### Bug 

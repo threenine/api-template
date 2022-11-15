@@ -1,7 +1,5 @@
 using AutoMapper;
-
-
-namespace Namespace.CommandRequest;
+namespace Namespace.Activities.Resource.Commands.CommandRequest;
 
 public class Mapping: Profile
 {
