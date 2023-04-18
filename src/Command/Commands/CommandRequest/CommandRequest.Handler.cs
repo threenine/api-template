@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using MediatR;
 using Threenine.ApiResponse;
 
-namespace Namespace.Activities.Resource.Commands.CommandRequest;
+namespace Api.Activities.Resource.Commands.CommandRequest;
 
 public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 {

@@ -14,15 +14,14 @@ The query template is a great option if you want to add an additional query opti
 To do so you can simply use
 
 ```shell
-dotnet new query -n <name of your query> -o <Directory location to create> --namespace <Namespace you would like to use>  --resource <name of the resource>
+dotnet new query --name <name of your query> --output <Directory location to create> --resource <name of the resource>
 ```
 
 
 ## Switches
 
-* `-n` Name of the Endpoint being created
-* `-o` the output directory you would like to create
-* `--namespace` The root namespace of your project i.e. Your company or project name
+* `--name` Name of the Endpoint being created
+* `--output` the output directory you would like to create
 * `--resource` the name of the resource the command will be associated too
 * `--force`  This is an optional command which enables overwriting some or all of the folders associated with the command.
 
@@ -31,7 +30,7 @@ dotnet new query -n <name of your query> -o <Directory location to create> --nam
 In a similar example we defined in the [Command Endpoint Template](../start/command-endpoint "Command Endpoint Template - API Template Pack") we want to create a Read endpoint in our Email API resource.
 
 ```shell
- dotnet new query -n Read -o SampleProject/Activities/Email --namespace SampleProject --resource Email
+ dotnet new query --name Read --output SampleProject/Activities/Email  --resource Email
 ```
 Which will result in a number of folders & files being created.
 

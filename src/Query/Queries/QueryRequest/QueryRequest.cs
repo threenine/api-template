@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
 
-namespace Namespace.Activities.Resource.Queries.QueryRequest;
+namespace Api.Activities.Resource.Queries.QueryRequest;
 
 [Route(Routes.Resource)]
 public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResult<SingleResponse<Response>>

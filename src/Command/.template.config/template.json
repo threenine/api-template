@@ -21,12 +21,6 @@
 	      "defaultFormat":"d"
 	    }
     },
-     "namespace": {
-        "type": "parameter",
-        "replaces": "Namespace",
-        "dataType": "string",
-        "defaultValue": "Namespace"
-    },
     "resource": {
       "type": "parameter",
       "replaces": "Resource",

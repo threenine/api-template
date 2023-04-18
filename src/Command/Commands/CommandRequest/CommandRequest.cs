@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using Threenine.ApiResponse;
 
-namespace Namespace.Activities.Resource.Commands.CommandRequest;
+namespace Api.Activities.Resource.Commands.CommandRequest;
 
 [Route(Routes.Resource)]
 public class CommandRequest : EndpointBaseAsync.WithRequest<Command>.WithActionResult<SingleResponse<Response>>

@@ -1,6 +1,6 @@
 using System;
 
-namespace Namespace.Activities.Resource.Queries.QueryRequest;
+namespace Api.Activities.Resource.Queries.QueryRequest;
 
 public class Response
 {

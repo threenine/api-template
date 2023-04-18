@@ -7,6 +7,12 @@ permalink: /docs/changelog
 
 # Change log
 
+### 4.1.7
+
+### Enhancement
+
+* Removed the Root Namespace parameter on Command And Query templates  - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 ### 4.1.5
 
 ### Enhancement

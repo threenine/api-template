@@ -17,14 +17,13 @@ The command template is also the best option if you want to create a [Custom Met
 To do so you can simply use
 
 ```shell
-dotnet new command -n <name of your command> -o <Directory location to create> --namespace <Namespace you would like to use>  --resource <name of the resource>
+dotnet new command --name <name of your command> --output <Directory location to create>  --resource <name of the resource>
 ```
 
 ## Switches
 
-* `-n` Name of the Endpoint being created
-* `-o` the output directory you would like to create
-* `--namespace` The root namespace of your project i.e. Your company or project name
+* `--name` Name of the Endpoint being created
+* `--output` the output directory you would like to create
 * `--resource` the name of the resource the command will be associated too
 * `--force`  This is an optional command which enables overwriting some or all of the folders associated with the command.
 
@@ -37,7 +36,7 @@ In this example we may want to create a Send endpoint for our Email resource in 
 We can use the following command to generate our new endpoint on our Root Project directory
 
 ```shell
- dotnet new command -n Send -o SampleProject/Activities/Email --namespace SampleProject --resource Email
+ dotnet new command --name Send --output SampleProject/Activities/Email  --resource Email
 ```
 
 Which will result in a number of folders & files being created.

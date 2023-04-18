@@ -1,4 +1,4 @@
-namespace Namespace.Activities.Resource.Commands.CommandRequest;
+namespace Api.Activities.Resource.Commands.CommandRequest;
 
 public class Response
 {
