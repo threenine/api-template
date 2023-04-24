@@ -1,7 +1,7 @@
 <Project>
     <PropertyGroup>
         <Authors>Gary Woodfine</Authors>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
         <Title>Vertical Slice Architecture API template Pack</Title>
         <Description>Project template to create vertical slice architecture project</Description>
         <RepositoryType>git</RepositoryType>

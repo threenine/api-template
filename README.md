@@ -10,9 +10,9 @@
 
 The API Template pack provides an opinionated implementation guide to making use of popular leading .net framework based tools and utilities to assist developers to quickly and efficiently develop secure, stable and resilient REST API’s.
 
-REST API framework for ASP.Net 6 that implements [REPR (Request-Endpoint-Response) Pattern](https://www.apitemplatepack.com/docs/introduction/repr-pattern/) and [Vertical Slice Architecture](https://www.apitemplatepack.com/docs/introduction/vertical-slice/).
+REST API framework for ASP.Net 7 that implements [REPR (Request-Endpoint-Response) Pattern](https://www.apitemplatepack.com/docs/introduction/repr-pattern/) and [Vertical Slice Architecture](https://www.apitemplatepack.com/docs/introduction/vertical-slice/).
 
-The API Template Pack provides an opinionated approach to implementing best practices and pattern based approaches to implementing Web Based REST API's using Dotnet 6, using the best available open source libraries enabling you to focus on just implementing the real value added business logic.
+The API Template Pack provides an opinionated approach to implementing best practices and pattern based approaches to implementing Web Based REST API's using Dotnet 7, using the best available open source libraries enabling you to focus on just implementing the real value added business logic.
 
 Check out the Documentation [apitemplatepack.com](https://www.apitemplatepack.com "API Template Pack")
 
@@ -35,8 +35,3 @@ If you find any issues, bugs or would like additional features the open a an Iss
 Details of changes per release can be found at the [Change log](https://www.apitemplatepack.com/docs/changelog)
 
 ---
-
-
-## Sponsored by
-
-[![threenine logo](http://static.threenine.co.uk/img/github_footer.png)](https://threenine.co.uk/)

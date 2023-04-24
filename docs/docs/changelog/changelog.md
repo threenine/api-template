@@ -7,6 +7,13 @@ permalink: /docs/changelog
 
 # Change log
 
+### 5.0.0
+* Updated to .Net 7.0 - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Upgraded project dependencies - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated Documentation with Backend For Frontend Pattern explanation - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated Documentation with Microservices Architecture Pattern explanation - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* 
+
 ### 4.1.7
 
 ### Enhancement
