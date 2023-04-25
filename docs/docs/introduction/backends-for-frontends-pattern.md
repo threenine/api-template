@@ -1,4 +1,11 @@
-
+---
+layout: default
+title: "Backends for Frontends pattern"
+parent: Introduction
+nav_order: 9
+description: "A BFF is a dedicated backend for the frontend, which proposes proposes a server-side component for each front-end application, thus enhancing and improving the user experience."
+image: "../../../assets/images/5-principles-api-design.png"
+---
 ## Backends for Frontends Pattern
 
 The **Backends for Frontends pattern (BFF)** is an fairly recent emerging pattern that is becoming more popular with the rise of mobile and web applications.  The pattern is a variation of the [Microservices Architecture Pattern](https://www.apitemplatepack.com/docs/introduction/microservices-architecture/ "Microservices Architecture Pattern - API Template Pack") and is used to help address the challenges of developing and maintaining multiple client applications that are used to access the same backend services.
