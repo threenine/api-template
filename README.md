@@ -34,4 +34,3 @@ If you find any issues, bugs or would like additional features the open a an Iss
 
 Details of changes per release can be found at the [Change log](https://www.apitemplatepack.com/docs/changelog)
 
----
