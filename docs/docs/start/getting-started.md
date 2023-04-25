@@ -21,7 +21,7 @@ To install the API Template Pack you can simply do so by opening a terminal wind
 
 ```shell
 
-dotnet new -i Threenine.ApiProject
+dotnet new install Threenine.ApiProject
 
 ```
 
@@ -37,7 +37,7 @@ Once the API Template pack is successfully installed  you should be able to use 
 Should for you for whatever reason need to uninstall the API Template pack this can be achieved by simply executing
 ```shell
 
-dotnet new -u Threenine.ApiProject
+dotnet new uninstall Threenine.ApiProject
 
 ```
 
