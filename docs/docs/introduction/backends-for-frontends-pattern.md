@@ -19,7 +19,7 @@ A BFF layer comprises multiple back-ends that are designed to meet the demands o
 
 Back-end-for-front-end is an architectural paradigm, a variant of the API gateway pattern, with each client application having its corresponding back-end application. This pattern is good when you have multiple client interfaces with diverse needs, leveraging the same underlying resources. 
 
-![Backends for Frontends Pattern](../../../assets/images/backends-for-frontends-pattern.png "Backends for Frontends Pattern")
+![Backend For Frontend Pattern](../../../assets/images/backend-for-frontend-pattern.png "Backends for Frontends Pattern")
 
 ### Why use the Backends for Frontends Pattern?
 
