@@ -32,9 +32,12 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly))
-    .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
-    .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+    cfg.AddOpenBehavior(typeof(LoggingBehaviour<,>));
+    cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+});
            
 builder.Services.AddAutoMapper(typeof(Program));
 

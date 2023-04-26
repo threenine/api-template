@@ -36,10 +36,12 @@ builder.Services.AddSwaggerGen(c =>
 });
 builder.Services.AddTransient<ExceptionHandlingMiddleware>();
 builder.Services.AddValidatorsFromAssemblies(new[] { typeof(Program).Assembly , typeof(ApiSolutionContext).Assembly});
-builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly))
-    .AddScoped(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>))
-    .AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
-
+builder.Services.AddMediatR(cfg =>
+{
+    cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+    cfg.AddOpenBehavior(typeof(LoggingBehaviour<,>));
+    cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
+});
 var connectionString = builder.Configuration.GetConnectionString(ConnectionsStringName);
 builder.Services.AddDbContext<ApiSolutionContext>(x => x.UseNpgsql(connectionString)).AddUnitOfWork<ApiSolutionContext>();
 
