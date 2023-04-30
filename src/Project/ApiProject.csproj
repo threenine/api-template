@@ -22,6 +22,6 @@
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.4.0" />
         <PackageReference Include="Threenine.ApiResponse" Version="1.0.26" />
-        <PackageReference Include="Threenine.Data" Version="4.0.0" />
+        <PackageReference Include="Threenine.Data" Version="5.0.0" />
     </ItemGroup>
 </Project> 
