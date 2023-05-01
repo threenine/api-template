@@ -10,7 +10,7 @@ using Threenine;
 using Threenine.Data.DependencyInjection;
 using Threenine.Services;
 
-const string ConnectionsStringName = "Local_DB";
+const string ConnectionsStringName = "Default";
 
 
 Log.Logger = new LoggerConfiguration()
