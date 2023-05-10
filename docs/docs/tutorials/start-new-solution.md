@@ -33,7 +33,7 @@ To start the project we'll simply use the command below, the command switches ar
 
 ```shell
 
-dotnet new apisolution -n Swc --Root Geekiam -o code/Swc
+dotnet new apisolution --name Swc --Root Geekiam --output code/Swc
 
 ```
 
@@ -76,7 +76,7 @@ The `appsettings.Development.json` will have the database connection defined whi
 
 ```json
  "ConnectionStrings" : {
-    "Local_DB": "User ID=Swc;Password=Password12@;Host=localhost;Port=5432;Database=Cms;Pooling=true;Integrated Security=true;"
+    "DefaultConnection": "User ID=Swc;Password=Password12@;Host=localhost;Port=5432;Database=Cms;Pooling=true;Integrated Security=true;"
   },
 ```
 

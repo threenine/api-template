@@ -20,9 +20,9 @@ To generate your set of Domain objects using the following terminal command
 
 
 ```shell
-dotnet new domain -n [ your chosen name] -o src/Domain/
+dotnet new domain --name [ your chosen name] --output src/Domain/
 
 ```
 
-The `-n` switch is used to define a name you would like to use
-The `-o` switch is used to define the output directory, in most cases this will be within the Domain project.
+The `--name` switch is used to define a name you would like to use
+The `--output` switch is used to define the output directory, in most cases this will be within the Domain project.

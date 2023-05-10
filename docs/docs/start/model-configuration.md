@@ -15,18 +15,18 @@ The template makes use of the following parameters
 
 `--model` Name of your Model class to generate the configuration for
 
-`-n` Name of your class to be created
-`-o` The preferred output location
+`--name` Name of your class to be created
+`--output` The preferred output location
 
 ```shell
- dotnet new modelconfig --model [Name of model] -o [your output location] -n [Name of you class]
+ dotnet new modelconfig --model [Name of model] --output [your output location] --name [Name of you class]
 
 ```
 
 In the following example we are going to generate a PostsConfiguration class for our Posts Model. Our preferred output location will be Configuraitons folder in our database project.  We will be executing the terminal command in the root of our project directory.
 
 ```shell
- dotnet new modelconfig --model Posts -o src/Database/Database/Configurations/ -n PostsConfiguration
+ dotnet new modelconfig --model Posts --output src/Database/Database/Configurations/ --name PostsConfiguration
 
 ```
 

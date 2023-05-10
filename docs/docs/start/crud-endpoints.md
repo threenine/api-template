@@ -23,15 +23,15 @@ The endpoints will not be a comprehensive list, but rather the common simple sta
 - *model* The model we are targeting
 - *domain* - The name of we're targeting
 
-Use the `-o` or `--output` switch to define the output location for the files to be generate
+Use the  `--output` switch to define the output location for the files to be generate
 
-The `-n` or `--name` switch to define the root folder name for the output
+The  `--name` switch to define the root folder name for the output
 
 To generate new CRUD endpoints, assuming you have created your Model and DTO classes. You change into the `Activities` folder of your API in your terminal window. i.e.  `cd src/Api/Activities` 
 
 ```shell
 
-dotnet new crud -n Blogs --resource Blogs --namespace Threenine --model Content --domain Article -o /src/Api/Activities
+dotnet new crud --name Blogs --resource Blogs --namespace Threenine --model Content --domain Article -o /src/Api/Activities
 ```
 
 Everything in the API Template Pack relies heavily on namespaces for Cohesion.

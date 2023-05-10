@@ -19,11 +19,11 @@ To create a new solution using the `apisolution` template simply open a terminal
 
 ```shell
 
-dotnet new apisolution -n <name of your solution>  --Root <your chosen root namespace>
+dotnet new apisolution --name <name of your solution>  --root <your chosen root namespace>
 
 ````
 
-- `-n`  Is a name switch that is used to provide your project a name for instance _Cms_
+- `--name`  Is a name switch that is used to provide your project a name for instance _Cms_
 - `--root` is a root namespace you would like to use for your project i.e. Your company name or some such.   
 - 
 
@@ -33,7 +33,7 @@ As an example we may want to develop the _Diogel_ project for our company _Three
 
 ```shell
 
-dotnet new apisolution -n Diogel --root Threenine
+dotnet new apisolution --name Diogel --root Threenine
 
 ```
 
@@ -98,14 +98,14 @@ From the outset the API Solution template, is ready for you to start your develo
 
 #### Initiating a Git repository
 
-By convention, a vast majority of software developers predominantly make use of [Git - Version Control](https://geekiam.io/what-is-git "What is Git - geekiam.io"). 
+By convention, a vast majority of software developers predominantly make use of [Git - Version Control](https://garywoodfine.com/what-is-git/ "What is Git - Gary Woodfine"). 
 
 
 > The API solution makes use of Semantic Versioning and makes use of **GitVersion** which requires a Git Repository, so all you create a Git Repository by Changing into the root of your created directory and using:
 > 
 > `git init` 
 > 
-> [How to create a Git Repository](https://geekiam.io/how-to-create-git-repository "How To Create A Git Repository - geekiam.io")
+> [How to create a Git Repository](https://garywoodfine.com/how-to-create-a-git-repository "How To Create A Git Repository - Gary Woodfine")
 
 The API template Pack, takes an opinionated view, on defining PostgreSQL as the default database to base API's from. We have detailed the number of [reasons why we chose PostgreSQL](../../knowledge/postgres "Why use PostgreSQL for your database - API Template Pack") as the default database option.   As such we we included a Docker-compose script that will setup a local PostgreSQL database for you.
 

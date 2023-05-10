@@ -10,7 +10,7 @@ nav_order: 8
 The Database project template aims to make creating a new database project for your microservice is as easy as possible.
 
 ```shell
-dotnet new database -n [Name of your Database]  -o [output location]
+dotnet new database --name [Name of your Database]  --output [output location]
 ```
 
 Using Rider project wizard 
