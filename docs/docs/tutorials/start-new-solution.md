@@ -248,13 +248,13 @@ Then we can use the CLI tool to generate our DTO place holder objects and their 
 
 ```shell
 
-dotnet new dto -n <name of your choice>
+dotnet new dto --name <name of your choice>
 ```
 
 so for example if we wanted to create a Blog data transfer object, we could simply use
 
 ```shell
-dotnet new dto -n Blog
+dotnet new dto --name Blog
 ```
  This will generate the place holder objects in the DTOs project
 
@@ -267,5 +267,5 @@ The API Template Pack enables generating some basic CRUD endpoints to quickly en
 
 ```shell
 
-dotnet new crud --Resource Blogs --Namespace Threenine.Api.Activities.Blog  --Model  Content --DTO Blog
+dotnet new crud --resource Blogs --namespace Threenine.Api.Activities.Blog  --model  Content --domain Blog
 ```
