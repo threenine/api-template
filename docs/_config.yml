@@ -16,7 +16,6 @@ mermaid:
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-sitemap
     
 search_enabled: true
@@ -54,6 +53,4 @@ kramdown:
     block:
       line_numbers: false
 
-footer_content: "&copy 2022 <a href=\"https://www.threenine.co.uk\">threenine.co.uk</a>"
-ga_tracking: G-T1HJG6SP8H
-ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)   
+footer_content: "&copy 2023 <a href=\"https://www.threenine.co.uk\">threenine.co.uk</a>"

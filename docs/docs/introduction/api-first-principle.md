@@ -55,5 +55,6 @@ The goal of the API first approach is to gather sufficient details to limit the 
 
 ### Additional Resources
 
+- [What is API First?](https://threenine.blog/posts/what-is-api-first)
 - [API Design Patterns](https://garywoodfine.com/book-review-api-design-patterns/)
 - [Principles of Web API Design](https://garywoodfine.com/book-review-principles-of-web-api-design/)
