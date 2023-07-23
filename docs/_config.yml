@@ -16,6 +16,7 @@ mermaid:
 
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
     
 search_enabled: true
