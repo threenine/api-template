@@ -7,7 +7,9 @@ nav_order: 3
 
 # Basic Crud Endpoints template
 
-A common requirement can occur when developing API's maybe to develop a set of Seeding or common data administration end points to populate core tables within the API for with standing data or provide a set of End points to an administration application to manage the data. These can be very boring to develop because they are mostly CRUD based endpoints. 
+A common requirement can occur when developing API's maybe to develop a set of Seeding or common data administration end points to populate core resources within the API for with standing data or provide a set of end points to an administration application to manage the data. These can be tedious and boring to develop because they are mostly CRUD based endpoints.
+
+The API Template Pack provides a simple command to generate a set of basic CRUD endpoints for a given resource.  We have discussed in [What is a REST API](https://threenine.blog/posts/what-is-a-rest-api) that REST API's are all about resources and are not really to focused on CRUD operations, we understand that this is sometimes a requirement and therefore we have provided a simple command to generate these endpoints.
 
 The basic crud endpoints will generate a set of CRUD (Create, Read, Update and Delete) endpoints, based on providing a set of criteria provided via the switch arguments.
 
