@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Kingsbridge.Helpers;
+namespace ApiProject.Helpers;
 
 public class JsonPatchDocumentFilter : IDocumentFilter
 {

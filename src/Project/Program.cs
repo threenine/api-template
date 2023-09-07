@@ -1,7 +1,7 @@
 using ApiProject.Behaviours;
 using ApiProject.Middleware;
+using ApiProject.Helpers;
 using FluentValidation;
-using Kingsbridge.Helpers;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
@@ -57,4 +57,4 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 app.MapControllers();
-app.Run();
+await app.RunAsync();

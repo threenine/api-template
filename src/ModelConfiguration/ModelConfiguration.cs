@@ -8,7 +8,7 @@ public class ModelConfiguration : BaseEntityTypeConfiguration<Model>
 {
     public override void Configure(EntityTypeBuilder<Model> builder)
     {
-        builder.ToTable(nameof(Model).ToLower());
+        builder.ToTable(nameof(Model).ToSnakeCase());
         
         // Add configurations
         
