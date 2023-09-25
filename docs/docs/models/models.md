@@ -8,23 +8,16 @@ permalink: /docs/models
 
 # Models Project
 
-The Models project is used to define the Entities used in the application, typically these are the Database Entities. A model is made up of (domain model)
-entity classes and a derived context ([Database Context](../docs/databases/context)) that represents a session with the database, allowing
-you to query and save data.
+The Models project is used to define the Database Entities for the Database project, these should not be confused with 
+the Domain Entities.  The Models project is tightly coupled to the Database project and the models should not be used
+outside of the Database project. 
 
-In DDD, there are artifacts to express, create, and retrieve domain models: Entity. An object that is not defined by its attributes, but rather by a thread of continuity and its identity.
+For the most part the models are a 1:1 mapping of the Database tables, however there are some exceptions to this rule. Ideally
+in typical DDD fashion the *Domain Entities* would be mapped to the *Database Models* via the use of Aggregate Roots, Data Transfer
+Objects, Repositories etc. 
 
-In the API Template Pack an Entity, may typically be a business object that may be represented as a Database object i.e. Table, although it does not exclusively mean this.
+Your classes and other objects defined in the Models project should be defined in the `Models` namespace, and this namespace
+should never be used directly withing the API Project.  For the most part the Models project should be considered an internal
+and the Domain and Database Project should only be able to reference it.
 
-### What is an Entity
 
-An `ENTITY` is anything that has continuity through a life cycle and distinctions independent of attributes that are important to the application's user.
-
-In *Domain-Driven Design* (DDD), an Entity is something that has an identifier and an owner. It can be mutable, but has a thread of continuity throughout its lifetime.
-
-There are important characteristics of entities:
-
-* An Entity has an identifier
-* An Entity has an owner
-* An Entity can be mutable
-* An Entity has a thread of continuity
