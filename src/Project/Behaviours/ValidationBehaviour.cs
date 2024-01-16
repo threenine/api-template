@@ -10,27 +10,21 @@ using ILogger = Serilog.ILogger;
 
 namespace ApiProject.Behaviours
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest,TResponse>
-        where TResponse : class where TRequest : IRequest<TResponse>
+    public class ValidationBehaviour<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators)
+        : IPipelineBehavior<TRequest, TResponse>
+        where TResponse : class
+        where TRequest : IRequest<TResponse>
     {
-        private readonly IEnumerable<IValidator<TRequest>> _validators;
-        private readonly ILogger _logger;
-
-        public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators, ILogger logger)
-        {
-            _validators = validators;
-            _logger = logger;
-        }
         
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             if (!typeof(TResponse).IsGenericType) return await next();
-            if (!_validators.Any()) return await next();
+            if (!validators.Any()) return await next();
 
             var context = new ValidationContext<TRequest>(request);
             var validationResults =
-                await Task.WhenAll(_validators.Select(v => v.ValidateAsync(context, cancellationToken)));
+                await Task.WhenAll(validators.Select(v => v.ValidateAsync(context, cancellationToken)));
             var failures = validationResults.SelectMany(r => r.Errors)
                 .Where(f => f != null)
                 .GroupBy(x => x.PropertyName,
@@ -42,7 +36,7 @@ namespace ApiProject.Behaviours
                     })
                 .ToDictionary(x => x.Key, x => x.Values);
 
-            if (!failures.Any()) return await next();
+            if (failures.Count == 0) return await next();
 
             return Activator.CreateInstance(typeof(TResponse), null, failures.ToList()) as TResponse;
         }
