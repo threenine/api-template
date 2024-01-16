@@ -4,15 +4,9 @@ using ILogger = Serilog.ILogger;
 
 namespace Api.Behaviours
 {
-    public class LoggingBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> 
+    public class LoggingBehaviour<TRequest, TResponse>(ILogger logger) : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
     {
-        private readonly ILogger _logger;
-        public LoggingBehaviour(ILogger logger)
-        {
-            _logger = logger;
-        }
-      
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {

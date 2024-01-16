@@ -10,6 +10,9 @@ permalink: /docs/changelog
 ### 6.0.0
 * Updated to .Net 8.0 - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Upgraded project dependencies - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated make use of C# Language syntax enhancements - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Created Connection String Names Static Class - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* 
 
 ### 5.0.0
 * Updated to .Net 7.0 - [@gary_woodfine](https://twitter.com/gary_woodfine)

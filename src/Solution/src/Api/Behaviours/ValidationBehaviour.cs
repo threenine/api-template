@@ -4,17 +4,11 @@ using ILogger = Serilog.ILogger;
 
 namespace Api.Behaviours
 {
-    public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest,TResponse>
-        where TResponse : class where TRequest : IRequest<TResponse>
+    public class ValidationBehaviour<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators)
+        : IPipelineBehavior<TRequest, TResponse>
+        where TResponse : class
+        where TRequest : IRequest<TResponse>
     {
-        private readonly IEnumerable<IValidator<TRequest>> _validators;
-        private readonly ILogger _logger;
-
-        public ValidationBehaviour(IEnumerable<IValidator<TRequest>> validators, ILogger logger)
-        {
-            _validators = validators;
-            _logger = logger;
-        }
         
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
