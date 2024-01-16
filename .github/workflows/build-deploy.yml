@@ -21,7 +21,7 @@ jobs:
       - name: Run cake
         uses: cake-build/cake-action@v1.4.1
         with:
-          arguments: |
-            NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-            GITHUB_TOKEN: ${{ github.token }}
+          arguments: | 
+            nuget_api_key: ${{ secrets.NUGET_API_KEY }}
+            github_token: ${{ github.token }}
         

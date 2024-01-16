@@ -2,8 +2,8 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
-var nuget_api_key = Argument("NUGET_API_KEY", "");
-var github_token = Argument("GITHUB_TOKEN", "")
+var nuget_api_key = Argument<string>("nuget_api_key");
+var github_token = Argument<string>("github_token")
 
 string version = String.Empty;
 //////////////////////////////////////////////////////////////////////
