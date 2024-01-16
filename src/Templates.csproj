@@ -12,16 +12,18 @@
         <NoDefaultExcludes>true</NoDefaultExcludes>
      </PropertyGroup>
     <ItemGroup Label="API Template Pack">
-       <Compile Include="Solution\src\Common\ConnectionStringName.cs" />
-       <Compile Include="WebSocket\Sockets\WebSocket.cs" />
-       <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
+        <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
         <Content Include="Database\**\*" Exclude="Database\DatabaseProject\bin\**;Database\DatabaseProject\obj\**;Models\bin\**;Models\obj\**" />
         <Content Include="Domain\**\*" Exclude="Domain\bin\**;Domain\obj\**" />
         <Content Include="ModelConfiguration\**\*" Exclude="ModelConfiguration\bin\**;ModelConfiguration\obj\**" />
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
-         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\.idea;Solution\tools\**" />
+        <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\.idea;Solution\tools\**" />
+        <Content Include="Solution-MSSQL\**\*"  Exclude="Solution-MSSQL\**\bin\**;Solution-MSSQL\**\obj\**;Solution-MSSQL\.idea;Solution-MSSQL\tools\**"  />
+      
+        
+        <Content Include="Solution-Postgre\**\*"  Exclude="Solution-Postgre\**\bin\**;Solution-Postgre\**\obj\**;Solution-Postgre\.idea;Solution-Postgre\tools\**"  />
          <None Include="readme.md" Pack="true" PackagePath="\" />
          <Compile Remove="**\*" />
     </ItemGroup>
