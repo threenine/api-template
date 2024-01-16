@@ -24,4 +24,5 @@ jobs:
           arguments: | 
             nuget_api_key: ${{ secrets.NUGET_API_KEY }}
             github_token: ${{ github.token }}
+            configuration: Release
         

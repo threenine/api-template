@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using System.Net.Mime;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 public class JsonPatchDocumentFilter : IDocumentFilter
@@ -33,10 +34,10 @@ public class JsonPatchDocumentFilter : IDocumentFilter
         foreach (var path in swaggerDoc.Paths.SelectMany(p => p.Value.Operations)
                      .Where(p => p.Key == Microsoft.OpenApi.Models.OperationType.Patch))
         {
-            foreach (var item in path.Value.RequestBody.Content.Where(c => c.Key != "application/json-patch+json"))
+            foreach (var item in path.Value.RequestBody.Content.Where(c => c.Key != MediaTypeNames.Application.JsonPatch))
                 path.Value.RequestBody.Content.Remove(item.Key);
                 
-            var response = path.Value.RequestBody.Content.SingleOrDefault(c => c.Key == "application/json-patch+json");
+            var response = path.Value.RequestBody.Content.SingleOrDefault(c => c.Key == MediaTypeNames.Application.JsonPatch);
                 
             response.Value.Schema = new OpenApiSchema
             {

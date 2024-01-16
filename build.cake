@@ -2,8 +2,8 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
-var nuget_api_key = Argument<string>("nuget_api_key");
-var github_token = Argument<string>("github_token");
+var nuget_api_key = Argument<string>("nuget_api_key" , "");
+var github_token = Argument<string>("github_token", "");
 
 string version = String.Empty;
 //////////////////////////////////////////////////////////////////////
@@ -121,9 +121,6 @@ Task("PublishNuget")
       } 
    } 
  }); 
-
-
-
 //////////////////////////////////////////////////////////////////////
 // EXECUTION
 //////////////////////////////////////////////////////////////////////
