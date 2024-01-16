@@ -7,6 +7,10 @@ permalink: /docs/changelog
 
 # Change log
 
+### 6.0.0
+* Updated to .Net 8.0 - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Upgraded project dependencies - [@gary_woodfine](https://twitter.com/gary_woodfine)
+
 ### 5.0.0
 * Updated to .Net 7.0 - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Upgraded project dependencies - [@gary_woodfine](https://twitter.com/gary_woodfine)
