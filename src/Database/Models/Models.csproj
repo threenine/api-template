@@ -1,11 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>true</ImplicitUsings>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
+
   <ItemGroup>
-    <PackageReference Include="Threenine.Database.Configuration" Version="0.2.3" />
+    <PackageReference Include="Threenine.Database.Configuration" Version="1.0.4" />
   </ItemGroup>
 </Project>
