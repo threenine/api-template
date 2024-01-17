@@ -6,26 +6,45 @@ nav_order: 1
 ---
 # API Solution Template
 
+
 Provides the ability to generate an entire API Solution project including:
 
 - API Project
 - Unit & Integration test projects
-- Github Action or Bitbucket Pipeline configuration
 - Dotnet Cake Build Script
 - Semantic Versioning
 - Docker Configuration
+- Database Configuration using Entity Framework Core
 
-To create a new solution using the `apisolution` template simply open a terminal window and execute the command with the supplied parameters below in chosen directory
+The template is configured to generate a MS SQL database configuration as default, however there is an optional switch 
+available that will enable you to create PostgreSQL database by passing an additional argument.
+
+To create a new solution using the `apisolution` template simply open a terminal window and execute the command with the 
+supplied parameters below in chosen directory.
 
 ```shell
 
-dotnet new apisolution --name <name of your solution>  --root <your chosen root namespace>
+dotnet new apisolution --name <name of your solution>  --root <your chosen root namespace>  --output <your chosen output directory>
 
 ````
 
+### Available arguments
 - `--name`  Is a name switch that is used to provide your project a name for instance _Cms_
 - `--root` is a root namespace you would like to use for your project i.e. Your company name or some such.   
-- 
+- `--usePOSTGRE`  optional flag to create a new solution that uses a PostgreSQL database backend
+- `--force`  Forces content to be generated even if it would change existing files. This is required when the template 
+chosen would override existing files in the output directory.
+
+To create a project making use of PostgreSQL the command will be similar. However, just including the `--usePOSTGRE` 
+switch
+
+```shell
+
+dotnet new apisolution --name <name of your solution>  --root <your chosen root namespace>  
+--output <your chosen output directory>  --usePOSTGRE
+
+````
+
 
 #### Example solution creation using the API Template Pack
 
@@ -41,11 +60,10 @@ This command will generate a full API Solution template
 
 ```shell
 .
-├── bitbucket-pipelines.yml
 ├── build.cake
 ├── Diogel.sln
 ├── Directory.Build.props
-├── docker-compose.yml
+├── local-dev-docker-compose.yml
 ├── Dockerfile
 ├── .github
 │   └── workflows
@@ -122,7 +140,7 @@ The image below is a screen shot of the Solution we created open in Rider
 
 #### Running Docker-compose to create development environment
 
-All you need to do to get this up and running is to execute the command `docker-compose up -d` in the root directory of your project.  Alternatively, if you are using Rider you can learn [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider "How to run docker compose files in Rider - Gary Woodfine")
+All you need to do to get this up and running is to execute the command `local-dev-docker-compose up -d` in the root directory of your project.  Alternatively, if you are using Rider you can learn [How to run docker compose files in Rider](https://garywoodfine.com/how-to-run-docker-compose-files-in-rider "How to run docker compose files in Rider - Gary Woodfine")
 
 ### Additional Resources
 * [What is this Directory.Build.props file all about?](https://garywoodfine.com/what-is-this-directory-build-props-file-all-about/ "What is this Directory.Build.props file all about? - Gary Woodfine")
