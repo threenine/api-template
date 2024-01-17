@@ -22,6 +22,15 @@
         }
       ],
       "defaultValue": "net6.0"
+    },
+    "useMSSQL": {
+      "type": "computed",
+      "value": "(!usePOSTGRE)"
+    },
+    "usePOSTGRE": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
     }
   },
   "classifications": [
