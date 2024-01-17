@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
-
-  
-
     <ItemGroup>
-        <ProjectReference Include="..\Models\Models.csproj" />
+        <ProjectReference Include="..\Entities\Entities.csproj" />
     </ItemGroup>
 
 </Project>
