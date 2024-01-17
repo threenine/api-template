@@ -3,8 +3,8 @@
   "author": "API Template Pack",
   "name": "API solution template",
   "description": "Solution template to implement Vertical Slice Architecture in projects",
-  "identity": "ApiSolution",
-  "shortName": "apisolution",
+  "identity": "ApiSolution SQL",
+  "shortName": "apisolution-sql",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -17,6 +17,15 @@
       "replaces": "placeHolder",
       "dataType": "string",
       "defaultValue": "Threenine"
+    },
+    "useMSSQL": {
+      "type": "computed",
+      "value": "(!usePOSTGRE)"
+    },
+    "usePOSTGRE": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
     },
     "Framework": {
       "type": "parameter",

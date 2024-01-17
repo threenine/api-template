@@ -16,6 +16,15 @@
       "replaces": "Model",
       "dataType": "string",
       "defaultValue": "Model"
+    },
+    "useMSSQL": {
+      "type": "computed",
+      "value": "(!usePOSTGRE)"
+    },
+    "usePOSTGRE": {
+      "type": "parameter",
+      "datatype": "bool",
+      "defaultValue": "false"
     }
   },
   "classifications": [
