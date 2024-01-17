@@ -20,10 +20,7 @@
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
          <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\.idea;Solution\tools\**" />
-        <Content Include="Solution-MSSQL\**\*"  Exclude="Solution-MSSQL\**\bin\**;Solution-MSSQL\**\obj\**;Solution-MSSQL\.idea;Solution-MSSQL\tools\**"  />
-      
-        
-        <Content Include="Solution-Postgre\**\*"  Exclude="Solution-Postgre\**\bin\**;Solution-Postgre\**\obj\**;Solution-Postgre\.idea;Solution-Postgre\tools\**"  />
+       
          <None Include="readme.md" Pack="true" PackagePath="\" />
          <Compile Remove="**\*" />
     </ItemGroup>

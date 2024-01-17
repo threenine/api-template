@@ -9,7 +9,7 @@ branches:
     is-release-branch: true
   feature:
     increment: Minor
-    tag: alpha
+    tag: ''
   release:
     increment: Minor
     tag: beta

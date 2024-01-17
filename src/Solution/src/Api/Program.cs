@@ -1,5 +1,6 @@
 using Api.Behaviours;
 using Api.Middleware;
+using Common;
 using Database.ApiSolutions;
 using FluentValidation;
 using MediatR;
@@ -10,7 +11,7 @@ using Threenine;
 using Threenine.Data.DependencyInjection;
 using Threenine.Services;
 
-const string ConnectionsStringName = "Default";
+
 
 
 Log.Logger = new LoggerConfiguration()
@@ -42,12 +43,11 @@ builder.Services.AddMediatR(cfg =>
     cfg.AddOpenBehavior(typeof(LoggingBehaviour<,>));
     cfg.AddOpenBehavior(typeof(ValidationBehaviour<,>));
 });
-var connectionString = builder.Configuration.GetConnectionString(ConnectionsStringName);
-builder.Services.AddDbContext<ApiSolutionContext>(x => x.UseNpgsql(connectionString)).AddUnitOfWork<ApiSolutionContext>();
 
+builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddTransient(typeof(IEntityValidationService<>),typeof(EntityValidationService<>));
-builder.Services.AddTransient(typeof(IDataService<>), typeof(DataService<>));
+
 
 
 var app = builder.Build();

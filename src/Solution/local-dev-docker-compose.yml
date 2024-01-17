@@ -10,11 +10,21 @@ services:
       ACCEPT_EULA: Y
     networks: 
       - apisolution
+#if (useMSSQL)
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: vendor-service-mssql
+    ports:
+      - 1433:1433
+    env_file:
+      - .mssql.env
+#endif
+#if (usePOSTGRE)
   postgres:
     container_name: apisolution_postgre
     image: postgres
     env_file:
-      - .env
+      - .postgre.env
     
     volumes:
       - postgres:/data/postgres
@@ -23,6 +33,7 @@ services:
     networks:
       - apisolution
     restart: unless-stopped
+#endif
 networks:
   apisolution:
     driver: bridge

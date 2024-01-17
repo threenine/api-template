@@ -1,7 +1,0 @@
-﻿{
-  "request": {
-    "https": {
-      "rejectUnauthorized": false
-    }
-  }
-}

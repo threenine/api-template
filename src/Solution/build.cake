@@ -2,13 +2,14 @@
 #addin nuget:?package=Cake.Docker&version=1.1.2
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
+string containerRegistry = Argument("container_registry", "ghcr.io");
 string version = String.Empty;
 
 string projectTag = "ApiSolution";
 string rootNamespace = "placeHolder";
 
 string packageName = string.Empty;
-string containerRegistry = EnvironmentVariable("CONTAINER_REGISTRY");
+
 //////////////////////////////////////////////////////////////////////
 // TASKS
 //////////////////////////////////////////////////////////////////////
