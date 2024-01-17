@@ -1,11 +1,11 @@
 mode: Mainline
 commit-message-incrementing: MergeMessageOnly
 branches:
-  main:
+  master:
     tag: ''
     increment: inherit
     source-branches:
-      - main
+      - master
     is-release-branch: true
   feature:
     increment: Minor
