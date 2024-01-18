@@ -29,6 +29,6 @@
     }
   },
   "classifications": [
-    "webapi", "cqrs", "vertical", "endpoint"
+    "API Template Pack"
   ]
 }

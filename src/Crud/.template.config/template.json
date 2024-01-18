@@ -47,6 +47,6 @@
     
   },
   "classifications": [
-    "webapi", "cqrs", "vertical slice", "crud", "endpoints"
+    "API Template Pack"
   ]
 }

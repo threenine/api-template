@@ -1,22 +1,17 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "API Template Pack",
-  "name": "Model Configuration generation template",
-  "description": "Generates a model configuration for database projects",
-  "identity": "ModelConfig",
-  "shortName": "modelconfig",
+  "name": "Database Entity",
+  "description": "Database Entity for Database projects",
+  "identity": "Database Entity",
+  "shortName": "entity",
+  "sourceName": "EntityName",
+  "preferNameDirectory": "false",
   "tags": {
     "language": "C#",
     "type": "item"
   },
-  "sourceName": "ModelConfiguration",
   "symbols": {
-    "model": {
-      "type": "parameter",
-      "replaces": "Model",
-      "dataType": "string",
-      "defaultValue": "Model"
-    },
     "useMSSQL": {
       "type": "computed",
       "value": "(!usePOSTGRE)"

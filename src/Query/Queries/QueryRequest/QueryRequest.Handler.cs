@@ -19,6 +19,7 @@ public class Handler : IRequestHandler<Query, SingleResponse<Response>>
 
     public async Task<SingleResponse<Response>> Handle(Query request, CancellationToken cancellationToken)
     {
+        //TODO: Add your implementation logic here 
         return new SingleResponse<Response>(new Response());
     }
 }

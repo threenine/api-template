@@ -1,6 +1,6 @@
 <Project>
     <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))"/>
-  <PropertyGroup>
-    <RootNamespace>placeHolder.Database.Entities</RootNamespace>
-  </PropertyGroup>
+    <PropertyGroup>
+      <RootNamespace>placeHolder.Database.Entities</RootNamespace>
+    </PropertyGroup>
 </Project>

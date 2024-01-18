@@ -48,7 +48,7 @@ public class QueryRequest : EndpointBaseAsync.WithRequest<Query>.WithActionResul
         {
             result = error.Key switch
             {
-                ErrorKeyNames.Conflict => new ConflictResult(),
+                ErrorKeyNames.NotFound => new NotFoundResult(),
                 _ => new BadRequestObjectResult(errors)
             };
         });

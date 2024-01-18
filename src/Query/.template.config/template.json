@@ -28,6 +28,6 @@
     },
   },
   "classifications": [
-    "webapi", "cqrs", "vertical slice", "endpoint"
+    "API Template Pack"
   ]
 }

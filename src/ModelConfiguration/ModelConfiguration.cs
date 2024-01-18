@@ -7,7 +7,7 @@ using Threenine.Configurations.SqlServer;
 using Threenine.Configurations.PostgreSql;
 #endif
 
-namespace Database.Configurations;
+namespace placeHolder.Database.Configurations;
 
 public class ModelConfiguration : BaseEntityTypeConfiguration<Model>
 {

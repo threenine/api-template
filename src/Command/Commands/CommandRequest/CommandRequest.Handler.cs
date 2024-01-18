@@ -14,6 +14,7 @@ public class Handler : IRequestHandler<Command, SingleResponse<Response>>
 
     public async Task<SingleResponse<Response>> Handle(Command request, CancellationToken cancellationToken)
     {
+        //TODO: Add your implementation logic here
         return new SingleResponse<Response>(new Response());
     }
 }

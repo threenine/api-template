@@ -3,8 +3,8 @@
   "author": "API Template Pack",
   "name": "API solution template",
   "description": "Solution template to implement Vertical Slice Architecture in projects",
-  "identity": "ApiSolution SQL",
-  "shortName": "apisolution-sql",
+  "identity": "ApiSolution",
+  "shortName": "apisolution",
   "tags": {
     "language": "C#",
     "type": "project"
@@ -40,6 +40,6 @@
     }
   },
   "classifications": [
-    "webapi", "cqrs", "vertical", "Solution"
+    "API Template Pack"
   ]
 }

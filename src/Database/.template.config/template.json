@@ -12,16 +12,11 @@
     "type": "project"
   },
   "symbols": {
-    "Framework": {
+    "root": {
       "type": "parameter",
-      "description": "The target framework for the project.",
-      "datatype": "choice",
-      "choices": [
-        {
-          "choice": "net6.0"
-        }
-      ],
-      "defaultValue": "net6.0"
+      "replaces": "placeHolder",
+      "dataType": "string",
+      "defaultValue": "Threenine"
     },
     "useMSSQL": {
       "type": "computed",
@@ -34,7 +29,7 @@
     }
   },
   "classifications": [
-    "webapi", "cqrs", "vertical", "project"
+    "API Template Pack"
   ]
 }
 
