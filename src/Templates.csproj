@@ -12,11 +12,10 @@
         <NoDefaultExcludes>true</NoDefaultExcludes>
      </PropertyGroup>
     <ItemGroup Label="API Template Pack">
-        <Compile Include="Entity\Entity.cs" />
+        <Content Include="Entity\**\*" Exclude="Entity\bin\**;Entity\obj\**" />
         <Content Include="Crud\**\*" Exclude="Crud\bin\**;Crud\obj\**" />
         <Content Include="Database\**\*" Exclude="Database\DatabaseProject\bin\**;Database\DatabaseProject\obj\**;Models\bin\**;Models\obj\**" />
         <Content Include="Domain\**\*" Exclude="Domain\bin\**;Domain\obj\**" />
-        <Content Include="Entity\.template.config\template.json" />
         <Content Include="ModelConfiguration\**\*" Exclude="ModelConfiguration\bin\**;ModelConfiguration\obj\**" />
          <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
          <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />

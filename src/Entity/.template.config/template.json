@@ -3,7 +3,7 @@
   "author": "API Template Pack",
   "name": "Database Entity",
   "description": "Database Entity for Database projects",
-  "identity": "Database Entity",
+  "identity": "Entity",
   "shortName": "entity",
   "sourceName": "EntityName",
   "preferNameDirectory": "false",
@@ -12,14 +12,11 @@
     "type": "item"
   },
   "symbols": {
-    "useMSSQL": {
-      "type": "computed",
-      "value": "(!usePOSTGRE)"
-    },
-    "usePOSTGRE": {
+    "root": {
       "type": "parameter",
-      "datatype": "bool",
-      "defaultValue": "false"
+      "replaces": "placeHolder",
+      "dataType": "string",
+      "defaultValue": "Threenine"
     },
     "entity": {
       "type": "computed",

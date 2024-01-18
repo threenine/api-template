@@ -1,10 +1,10 @@
 using Threenine.Models;
-namespace Templates.Entity;
+namespace placeHolder.Database.Entities;
 
 #if (list)
-    public sealed class EntityName : ValueListEntity
+public sealed class EntityName : ValueListEntity
 #else 
-   public sealed class EntityName : BaseEntity
+public sealed class EntityName : BaseEntity
 #endif
 {   
 }
