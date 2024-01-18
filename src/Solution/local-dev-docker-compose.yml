@@ -17,14 +17,14 @@ services:
     ports:
       - 1433:1433
     env_file:
-      - .mssql.env
+      - .env
 #endif
 #if (usePOSTGRE)
   postgres:
     container_name: apisolution_postgre
     image: postgres
     env_file:
-      - .postgre.env
+      - .env
     
     volumes:
       - postgres:/data/postgres
