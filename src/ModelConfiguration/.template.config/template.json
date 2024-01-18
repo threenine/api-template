@@ -11,6 +11,12 @@
   },
   "sourceName": "ModelConfiguration",
   "symbols": {
+    "root": {
+      "type": "parameter",
+      "replaces": "placeHolder",
+      "dataType": "string",
+      "defaultValue": "Threenine"
+    },
     "model": {
       "type": "parameter",
       "replaces": "Model",

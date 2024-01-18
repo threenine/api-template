@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Threenine;
 #if(useMSSQL)
 using Threenine.Configurations.SqlServer;
 #endif

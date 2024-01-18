@@ -52,21 +52,21 @@ builder.Services.AddTransient(typeof(IEntityValidationService<>),typeof(EntityVa
 
 var app = builder.Build();
 
+
 app.UseSerilogRequestLogging();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
-
-// Database migrations
-using (var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope())
-{
-    var context = serviceScope.ServiceProvider.GetService<ApiSolutionContext>();
-    context?.Database.Migrate();
-}
+app.DatabaseInitialise();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api v1"));
+    app.UseSwaggerUI(settings =>
+    {
+        settings.SwaggerEndpoint("/swagger/v1/swagger.json", "Api v1");
+    });
+        
+     
 }
 app.UseHttpsRedirection();
 

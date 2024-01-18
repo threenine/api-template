@@ -1,6 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
     <ItemGroup>
         <ProjectReference Include="..\Entities\Entities.csproj" />
     </ItemGroup>
-
+    
+  
 </Project>
