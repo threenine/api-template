@@ -1,12 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Threenine;
-#if(useMSSQL)
-using Threenine.Configurations.SqlServer;
-#endif
-#if (usePOSTGRE)
-using Threenine.Configurations.PostgreSql;
-#endif
+
 
 namespace placeHolder.Database.Configurations;
 

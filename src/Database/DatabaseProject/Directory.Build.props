@@ -1,0 +1,16 @@
+<Project>
+    <Import Project="$([MSBuild]::GetPathOfFileAbove('Directory.Build.props', '$(MSBuildThisFileDirectory)../'))"/>
+  <ItemGroup>
+    <Using Include="placeHolder.Database.Entities" />
+    <Using Include="Microsoft.EntityFrameworkCore" />
+    <Using Include="Microsoft.EntityFrameworkCore.Metadata.Builders" />
+    <Using Include="Threenine" />
+    <!--#if (mssql) -->
+    <Using Include="Threenine.Configurations.SqlServer"/>
+    <!--#endif -->
+    <!--#if (postgre)-->
+    <Using Include="Threenine.Configurations.PostgreSql" />
+    <!--#endif -->
+  </ItemGroup>
+  
+</Project>
