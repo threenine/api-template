@@ -10,7 +10,7 @@ services:
       ACCEPT_EULA: Y
     networks: 
       - apisolution
-#if (useMSSQL)
+#if (mssql)
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: vendor-service-mssql
@@ -19,7 +19,7 @@ services:
     env_file:
       - .env
 #endif
-#if (usePOSTGRE)
+#if (postgre)
   postgres:
     container_name: apisolution_postgre
     image: postgres

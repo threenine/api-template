@@ -1,10 +1,15 @@
+using System;
+using System.Collections.Generic;
 using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 using MediatR;
-using ILogger = Serilog.ILogger;
+using Serilog;
+
 
 namespace ApiProject.Behaviours
 {
-    public class LoggingBehaviour<TRequest, TResponse>(ILogger logger) : IPipelineBehavior<TRequest, TResponse>
+    public class LoggingBehaviour<TRequest, TResponse>(Serilog.ILogger logger) : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>
     {
 
