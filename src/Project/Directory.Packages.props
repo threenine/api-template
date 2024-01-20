@@ -15,6 +15,7 @@
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
     <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+    
     <PackageVersion Include="Npgsql" Version="8.0.1" />
     <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
     <PackageVersion Include="FluentValidation" Version="11.9.0" />

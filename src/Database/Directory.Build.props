@@ -10,6 +10,7 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore"/>
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools"/>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
         <!--#if (mssql) -->
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
         <!--#endif -->
@@ -17,6 +18,6 @@
         <PackageReference Include="Npgsql" />
         <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
         <!--#endif -->
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     </ItemGroup>
 </Project>
