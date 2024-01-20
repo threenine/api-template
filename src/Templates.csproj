@@ -3,7 +3,6 @@
         <PackageType>Template</PackageType>
         <IsPackable>true</IsPackable>
         <PackageId>Threenine.ApiProject</PackageId>
-       
          <PackageReadmeFile>readme.md</PackageReadmeFile>
         <IncludeContentInPack>true</IncludeContentInPack>
         <IncludeBuildOutput>false</IncludeBuildOutput>
@@ -17,13 +16,11 @@
         <Content Include="Database\**\*" Exclude="Database\DatabaseProject\bin\**;Database\DatabaseProject\obj\**;Models\bin\**;Models\obj\**" />
         <Content Include="Domain\**\*" Exclude="Domain\bin\**;Domain\obj\**" />
         <Content Include="ModelConfiguration\**\*" Exclude="ModelConfiguration\bin\**;ModelConfiguration\obj\**" />
-       
-         <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
-         <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
-         <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\.idea;Solution\tools\**"  />
-      <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
-       
-         <None Include="readme.md" Pack="true" PackagePath="\" />
-         <Compile Remove="**\*" />
+        <Content Include="Command\**\*" Exclude="Command\**\bin\**;Command\**\obj\**" />
+        <Content Include="Query\**\*" Exclude="Query\**\bin\**;Query\**\obj\**" />
+        <Content Include="Solution\**\*" Exclude="Solution\**\bin\**;Solution\**\obj\**;Solution\.idea;Solution\tools\**"  />
+        <Content Include="Project\**\*" Exclude="Project\bin\**;Project\obj\**" />
+        <None Include="readme.md" Pack="true" PackagePath="\" />
+        <Compile Remove="**\*" />
     </ItemGroup>
 </Project> 
