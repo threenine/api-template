@@ -11,7 +11,8 @@ permalink: /docs/changelog
 
 * Refactor and improvements to the Database project template - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Implement Dependency Injection capability to the database projects to enable inversion of control the net result is now
-there are two new calls to make when wanting to add the Database project you API Solution. 
+there are two new calls to make when wanting to add the Database project you API Solution.  - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Updated documentation to incorporate these changes  - [@gary_woodfine](https://twitter.com/gary_woodfine)
 
 
 ### 6.0.0
