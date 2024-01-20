@@ -11,8 +11,9 @@ nav_order: 2
 
 A factory for creating derived Context instances.  Implements the Microsoft Entity Framework Core `IDesignTimeDbContextFactory` to enable design-time services for context types that do not have a public default constructor. At design-time, derived `DbContext` instances can be created in order to enable specific design-time experiences such as Migrations. Design-time services will automatically discover implementations of this interface that are in the startup assembly or the same assembly as the derived context.
 
-This class is also pregenerated for you and ready for you to start generating Migrations etc with
+This class is also pre-generated for you and ready for you to start generating Migrations etc with
 
+The Example below illustrates an example of a `ContextFactory` generated making use of PostgreSQL, which can be done making use of the `--postgre` switch
 ```csharp
 
 internal class ArticlesContextFactory : IDesignTimeDbContextFactory<ArticlesContext>

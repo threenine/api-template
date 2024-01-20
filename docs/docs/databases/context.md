@@ -25,10 +25,6 @@ public class ArticlesContext : BaseContext<ArticlesContext>
     {
     }
 
-    // Add more DB Sets as required
-    public DbSet<Sources> Sources { get; set; }
-
-        
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasDefaultSchema(DefaultSchema.Name);

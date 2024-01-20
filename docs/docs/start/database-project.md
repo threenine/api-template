@@ -8,14 +8,14 @@ nav_order: 8
 # Database project template
 
 The Database project template aims to make creating a new database project for your microservice is as easy as possible. Bu default the project is configured to generate MSSQL, however if
-you want to use PosgreSQL you can make use of the `--usePOSGRE` switch to generate for
+you want to use PosgreSQL you can make use of the `--postgre` switch to generate for
 postgre
 
 ```shell
 dotnet new database --name [Name of your Database]  --output [output location]
 ```
 
-To generate for Postgre you can use the same same command just passing in `--usePOSGRE` switch
+To generate for Postgre you can use the same same command just passing in `--postgre` switch
 
 ```shell
 dotnet new database --name [Name of your Database]  --output [output location] --usePOSTGRE

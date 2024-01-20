@@ -18,11 +18,11 @@
       "dataType": "string",
       "defaultValue": "Threenine"
     },
-    "useMSSQL": {
+    "mssql": {
       "type": "computed",
-      "value": "(!usePOSTGRE)"
+      "value": "(!postgre)"
     },
-    "usePOSTGRE": {
+    "postgre": {
       "type": "parameter",
       "datatype": "bool",
       "defaultValue": "false"

@@ -16,13 +16,13 @@ public static class DependencyInjection
         ArgumentException.ThrowIfNullOrEmpty(connectionString);
   
         services.AddDbContext<ApiSolutionContext>(
-#if (usePOSTGRE)
+#if (postgre)
             x => x.UseNpgsql(connectionString,   
                 b => b.MigrationsAssembly(typeof(ApiSolutionContext).Assembly.FullName)),
             ServiceLifetime.Transient
 #endif 
 
-#if (useMSSQL)
+#if (mssql)
          x => x.UseSqlServer(connectionString,
             b => b.MigrationsAssembly(typeof(ApiSolutionContext).Assembly.FullName)),
         ServiceLifetime.Transient

@@ -1,0 +1,11 @@
+<Project>
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <IsPackable>false</IsPackable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <RootNamespace>placeHolder</RootNamespace>
+    </PropertyGroup>
+</Project>

@@ -4,19 +4,20 @@
         <RootNamespace>placeHolder.Database</RootNamespace>
     </PropertyGroup>
     <ItemGroup>
-        <PackageReference Include="Threenine.Data" Version="5.0.1"/>
-        <PackageReference Include="Threenine.Database.Configuration" Version="1.0.4"/>
-        <PackageReference Include="Threenine.DataService" Version="0.2.1" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.1"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1"/>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1"/>
-        <!--#if (useMSSQL) -->
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1"/>
+        <PackageReference Include="Threenine.Data"/>
+        <PackageReference Include="Threenine.Database.Configuration"/>
+        <PackageReference Include="Threenine.DataService" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools"/>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+        <!--#if (mssql) -->
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
         <!--#endif -->
-        <!--#if (usePOSTGRE)-->
-        <PackageReference Include="Npgsql" Version="8.0.1" />
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+        <!--#if (postgre)-->
+        <PackageReference Include="Npgsql" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
         <!--#endif -->
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.1"/>
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
     </ItemGroup>
 </Project>

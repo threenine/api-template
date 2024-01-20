@@ -1,0 +1,24 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="Threenine.Data" Version="5.0.1" />
+    <PackageVersion Include="Threenine.Database.Configuration" Version="1.0.4" />
+    <PackageVersion Include="Threenine.DataService" Version="0.2.1" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.1" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.1" />
+    <!--#if (mssql) -->
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
+    <!--#endif -->
+    <!--#if (postgre)-->
+    <PackageVersion Include="Npgsql" Version="8.0.1" />
+    <PackageVersion Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <!--#endif -->
+    <PackageVersion Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+</Project>
+

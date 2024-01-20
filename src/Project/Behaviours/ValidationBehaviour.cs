@@ -5,8 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
 using MediatR;
-using Serilog;
-using ILogger = Serilog.ILogger;
+
 
 namespace ApiProject.Behaviours
 {
