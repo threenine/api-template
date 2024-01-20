@@ -7,6 +7,13 @@ permalink: /docs/changelog
 
 # Change log
 
+### 6.1.0 
+
+* Refactor and improvements to the Database project template - [@gary_woodfine](https://twitter.com/gary_woodfine)
+* Implement Dependency Injection capability to the database projects to enable inversion of control the net result is now
+there are two new calls to make when wanting to add the Database project you API Solution. 
+
+
 ### 6.0.0
 * Updated to .Net 8.0 - [@gary_woodfine](https://twitter.com/gary_woodfine)
 * Upgraded project dependencies - [@gary_woodfine](https://twitter.com/gary_woodfine)
