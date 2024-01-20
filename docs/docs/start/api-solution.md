@@ -31,17 +31,17 @@ dotnet new apisolution --name <name of your solution>  --root <your chosen root 
 ### Available arguments
 - `--name`  Is a name switch that is used to provide your project a name for instance _Cms_
 - `--root` is a root namespace you would like to use for your project i.e. Your company name or some such.   
-- `--usePOSTGRE`  optional flag to create a new solution that uses a PostgreSQL database backend
+- `--postgre`  optional flag to create a new solution that uses a PostgreSQL database backend
 - `--force`  Forces content to be generated even if it would change existing files. This is required when the template 
 chosen would override existing files in the output directory.
 
-To create a project making use of PostgreSQL the command will be similar. However, just including the `--usePOSTGRE` 
+To create a project making use of PostgreSQL the command will be similar. However, just including the `--postgre` 
 switch
 
 ```shell
 
 dotnet new apisolution --name <name of your solution>  --root <your chosen root namespace>  
---output <your chosen output directory>  --usePOSTGRE
+--output <your chosen output directory>  --postgre
 
 ````
 

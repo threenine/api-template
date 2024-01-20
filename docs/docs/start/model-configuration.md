@@ -12,7 +12,7 @@ The API Template Pack provides a [BaseEntity](../../databases/entity-type-config
 To simplify the process of creating your Model Configuration we provide the Model Configuration Template which can be run from the terminal, which create the stub class for you to complete.
 
 By default the template will generate a new Model Configuration class to use MSSQL if
-you want to use PosgreSQL you can make use of the `--usePOSGRE` switch to generate for
+you want to use PosgreSQL you can make use of the `--postgre` switch to generate for
 postgre
 
 The template makes use of the following parameters
@@ -20,7 +20,7 @@ The template makes use of the following parameters
 * `--model` Name of your Model class to generate the configuration for
 * `--name` Name of your class to be created
 * `--output` The preferred output location
-* `--usePOSTGRE`  optional flag to create a new solution that uses a PostgreSQL database backend
+* `--postgre`  optional flag to create a new solution that uses a PostgreSQL database backend
 * `--force`  Forces content to be generated even if it would change existing files. This is required when the template
   chosen would override existing files in the output directory.
 
@@ -28,14 +28,14 @@ The template makes use of the following parameters
  dotnet new modelconfig --model [Name of model] --output [your output location] --name [Name of you class]
 
 ```
-to generate for Postgre use the `--usePOSTGRE` switch
+to generate for Postgre use the `--postgre` switch
 
 ```shell
- dotnet new modelconfig --model [Name of model] --output [your output location] --name [Name of you class]  --usePOSTGRE
+ dotnet new modelconfig --model [Name of model] --output [your output location] --name [Name of you class]  --postgre
 
 ```
 
-In the following example we are going to generate a PostsConfiguration class for our Posts Model. Our preferred output location will be Configuraitons folder in our database project.  We will be executing the terminal command in the root of our project directory.
+In the following example we are going to generate a PostsConfiguration class for our Posts Model. Our preferred output location will be Configurations folder in our database project.  We will be executing the terminal command in the root of our project directory.
 
 ```shell
  dotnet new modelconfig --model Posts --output src/Database/Database/Configurations/ --name PostsConfiguration
